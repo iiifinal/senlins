@@ -1,8 +1,13 @@
+/*----------------------------------------------------*/
+/*整体内容区域*/
 
 .caseContent {
     width: 100%;
 
 }
+
+/*-------------------------------------------------------*/
+/*重新宽度设置内容区域*/
 
 .caseConSetWidth {
     width: 85%;
@@ -14,6 +19,8 @@
     /*align-items: center;*/
 }
 
+/*-------------------------------------------------------*/
+/*首例案例信息区域*/
 .FirstCase {
     height: 700px;
     width: 100%;
@@ -62,20 +69,269 @@
     background-size: cover;
 }
 
+/*------------------------------------------------------------*/
+/*这是合作品牌信息*/
+
 .Cooperation {
     margin-top: -90px;
     width: 85%;
     margin-left: 8%;
     height: 180px;
-    background: deepskyblue;
+    background: rgba(0, 191, 255, 0.98);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     border-radius: 5px;
+    box-shadow: 10px 3px 20px 5px rgba(0, 191, 255, 0.1);
 }
-.Cooperation>div {
+
+.Cooperation > div {
     flex: 20%;
     text-align: center;
     color: white;
+}
+
+/*----------------------------------------------------------*/
+/*这是案例列表信息区域*/
+
+.CaseList {
+    width: 85%;
+    margin-left: 8%;
+    margin-right: 7%;
+    /*height: 600px;*/
+    margin-top: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /*background: darkseagreen;*/
+}
+
+.CaseListTitle {
+
+}
+
+.CaseListTitle > h3 {
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 14px;
+}
+
+.CaseListTitle > p {
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.CaseListCon {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.CaseListItem {
+    flex: 30%;
+    margin: 10px;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 191, 255, 0.2);
+    box-shadow: 1px 1px 5px 1px rgba(0, 191, 255, 0.1);
+
+}
+
+.CaseListItemImg {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+
+}
+
+.CaseListItemImg > img {
+    width: 100%;
+    height: 100%;
+}
+
+.CaseListItem > h3 {
+    margin-top: 20px;
+    font-size: 20px;
+    color: deepskyblue;
+    text-align: center;
+    padding: 0 10%;
+    overflow: hidden;
+    /*text-overflow:ellipsis;*/
+    /*white-space:nowrap;*/
+    /*box-sizing: border-box;*/
+}
+
+.CaseListItem > h5 {
+    margin-top: 16px;
+    padding-bottom: 6px;
+    font-size: 16px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.CaseListItemLine {
+    height: 2px;
+    width: 25%;
+    background: rgba(0, 191, 255, 0.6);
+    margin-bottom: 16px;
+    box-shadow: 3px 3px 3px rgba(65, 125, 225, 0.2);
+}
+
+.CaseListItem > p {
+    padding: 0 10%;
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+}
+
+/*-----------------------------------------------------------*/
+/*详细案例1信息区域*/
+
+.detailedCase {
+    /*width: 100%;*/
+    height: 500px;
+    /*background: deepskyblue;*/
+    display: flex;
+    margin-left: 10%;
+    width: 90%;
+    margin-bottom: 60px;
+}
+
+.detailedCaseLeft {
+    flex: 50% 0;
+    height: 100%;
+    /*background: darkseagreen;*/
+    display: flex;
+    flex-direction: column;
+    padding: 10% 10% 10% 0;
+
+}
+
+.detailedCaseLeft > h3 {
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-size: 30px;
+
+}
+
+.detailedCaseLeft > .detailedCaseLeftSubtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+    line-height: 20px;
+
+}
+
+.detailedCaseLeft > .detailedCaseLeftText {
+    font-size: 14px;
+    margin-bottom: 30px;
+    line-height: 20px;
+
+}
+
+.detailedCaseLeft > span {
+    padding: 10px 20px;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #7e8c8d;
+    border-radius: 2px;
+}
+
+.detailedCaseRight {
+    flex: 50% 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.detailedCaseRight > img {
+    width: 100%;
+    /*height: 100%;*/
+}
+
+/*-----------------------------------------------------------*/
+/*工作过程信息区域*/
+.workProcess {
+    height: 500px;
+    /*background: deepskyblue;*/
+    display: flex;
+    margin-right: 10%;
+    width: 90%;
+    margin-bottom: 60px;
+}
+
+.workProcessLeft {
+    flex: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.workProcessLeft > img {
+    width: 100%;
+    /*height: 100%;*/
+}
+
+.workProcessRight {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 10% 0 10% 10%;
+    /*text-align: right;*/
+    /*justify-items: right;*/
+}
+
+.workProcessRight > h3 {
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.workProcessRight > p {
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.workProcessRight > span {
+    padding: 10px 20px;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #7e8c8d;
+    border-radius: 2px;
+}
+
+/*-----------------------------------------------*/
+/*搜索区域*/
+.searchCon{
+    display: flex;
+    justify-items: center;
+    padding-bottom: 60px;
+
+ }
+.searchConSetWidth{
+    flex: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.searchConSetWidth>p{
+    /*margin-top: 30px;*/
+    margin-bottom: 26px;
+    font-size: 14px;
+}
+.searchConSetWidth>.search{
+    display: flex;
+    align-items: center;
+}
+.searchConSetWidth>.search>.input{
+    width: 300px;
+    border-radius: 0;
+}
+.searchConSetWidth>.search>.button{
+    border-radius: 0;
 }
