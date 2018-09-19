@@ -193,6 +193,26 @@ class Home extends React.Component {
                                     </span>
                                 </div>
                             </div>
+                            <div className={style.othersConItem}>
+                                <div className={style.othersConItemImg}>
+                                    <img src={AVATAR} alt=""/>
+                                </div>
+                                <h3>Cat</h3>
+                                <h5>
+                                    The story goes that some time ago.
+                                </h5>
+                                <p>Money was tight and he became infuriated when the child tried to decorate a box to
+                                    put under the Christmas tree. Nevertheless, the little girl brought
+                                </p>
+                                <div className={style.othersConItemStore}>
+                                    <span className={style.othersConItemStoreLike}>
+                                        <Icon type='heart'></Icon><span>123456</span>
+                                    </span>
+                                    <span className={style.othersConItemStoreLook}>
+                                        <Icon type='eye'></Icon><span>123456</span>
+                                    </span>
+                                </div>
+                            </div>
                         </article>
                     </div>
                 </div>

@@ -301,17 +301,17 @@
 }
 
 .othersConItem {
-    flex: 40% 0 ;
+    flex: 30% 0 ;
     background: white;
     display: flex;
-    margin:0 5% ;
+    /*margin:0 10% ;*/
     flex-direction: column;
     justify-content: space-between;
 }
 
 .othersConItemImg {
     width: 100%;
-    flex: 300px 0;
+    flex: 400px 0;
     overflow: hidden;
 }
 
