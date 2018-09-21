@@ -5,6 +5,7 @@ import {BrowserRouter, Route, Link} from 'react-router-dom'
 import Home from './component/home/home'
 import Case from './component/case/case'
 import Concect from './component/concect/concect'
+import Meetus from './component/meetus/meetus'
 
 class App extends Component {
 
@@ -41,12 +42,13 @@ class App extends Component {
                                             <Menu.Item key="setting:4">Option 4</Menu.Item>
                                         </MenuItemGroup>
                                     </SubMenu>
-                                    <Menu.Item key="alipay" className={styles.menuitem}>
+                                    <Menu.Item key="meetus" className={styles.menuitem}>
+                                        <Link to={'/meetus'}><Icon type="book"/>Meetus</Link>
+                                    </Menu.Item>
+                                    <Menu.Item key="concect" className={styles.menuitem}>
                                         <Link to={'/concect'}><Icon type="phone"/>Contact</Link>
                                     </Menu.Item>
-                                    <Menu.Item key="book" className={styles.menuitem}>
-                                        <Link to={''}><Icon type="book"/>Book</Link>
-                                    </Menu.Item>
+
                                 </Menu>
                             </Col>
                         </Row>
@@ -55,6 +57,7 @@ class App extends Component {
                         <Route exact path='/' component={Home}/>
                         <Route exact path='/case' component={Case}/>
                         <Route exact path='/concect' component={Concect}/>
+                        <Route exact path='/meetus' component={Meetus}/>
                     </div>
                     <div className={styles.footer}>
                         <div className={styles.FooterSetWidth}>
@@ -84,14 +87,14 @@ class App extends Component {
                             <div className={styles.FooterItemFlag}>
                                 <h3 className={styles.FooterFlagTitle}>CHASE</h3>
                                 <div className={styles.FooterItemFlagCon}>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
+                                <div>1</div>
+                                <div>3</div>
+                                <div>4</div>
+                                <div>5</div>
+                                <div>6</div>
+                                <div>7</div>
+                                <div>8</div>
+                                <div>9</div>
                                 </div>
 
                             </div>
