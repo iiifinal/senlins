@@ -86,6 +86,7 @@ class App extends Component {
                             </div>
                             <div className={styles.FooterItemFlag}>
                                 <h3 className={styles.FooterFlagTitle}>CHASE</h3>
+                                <span>You can follow our team in the following way.</span>
                                 <div className={styles.FooterItemFlagCon}>
                                 <div>1</div>
                                 <div>3</div>

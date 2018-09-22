@@ -160,6 +160,7 @@
 }
 .aboutCenterRight{
     flex: 60% 0;
+    margin-left: 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -168,6 +169,7 @@
 .aboutCenterRight>h3{
     font-size: 22px;
     margin-bottom: 20px;
+    line-height: 32px;
 }
 .aboutCenterRight>p{
     font-size: 14px;
@@ -185,3 +187,121 @@
 
 /*-----------------------------------------------------------------*/
 /*about信息bottom区域*/
+.aboutBottom{
+    width: 80%;
+    margin-top: 40px;
+    margin-bottom: 220px;
+    height: 400px;
+    margin-left: 10%;
+    margin-right: 10%;
+    /*background: deepskyblue;*/
+    display: flex;
+}
+.aboutBottomLeft{
+    flex: 60% 0;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*align-items: center;*/
+}
+.aboutBottomLeft>h3{
+    font-size: 22px;
+    margin-bottom: 20px;
+    line-height: 32px;
+}
+.aboutBottomLeft>p{
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 20px;
+}
+.aboutBottomLeft>span{
+    font-size: 14px;
+    width: 20%;
+    text-align: center;
+    padding:10px 30px;
+    border:1px solid rgba(0,125,255,0.2);
+}
+
+.aboutBottomRight {
+    flex: 40% 0;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.aboutBottomRightImg {
+    flex: 400px 0;
+    height: 100%;
+    background: url("./img/about_center.jpg") no-repeat;
+    background-size: cover;
+    box-shadow: 5px 5px 20px 3px rgba(0,192,255,0.1);
+}
+.aboutBottomRightColor {
+    flex: 5% 0;
+    height: 40%;
+    background: yellow;
+}
+
+
+/*-------------------------------------------------------------*/
+/*联系我们区域*/
+.concect{
+    width: 100%;
+    height: 500px;
+    background: deepskyblue;
+    position: relative;
+
+}
+.concectSetWidth{
+    position: absolute;
+    top:-100px;
+    width: 80%;
+    /*height: 600px;*/
+    margin-left: 10%;
+    margin-right: 10%;
+    background: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.concectTitle{
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.concectTitle>p{
+font-size: 20px;
+    text-align: center;
+
+}
+.concectForm{
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 14px;
+    width: 90%;
+}
+.concectFormItem{
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+
+
+.concectFormLeft{
+    flex: 50%;
+}
+.concectFormRight{
+    flex: 50%;
+}
+.concectFormTextArea{
+ min-height: 200px!important;
+    /*min-width: 300px !important;*/
+}
+.concectButton{
+    max-width: 20%;
+    text-align: center;
+    margin-bottom: 40px;
+
+}
