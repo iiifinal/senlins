@@ -100,7 +100,9 @@ class App extends Component {
 
                             </div>
                         </div>
-
+                        <div className={styles.senlinCat}>
+                            <p>深圳市森林猫网络科技有限公司@..SenLinsCat@qq.com</p>
+                        </div>
                     </div>
                 </div>
             </BrowserRouter>
