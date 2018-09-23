@@ -272,6 +272,10 @@
     color: white;
 }
 
+
+/*---------------------------------------------------------------*/
+/*其他区域*/
+
 .others {
     width: 100%;
     background: rgba(25, 136, 247, 0.1);
@@ -280,11 +284,10 @@
 }
 
 .otherSetWidth {
-    margin-left: 5%;
-    width: 85%;
+    margin-left: 10%;
+    width: 80%;
     display: flex;
     flex-direction: column;
-
 }
 
 .othersTitle {
@@ -297,63 +300,69 @@
 .othersCon {
     display: flex;
     justify-content: space-between;
-    margin-left: 10%;
+    /*margin-left: 10%;*/
+    height: 400px;
 }
 
 .othersConItem {
-    flex: 30% 0 ;
+    flex: 31% 0 ;
     background: white;
     display: flex;
-    /*margin:0 10% ;*/
     flex-direction: column;
     justify-content: space-between;
 }
 
 .othersConItemImg {
     width: 100%;
-    flex: 400px 0;
-    overflow: hidden;
+    flex: 50% 0;
+    background-image: url("./img/avatar.jpeg");
+    background-size: cover;
+    /*overflow: hidden;*/
 }
 
-.othersConItemImg > img {
-    width: 100%;
-}
+/*.othersConItemImg > img {*/
+    /*width: 100%;*/
+/*}*/
 
-.othersConItem > h3 {
+.othersConItemText{
+    flex: 50% 0;
+    display: flex;
+    flex-direction: column;
+}
+.othersConItemText > h3 {
     font-size: 26px;
-    /*margin-top: 20px;*/
+    margin-top: 10px;
     color: deepskyblue;
     /*margin-bottom: 20px;*/
     text-align: center;
-    flex: 10% 0;
-    margin-top: 10px;
+    flex: 20%;
     overflow: hidden;
     box-sizing: border-box;
 
 }
 
-.othersConItem > h5 {
+.othersConItemText > h5 {
     padding: 0 10%;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 22px;
     /*margin-bottom: 20px;*/
-    flex: 16% 0;
+    flex: 30%;
     overflow: hidden;
 
 }
 
-.othersConItem > p {
+.othersConItemText > p {
     padding: 0 10%;
     font-size: 14px;
     line-height: 20px;
-    flex: 24% 0;
+    flex: 30%;
     overflow: hidden;
 }
 
 .othersConItemStore {
     display: flex;
     padding: 0 10%;
-    flex: 8%;
+    flex: 20%;
     margin-bottom: 20px;
     justify-content: space-between;
 }
