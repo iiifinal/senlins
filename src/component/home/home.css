@@ -28,9 +28,10 @@
 }
 .cascade > h3 {
     color: white;
-    font-size: 40px;
+    font-size: 30px;
     padding-left: 22%;
-    line-height: 100px;
+    line-height: 90px;
+    padding-top: 10px;
 }
 
 .cascade > p {
@@ -39,6 +40,7 @@
     padding-right: 4%;
     line-height: 20px;
     font-size: 14px;
+    margin-bottom: 6px;
 }
 
 .section {
@@ -117,6 +119,7 @@
 .imgSetWidth {
     width: 100%;
     height: 500px;
+    border: 1px solid rgba(0,192,255,0.2);
     overflow: hidden;
 }
 
@@ -126,7 +129,8 @@
 
 .imgCon > p {
     height: 60px;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 600;
     line-height: 60px;
     text-align: center;
 }
@@ -220,7 +224,6 @@
 
 .EmailTitle {
     font-size: 20px;
-
     margin-bottom: 10px;
 }
 

@@ -19,7 +19,7 @@ class App extends Component {
                         <Row type="flex" justify='center'>
                             <Col span={10} push={1}>
                                 <div className={styles.senlins}>
-                                    <Link to='/'>Senlins</Link>
+                                    <Link to='/'>SENLINS</Link>
                                 </div>
                             </Col>
 
@@ -29,11 +29,11 @@ class App extends Component {
                                       mode="horizontal"
                                 >
                                     <Menu.Item key="app" className={styles.menuitem}>
-                                        <Link to={'/'}><Icon type="appstore"/>Home</Link>
+                                        <Link to={'/'}><Icon type="appstore"/>首页</Link>
                                     </Menu.Item>
 
                                     <Menu.Item key="case" className={styles.menuitem}>
-                                        <Link to={'/case'}><Icon type="search"/>Case</Link>
+                                        <Link to={'/case'}><Icon type="search"/>案例</Link>
                                     </Menu.Item>
                                     {/*<SubMenu title={<span className={styles.flagSpan}><Icon type="search"/><Link*/}
                                         {/*to={'/case'}>Case</Link></span>} className={styles.menuitem}>*/}
@@ -50,10 +50,10 @@ class App extends Component {
 
 
                                     <Menu.Item key="meetus" className={styles.menuitem}>
-                                        <Link to={'/meetus'}><Icon type="book"/>Meetus</Link>
+                                        <Link to={'/meetus'}><Icon type="book"/>我们</Link>
                                     </Menu.Item>
                                     <Menu.Item key="concect" className={styles.menuitem}>
-                                        <Link to={'/concect'}><Icon type="phone"/>Contact</Link>
+                                        <Link to={'/concect'}><Icon type="phone"/>联系</Link>
                                     </Menu.Item>
 
                                 </Menu>
