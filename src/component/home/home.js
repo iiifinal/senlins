@@ -1,5 +1,5 @@
 import React from 'react'
-import {Carousel, Row, Card, Icon} from 'antd'
+import {Carousel, Row, Card, Icon,Rate} from 'antd'
 import style from './home.css'
 import IMG1 from './img/home_item_1.png'
 import IMG2 from './img/home_item_2.png'
@@ -87,47 +87,41 @@ class Home extends React.Component {
                             <div className={style.avatar}>
                                 <img src={AVATAR} alt=""/>
                             </div>
-                            <h3>SENLINS，定制方案解决专家</h3>
-                            <h5>Senlins, custom holistic solution specialist</h5>
+                            <h3>定制方案解决专家</h3>
+                            <h5>custom holistic solution specialist</h5>
                             <p>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
+                                <Rate disabled defaultValue={5} />
                             </p>
                         </article>
                         <article className={style.nameRight}>
                             <div className={style.contact}>
                                 <div className={style.email}>
-                                    <h3 className={style.EmailTitle}>Email:</h3>
+                                    <h3 className={style.EmailTitle}>电子邮箱:</h3>
                                     <p>maldek@qq.com</p>
                                 </div>
                                 <div className={style.phone}>
-                                    <h3 className={style.PhoneTitle}>Phone:</h3>
-                                    <p>123456789</p>
+                                    <h3 className={style.PhoneTitle}>电话号码:</h3>
+                                    <p>17603090160</p>
                                 </div>
                             </div>
                             <div className={style.label}>
                                 <h3 className={style.LabelTitle}>
-                                    Impression:
+                                    印象标签:
                                 </h3>
                                 <div className={style.impression}>
-                                    <span>despair</span>
-                                    <span>confusion</span>
-                                    <span>lonesome</span>
-                                    <span>despair</span>
-                                    <span>confusion</span>
-                                    <span>lonesome</span>
-                                    <span>despair</span>
-                                    <span>confusion</span>
-                                    <span>lonesome</span>
-                                    <span>despair</span>
-                                    <span>confusion</span>
-                                    <span>lonesome</span>
-                                    <span>despair</span>
-                                    <span>confusion</span>
-                                    <span>lonesome</span>
+                                    <span>负责人</span>
+                                    <span>技术精湛</span>
+                                    <span>按时完成</span>
+                                    <span>合作愉快</span>
+                                    <span>懂技术，会优化</span>
+                                    <span>后端哥哥666</span>
+                                    <span>UI/UX满分</span>
+                                    <span>大牌人气站酷设计师</span>
+                                    <span>项目经理优秀</span>
+                                    <span>前端妹纸可爱</span>
+                                    <span>前端小哥辛苦了</span>
+                                    <span>同行合作愉快</span>
+                                    <span>不错的团队</span>
                                 </div>
                             </div>
                         </article>

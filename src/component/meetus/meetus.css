@@ -54,11 +54,12 @@
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 10px;
+    font-size: 20px;
 
 }
 
 .meetusHeaderText > h3 {
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 10px;
@@ -67,7 +68,7 @@
 }
 
 .meetusHeaderText > p {
-    font-size: 10px;
+    font-size: 14px;
     text-align: right;
 }
 
@@ -197,7 +198,22 @@
 .teamEveryManConItemImg > img {
     max-width: 100%;
 }
+.teamItemText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.teamItemText>span{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    background: royalblue;
+}
 
+.teamItemText>span>img{
+    width: 100%;
+    height: 100%;
+}
 /*---------------------------------------------------------*/
 /*加入我们*/
 .joinUs {

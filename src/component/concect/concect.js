@@ -27,7 +27,7 @@ class Concect extends React.Component {
             <div className={style.page}>
                 <div className={style.header}>
                     <div className={style.headerBgImg}>
-                        <p>I"am async aplle !</p>
+                        <p>建立你的项目</p>
                         <h3>Create Design & App</h3>
                         <span>Do It!</span>
                     </div>
@@ -36,7 +36,7 @@ class Concect extends React.Component {
                     <div className={style.aboutTop}>
                         <div className={style.aboutTopImg}>
                             <div className={style.aboutTopImgTitle}>
-                                ご苦労 楽しもう
+                                你准备好了吗？
                             </div>
                             <span className={style.aboutTopImgimg}>Icon</span>
                         </div>

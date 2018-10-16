@@ -69,41 +69,27 @@ class App extends Component {
                     <div className={styles.footer}>
                         <div className={styles.FooterSetWidth}>
                             <div className={styles.FooterItem}>
-                                <h3 className={styles.FooterItemTitle}>CHASE</h3>
-                                <div>maldek</div>
-                                <div>iiifinal</div>
-                                <div>google</div>
-                                <div>baidu</div>
-                                <div>biddren</div>
+                                <h3 className={styles.FooterItemTitle}>商务电话</h3>
+
+                                <div>17603090160</div>
                             </div>
                             <div className={styles.FooterItem}>
-                                <h3 className={styles.FooterItemTitle}>CHASE</h3>
-                                <div>maldek</div>
-                                <div>iiifinal</div>
-                                <div>google</div>
-                                <div>baidu</div>
-                                <div>biddren</div>
+                                <h3 className={styles.FooterItemTitle}>商务邮箱</h3>
+
+                                <div>senlins.com</div>
                             </div>
                             <div className={styles.FooterItem}>
-                                <h3 className={styles.FooterItemTitle}>CHASE</h3>
-                                <div>maldek</div>
-                                <div>iiifinal</div>
-                                <div>google</div>
-                                <div>baidu</div>
+                                <h3 className={styles.FooterItemTitle}>媒体联系</h3>
+
+                                <div>17603090160</div>
                             </div>
                             <div className={styles.FooterItemFlag}>
-                                <h3 className={styles.FooterFlagTitle}>CHASE</h3>
-                                <span>You can follow our team in the following way.</span>
+                                <h3 className={styles.FooterFlagTitle}>关注我们</h3>
+                                <span>想了解我们的最新动态？可以点击关注哦</span>
                                 <div className={styles.FooterItemFlagCon}>
-                                <div>1</div>
-                                <div>3</div>
-                                <div>4</div>
-                                <div>5</div>
-                                <div>6</div>
-                                <div>7</div>
-                                <div>8</div>
-                                <div>9</div>
-                                </div>
+                                <div>v</div>
+                                <div>v</div>
+                            </div>
 
                             </div>
                         </div>

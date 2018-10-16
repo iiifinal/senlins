@@ -31,22 +31,22 @@ class Case extends React.Component {
                     <div className={style.FirstCase}>
                         <div className={style.FirstCaseLeft}>
                             <span>HELLO</span>
-                            <h3>I"m Apple</h3>
-                            <h5>A freelance web Designer & Developer</h5>
+                            <h3>I"m Senlins</h3>
+                            <h5>A professional custom solution solution expert</h5>
                             <p> HIRE ME</p>
                         </div>
                         <div className={style.FirstCaseRight}>
                         </div>
                     </div>
                     <div className={style.Cooperation}>
-                        <div>Cooperation brand</div>
-                        <div>Cooperation brand</div>
-                        <div>Cooperation brand</div>
-                        <div>Cooperation brand</div>
+                        <div>合作品牌1</div>
+                        <div>合作品牌1</div>
+                        <div>合作品牌1</div>
+                        <div>合作品牌1</div>
                     </div>
                     <div className={style.CaseList}>
                         <div className={style.CaseListTitle}>
-                            <h3>Case Collection</h3>
+                            <h3>精选案例</h3>
                             <p>
                                 "Oh, Daddy, it's not empty at all. I blew kisses into the box. They're all for you,
                                 Daddy."

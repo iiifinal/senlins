@@ -8,9 +8,11 @@ import JOIN from './img/joinUs.jpg'
 
 
 const content = (
-    <div>
-        <p>Content</p>
-        <p>Content</p>
+    <div className={style.teamItemText}>
+        <span><img src={ItemImg} alt=""/></span>
+        <p>资深前端开发工程师</p>
+        <p>资深平面设计师</p>
+        <p>四年的工作经年，熟悉设计与开发的相关知识</p>
     </div>
 )
 
@@ -29,9 +31,9 @@ class Meetus extends React.Component {
                         <div className={style.meetusHeaderRight}>
 
                             <div className={style.meetusHeaderText}>
-                                <span>JARE WIDRED</span>
-                                <h3>WEBDING PLAANNER</h3>
-                                <p>She no longer saw a little girl in a simple dress.</p>
+                                <span>Hello!我是森林猫</span>
+                                <h3>一个整体方案解决专家</h3>
+                                <p>欢迎了解我们</p>
                             </div>
                         </div>
                     </div>
@@ -39,21 +41,18 @@ class Meetus extends React.Component {
                 </div>
                 <div className={style.summary}>
                     <div className={style.summaryLeft}>
-                        <h3>She no longer saw a little girl in a simple dress. She saw a child wrapped…in her mother's
-                            love.</h3>
+                        <h3>森林猫科技有限公司，成立于2018年10月1日，一个提供整体化项目方案的专业研发团队。</h3>
                         <p>
-                            Then suddenly the little girl did something that the woman thought was a bit strange.She
-                            stopped crying,stepped back from the woman and began to sing.She sang so softly that it was
-                            almost a whisper. It was the sweetest sound the woman had ever heard,almost like the song of
-                            a very small bird.
+                            我们以人为本，以专业技术为指导方向，快速实现客户的项目从0到1的实现。senlins的团队拥有丰富的开发实战经验，尤其对金融平台、视频直播、数据可视化、社交、o2o商城等项目开发尤为熟悉。
+
                         </p>
                     </div>
                     <div className={style.summaryRight}>
                         <div className={style.summaryRightTitle}>
-                            <p>"what do you want me to see?"</p>
+                            <p>团队位置照片</p>
                         </div>
                         <div className={style.summaryRightImg}>
-                            {/*<img src={SUM} alt=""/>*/}
+                            {/*<img src={TEAM} alt=""/>*/}
                         </div>
                     </div>
                 </div>
@@ -63,10 +62,15 @@ class Meetus extends React.Component {
                     </div>
                     <div className={style.teamEveryMan}>
                         <div className={style.teamEveryManTitle}>
-                            <h3>Featured Gallery</h3>
+                            <h3>我们不仅仅只是开发者</h3>
                             <p>
-                                Catch the star that holds your destiny, the one that forever twinkles within your heart.
-                                Take advantage of precious opportunities while they still sparkle before you.
+                               创造你所想
+                            </p>
+                            <p>
+                                完成你所求
+                            </p>
+                            <p>
+                                以我们的技术基石去推动你所梦想的新世界
                             </p>
                         </div>
                         <div className={style.teamEveryManCon}>
@@ -74,7 +78,7 @@ class Meetus extends React.Component {
 
                             <div className={style.teamEveryManConItem}>
                                 <Popover
-                                    content={content} title="Title" trigger="click"
+                                    content={content} title="Apple" trigger="click"
                                     className={style.teamEveryManConItemImg}>
                                     <img src={ItemImg} alt=""/>
                                 </Popover>
@@ -144,18 +148,14 @@ class Meetus extends React.Component {
                 <div className={style.joinUs}>
                     <div className={style.joinUsSetWidth}>
 
-                        <p className={style.joinUsTitle}>LALAKHAL</p>
+                        <p className={style.joinUsTitle}>产品核心论</p>
                         <div className={style.joinUsText}>
-                            Take pride in your accomplishments, as they are stepping stones to your dreams. Understand that
-                            you may make mistakes, but don't let them discourage you. Value your capabilities and talents
-                            for they are what make you truly unique.
+                          我们善于将商业逻辑有序的以产品形态传递给消费者，协助从0-1的起跑者规划商业图谱与产品发展路径。
                         </div>
                         <div className={style.joinUsGraphic}>
                             <div className={style.joinUsGraphicLeft}>
                                 <p>
-                                    The greatest gifts in life are not purchased, but acquired through hard work and
-                                    determination. Find the star that twinkles in your heart. For you alone are capable of
-                                    making your brightest dreams come true.
+                                    策略与产品之间不应该有任何介质与翻译。我们的任务就是将各行业丰富的行业通理与合作伙伴的业务特征与优势结合，打造每个领域中的杀手产品。
                                 </p>
                                 <div>
                                     <img src={JOIN} alt=""/>
@@ -163,23 +163,13 @@ class Meetus extends React.Component {
                             </div>
                             <div className={style.joinUsGraphicRight}>
                                 <p>
-                                    Wherever you are, and whoever you may be, there is one thing in which you and I are just
-                                    alike at this monment, and in all the moments of our existence. We are not at rest, we
-                                    are on a journey. Our life is a movement, a tendency, a steady, and ceaseless progress
-                                    towards an unseen goal.
+                                    优秀的产品扮演着商业路径中每一次跳跃的起点，我们将利用所有方式与经验将每个产品打造为品牌助推器。
                                 </p>
                                 <p>
-                                    We are gaining something, or losing something, everyday. Even when our position and our
-                                    character seem to remain precisely the same, but in fact, they are changing. For the
-                                    mereadvance of time is a change. It is not the same thing to have a bare field in
-                                    January and in July. The season makes the difference. The limitations that are childlike
-                                    in the child, but childish in the man.
+                                    我们最自信的经验不来自于任何一个行业，它来自于所有行业。这有赖于我们引以为荣的团队学习能力，对于每个行业我们都着迷的想去了解它的运作机制，并贡献我们的经验参与塑造它的未来 。
                                 </p>
                                 <p>
-                                    Everything that we do is a step in one direction or another. Even the failure to do
-                                    something is in itself a deed. it sets us forward or backward. the action of the
-                                    negative pole of a magnetic needle is just as real as the action of the positive pole.
-                                    To decline is to accept--the other alternative.
+                                    我们深入学习理解众多行业，与品牌伙伴一起成长。
                                 </p>
 
                             </div>
