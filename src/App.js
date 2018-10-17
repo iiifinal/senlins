@@ -35,20 +35,6 @@ class App extends Component {
                                     <Menu.Item key="case" className={styles.menuitem}>
                                         <Link to={'/case'}><Icon type="search"/>案例</Link>
                                     </Menu.Item>
-                                    {/*<SubMenu title={<span className={styles.flagSpan}><Icon type="search"/><Link*/}
-                                        {/*to={'/case'}>Case</Link></span>} className={styles.menuitem}>*/}
-                                        {/*<MenuItemGroup title="Item 1">*/}
-                                            {/*<Menu.Item key="setting:1">Option 1</Menu.Item>*/}
-                                            {/*<Menu.Item key="setting:2">Option 2</Menu.Item>*/}
-                                        {/*</MenuItemGroup>*/}
-                                        {/*<MenuItemGroup title="Item 2">*/}
-                                            {/*<Menu.Item key="setting:3">Option 3</Menu.Item>*/}
-                                            {/*<Menu.Item key="setting:4">Option 4</Menu.Item>*/}
-                                        {/*</MenuItemGroup>*/}
-                                    {/*</SubMenu>*/}
-
-
-
                                     <Menu.Item key="meetus" className={styles.menuitem}>
                                         <Link to={'/meetus'}><Icon type="book"/>我们</Link>
                                     </Menu.Item>
