@@ -89,7 +89,7 @@ class Home extends React.Component {
                             </div>
                             <h3>定制方案解决专家</h3>
                             <h5>custom holistic solution specialist</h5>
-                            <div className={style.stars}>
+                            <div className={style.star}>
                                 <Rate disabled defaultValue={5} />
                             </div>
                         </article>
@@ -145,12 +145,12 @@ class Home extends React.Component {
                                     </h5>
                                     <p>Money was tight and he became infuriated when the child tried </p>
                                     <div className={style.othersConItemStore}>
-                                    <span className={style.othersConItemStoreLike}>
-                                        <Icon type='heart'></Icon><span>123456</span>
-                                    </span>
+    <span className={style.othersConItemStoreLike}>
+    <Icon type='heart'></Icon><span>123456</span>
+        </span>
                                         <span className={style.othersConItemStoreLook}>
-                                        <Icon type='eye'></Icon><span>123456</span>
-                                    </span>
+    <Icon type='eye'></Icon><span>123456</span>
+        </span>
                                     </div>
                                 </div>
                             </div>
@@ -165,12 +165,12 @@ class Home extends React.Component {
                                     </h5>
                                     <p>Money was tight and he became infuriated when the child tried </p>
                                     <div className={style.othersConItemStore}>
-                                    <span className={style.othersConItemStoreLike}>
-                                        <Icon type='heart'></Icon><span>123456</span>
-                                    </span>
+    <span className={style.othersConItemStoreLike}>
+    <Icon type='heart'></Icon><span>123456</span>
+        </span>
                                         <span className={style.othersConItemStoreLook}>
-                                        <Icon type='eye'></Icon><span>123456</span>
-                                    </span>
+    <Icon type='eye'></Icon><span>123456</span>
+        </span>
                                     </div>
                                 </div>
                             </div>
@@ -185,12 +185,12 @@ class Home extends React.Component {
                                     </h5>
                                     <p>Money was tight and he became infuriated when the child tried </p>
                                     <div className={style.othersConItemStore}>
-                                    <span className={style.othersConItemStoreLike}>
-                                        <Icon type='heart'></Icon><span>123456</span>
-                                    </span>
+    <span className={style.othersConItemStoreLike}>
+    <Icon type='heart'></Icon><span>123456</span>
+        </span>
                                         <span className={style.othersConItemStoreLook}>
-                                        <Icon type='eye'></Icon><span>123456</span>
-                                    </span>
+    <Icon type='eye'></Icon><span>123456</span>
+        </span>
                                     </div>
                                 </div>
                             </div>

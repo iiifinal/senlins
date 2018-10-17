@@ -183,7 +183,7 @@
     line-height: 20px;
 }
 
-.nameLeft > .stars {
+.nameLeft > .star {
     display: flex;
     width: 100%;
     justify-content: space-between;
