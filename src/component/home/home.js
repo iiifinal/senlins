@@ -89,9 +89,9 @@ class Home extends React.Component {
                             </div>
                             <h3>定制方案解决专家</h3>
                             <h5>custom holistic solution specialist</h5>
-                            <p>
+                            <div className={style.star}>
                                 <Rate disabled defaultValue={5} />
-                            </p>
+                            </div>
                         </article>
                         <article className={style.nameRight}>
                             <div className={style.contact}>
