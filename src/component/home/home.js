@@ -89,7 +89,7 @@ class Home extends React.Component {
                             </div>
                             <h3>定制方案解决专家</h3>
                             <h5>custom holistic solution specialist</h5>
-                            <div className={style.star}>
+                            <div className={style.stars}>
                                 <Rate disabled defaultValue={5} />
                             </div>
                         </article>
