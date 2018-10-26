@@ -6,12 +6,12 @@ import Home from './component/home/home'
 import Case from './component/case/case'
 import Concect from './component/concect/concect'
 import Meetus from './component/meetus/meetus'
+import Item from './component/item/item'
 
 class App extends Component {
 
     render() {
-        const SubMenu = Menu.SubMenu;
-        const MenuItemGroup = Menu.ItemGroup;
+
         return (
             <BrowserRouter>
                 <div className={styles.page}>
@@ -65,6 +65,7 @@ class App extends Component {
                         <Route exact path='/case' component={Case}/>
                         <Route exact path='/concect' component={Concect}/>
                         <Route exact path='/meetus' component={Meetus}/>
+                        <Route exact path='/item' component={Item}/>
                     </div>
                     <div className={styles.footer}>
                         <div className={styles.FooterSetWidth}>

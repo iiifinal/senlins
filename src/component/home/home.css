@@ -8,7 +8,8 @@
 }
 
 .cascade {
-    background: deepskyblue;
+    /*background: rgba(0,191,255,0.9);*/
+    background: rgba(126,140,141,0.95);
     width: 90%;
     height: 400px;
     color: white;
@@ -20,11 +21,13 @@
     font-size: 14px;
     font-family: "PingFang SC";
     background-image: url("./../../common/images/head_bg.jpg");
-    background-size: cover;
+    background-size:cover;
+
 
 }
 .cascade{
     margin-top: -200px;
+    z-index: 1000;
 }
 .cascade > h3 {
     color: white;
@@ -113,18 +116,19 @@
 
 .imgCon {
     width: 100%;
-    height: 560px;
+    max-height: 560px;
 }
 
 .imgSetWidth {
     width: 100%;
-    height: 500px;
-    border: 1px solid rgba(0,192,255,0.2);
+    max-height: 500px;
+    border: 1px solid rgba(120,141,140,0.1);
+    border-radius: 2px;
     overflow: hidden;
 }
 
 .imgSetWidth > img {
-    width: 100%;
+    max-width: 100%;
 }
 
 .imgCon > p {

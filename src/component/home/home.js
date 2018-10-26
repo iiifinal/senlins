@@ -1,20 +1,23 @@
 import React from 'react'
 import {Carousel, Row, Card, Icon,Rate} from 'antd'
 import style from './home.css'
-import IMG1 from './img/home_item_1.png'
-import IMG2 from './img/home_item_2.png'
+import IMG1 from './img/home_item_1.jpg'
+import IMG2 from './img/home_item_2.jpg'
 import IMG3 from './img/home_item_3.png'
 import AVATAR from './img/avatar.jpeg'
-
+import {Link} from 'react-router-dom'
 class Home extends React.Component {
     render() {
 
         return (
 
             <div className={style.content}>
-                <div className={style.bgImg}></div>
+                {/*<Carousel  effect="fade">*/}
+                    <div className={style.bgImg}></div>
+                {/*</Carousel>*/}
+
                 <div className={style.cascade}>
-                    <h3>SENLINS : 专注于产品定制化整体解决方案的知识创新咨询公司</h3>
+                    <h3>森林猫（Senlins）,一个专注项目定制化整体方案解决的企业</h3>
                     <p>
                         SENLINS遵循着"产品是商业价值的核心容器"的观念，通过定制化研究，快速定义产品策略和方向。
                     </p>
@@ -39,45 +42,43 @@ class Home extends React.Component {
                             <div className={style.title}>
                                 <h5>A</h5>
                                 <p>
-                                    LUXCHAIN为个人奢侈品提供多因素身份验证。 LUXCHAIN使用基于人工智能和区块链的综合验证解决方案来识别假冒产品。
-                                    借助数字资产，LUXCHAIN可以让买家和卖家一目了然地查看详细的产品信息。 数字资产就是产品真实性的证明，从而增强透明度和信任度。
-                                    LUXCHAIN是奢侈品认证的下一代解决方案，对目前假货充斥的奢侈品市场提供真正有效可靠的方案，让人们更加放心购买。
+                                  独书是一款汇聚当下最优秀最震撼人心的书籍的阅读APP,为你开启文艺社区新旅程。每天推出精选内容,诗歌、文学、艺术、电影、音乐等,带给你精神上的饱满体验！ 在这里你不但可以认识书里更为辽阔新奇有趣的世界，还可以找到与你志同道合的小伙伴，与他们一起共同分享彼此阅读的乐趣。
                                 </p>
                             </div>
                             <figure className={style.imgCon}>
-                                <div className={style.imgSetWidth}>
+                                <Link to="./item" className={style.imgSetWidth}>
                                     <img src={IMG1} alt=""/>
-                                </div>
-                                <p>LUXCHAIN，奢侈品认证的下一代解决方案</p>
+                                </Link>
+                                <p>独书app，共同分享阅读各自不一样的快乐</p>
                             </figure>
                         </div>
                         <div className={style.ConItem}>
                             <div className={style.title}>
                                 <h5>B</h5>
                                 <p>
-                                    今金贷（91JINJINDAI.COM）系由西北大型金融企业甘肃金畅集团设立，总部位于兰州的网络借贷信息中介机构，运营主体为甘肃金畅网络科技有限公司，注册资金1亿元，于2015年5月16日上线运营。今金贷专注服务于西北地区实体经济，其发展规划被写入甘肃省政府下发的《甘肃省深入推进"互联网+"行动实施方案》中。平台持续创新与迭代金融服务意识，以先进的金融科技手段和大数据风控技术为“一带一路”沿线区域特别是西北地区中小微企业提供了专业高效、稳健合规的普惠金融服务。
+                                    独书是一款汇聚当下最优秀最震撼人心的书籍的阅读APP,为你开启文艺社区新旅程。每天推出精选内容,诗歌、文学、艺术、电影、音乐等,带给你精神上的饱满体验！ 在这里你不但可以认识书里更为辽阔新奇有趣的世界，还可以找到与你志同道合的小伙伴，与他们一起共同分享彼此阅读的乐趣。
                                 </p>
                             </div>
                             <figure className={style.imgCon}>
-                                <div className={style.imgSetWidth}>
+                                <Link to="./item" className={style.imgSetWidth}>
                                     <img src={IMG2} alt=""/>
-                                </div>
-                                <p>今金贷，立足西北服务实体资金托管的P2P网贷平台</p>
+                                </Link>
+                                <p>独书app，共同分享阅读各自不一样的快乐</p>
                             </figure>
                         </div>
                         <div className={style.ConItem}>
                             <div className={style.title}>
-                                <h5>C</h5>
+                                <h5>A</h5>
                                 <p>
-                                    企鹅电竞是腾讯旗下规模最大的移动电竞平台。其定位于电竞生态的“连接器”，整合腾讯网、QQ手游、腾讯互娱团队资源，与QGC、TGA等职业电竞赛事深度合作，同时汇聚海量大牌游戏主播，集手游职业竞赛、互动视频直播、游戏礼包分享等功能于一身，为玩家用户提供一站式的次世代移动电竞体验。
+                                    独书是一款汇聚当下最优秀最震撼人心的书籍的阅读APP,为你开启文艺社区新旅程。每天推出精选内容,诗歌、文学、艺术、电影、音乐等,带给你精神上的饱满体验！ 在这里你不但可以认识书里更为辽阔新奇有趣的世界，还可以找到与你志同道合的小伙伴，与他们一起共同分享彼此阅读的乐趣。
                                 </p>
                             </div>
-                            <div className={style.imgCon}>
-                                <figure className={style.imgSetWidth}>
-                                    <img src={IMG3} alt=""/>
-                                </figure>
-                                <p>企鹅电竞，腾讯旗下规模最大的移动电竞平台</p>
-                            </div>
+                            <figure className={style.imgCon}>
+                                <Link to="./item" className={style.imgSetWidth}>
+                                    <img src={IMG1} alt=""/>
+                                </Link>
+                                <p>独书app，共同分享阅读各自不一样的快乐</p>
+                            </figure>
                         </div>
                     </div>
                 </div>
