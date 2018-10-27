@@ -1,16 +1,32 @@
 import React from 'react'
-import {Carousel, Row, Card, Icon, Rate} from 'antd'
+// import {Carousel, Row, Card, Icon, Rate} from 'antd'
+
+// import {connect} from 'react-redux'
+// import {TestF} from "../../redux/user.redux";
 import style from './home.css'
-import IMG1 from './img/home_item_1.jpg'
-import IMG2 from './img/home_item_2.jpg'
-import IMG3 from './img/home_item_3.jpg'
 import {Link} from 'react-router-dom'
 
+// @connect(
+//     state => state.user,
+//     {TestF}
+// )
+
 class Home extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            Text: '测试'
+        }
+    }
+
+    handleChange(key, val) {
+        this.setState({
+            [key]: val
+        })
+    }
+
     render() {
-
         return (
-
             <div className={style.content}>
 
                 <div className={style.bgImg}></div>
@@ -46,8 +62,10 @@ class Home extends React.Component {
                                 </p>
                             </div>
                             <figure className={style.imgCon}>
-                                <Link to="./item" className={style.imgSetWidth}>
-                                    <img src={IMG1} alt=""/>
+                                <Link to="./item" className={style.imgSetWidth} onClick={() => {
+                                    this.handleChange('google', 'flag')
+                                }}>
+                                    <img src={require('./img/home_item_1.jpg')} alt=""/>
                                 </Link>
                                 <p>独书app，共同分享阅读各自不一样的快乐</p>
                             </figure>
@@ -61,7 +79,7 @@ class Home extends React.Component {
                             </div>
                             <figure className={style.imgCon}>
                                 <Link to="./item" className={style.imgSetWidth}>
-                                    <img src={IMG2} alt=""/>
+                                    <img src={require('./img/home_item_2.jpg')} alt=""/>
                                 </Link>
                                 <p>"哦懂了"，你的掌上教学APP</p>
                             </figure>
@@ -75,7 +93,7 @@ class Home extends React.Component {
                             </div>
                             <figure className={style.imgCon}>
                                 <Link to="./item" className={style.imgSetWidth}>
-                                    <img src={IMG3} alt=""/>
+                                    <img src={require('./img/home_item_3.jpg')} alt=""/>
                                 </Link>
                                 <p>UI100天APP，设计师的交流社区中心</p>
                             </figure>

@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 import {BrowserRouter, Route, Link} from 'react-router-dom'
-import {createStore, applyMiddleware, compose} from 'redux'
-import thunk from 'redux-thunk'
-import {Provider} from 'react-redux'
-import reducers from './reducer'
+
 
 
 import {Menu, Icon, Row, Col} from 'antd'
@@ -15,15 +12,14 @@ import Concect from './component/concect/concect'
 import Meetus from './component/meetus/meetus'
 import Item from './component/item/item'
 
-const store = createStore(reducers, compose(applyMiddleware(thunk),
-    window.devToolsExtension ? window.devToolsExtension() : f => f))
+
 
 class App extends Component {
 
     render() {
 
         return (
-            <Provider store={store}>
+
 
             <BrowserRouter>
                 <div className={styles.page}>
@@ -100,7 +96,7 @@ class App extends Component {
                 </div>
             </BrowserRouter>
 
-            </Provider>
+
         );
     }
 }

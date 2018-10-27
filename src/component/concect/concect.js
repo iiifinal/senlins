@@ -1,11 +1,10 @@
 import React from 'react'
-import { Form, Input,Button, DatePicker, Col, TimePicker, Select, Cascader, InputNumber } from 'antd';
+import { Form, Input,Button } from 'antd';
 import style from './concect.css'
-import HEADERImg from './img/contact_bg.jpg'
 
 
 const FormItem = Form.Item;
-const Option = Select.Option;
+
 const { TextArea } = Input
 
 const formItemLayout = {
