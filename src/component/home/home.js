@@ -1,20 +1,19 @@
 import React from 'react'
-import {Carousel, Row, Card, Icon,Rate} from 'antd'
+import {Carousel, Row, Card, Icon, Rate} from 'antd'
 import style from './home.css'
 import IMG1 from './img/home_item_1.jpg'
 import IMG2 from './img/home_item_2.jpg'
-import IMG3 from './img/home_item_3.png'
-import AVATAR from './img/avatar.jpeg'
+import IMG3 from './img/home_item_3.jpg'
 import {Link} from 'react-router-dom'
+
 class Home extends React.Component {
     render() {
 
         return (
 
             <div className={style.content}>
-                {/*<Carousel  effect="fade">*/}
-                    <div className={style.bgImg}></div>
-                {/*</Carousel>*/}
+
+                <div className={style.bgImg}></div>
 
                 <div className={style.cascade}>
                     <h3>森林猫（Senlins）,一个专注项目定制化整体方案解决的企业</h3>
@@ -42,7 +41,8 @@ class Home extends React.Component {
                             <div className={style.title}>
                                 <h5>A</h5>
                                 <p>
-                                  独书是一款汇聚当下最优秀最震撼人心的书籍的阅读APP,为你开启文艺社区新旅程。每天推出精选内容,诗歌、文学、艺术、电影、音乐等,带给你精神上的饱满体验！ 在这里你不但可以认识书里更为辽阔新奇有趣的世界，还可以找到与你志同道合的小伙伴，与他们一起共同分享彼此阅读的乐趣。
+                                    独书是一款汇聚当下最优秀最震撼人心的书籍的阅读APP,为你开启文艺社区新旅程。每天推出精选内容,诗歌、文学、艺术、电影、音乐等,带给你精神上的饱满体验！
+                                    在这里你不但可以认识书里更为辽阔新奇有趣的世界，还可以找到与你志同道合的小伙伴，与他们一起共同分享彼此阅读的乐趣。
                                 </p>
                             </div>
                             <figure className={style.imgCon}>
@@ -56,147 +56,100 @@ class Home extends React.Component {
                             <div className={style.title}>
                                 <h5>B</h5>
                                 <p>
-                                    独书是一款汇聚当下最优秀最震撼人心的书籍的阅读APP,为你开启文艺社区新旅程。每天推出精选内容,诗歌、文学、艺术、电影、音乐等,带给你精神上的饱满体验！ 在这里你不但可以认识书里更为辽阔新奇有趣的世界，还可以找到与你志同道合的小伙伴，与他们一起共同分享彼此阅读的乐趣。
+                                    "哦懂了"是一款为广大的学生群体免费提供优质的同步课堂视频的APP，视频内容涵盖了小学初中高中所有科目的所有课程，旨在解决学生预习复习的需求，为普及基础教育做贡献。
                                 </p>
                             </div>
                             <figure className={style.imgCon}>
                                 <Link to="./item" className={style.imgSetWidth}>
                                     <img src={IMG2} alt=""/>
                                 </Link>
-                                <p>独书app，共同分享阅读各自不一样的快乐</p>
+                                <p>"哦懂了"，你的掌上教学APP</p>
                             </figure>
                         </div>
                         <div className={style.ConItem}>
                             <div className={style.title}>
-                                <h5>A</h5>
+                                <h5>C</h5>
                                 <p>
-                                    独书是一款汇聚当下最优秀最震撼人心的书籍的阅读APP,为你开启文艺社区新旅程。每天推出精选内容,诗歌、文学、艺术、电影、音乐等,带给你精神上的饱满体验！ 在这里你不但可以认识书里更为辽阔新奇有趣的世界，还可以找到与你志同道合的小伙伴，与他们一起共同分享彼此阅读的乐趣。
+                                    UI100Days是一款提供给广大的设计师作品浏览与交流互动的轻量级应用，旨在为设计师们短时间内高效地欣赏社区内各个领域优秀的作品，帮助设计师们互动交流，不同的思维碰撞，让彼此的设计水平可以达到快速有效的成长。
                                 </p>
                             </div>
                             <figure className={style.imgCon}>
                                 <Link to="./item" className={style.imgSetWidth}>
-                                    <img src={IMG1} alt=""/>
+                                    <img src={IMG3} alt=""/>
                                 </Link>
-                                <p>独书app，共同分享阅读各自不一样的快乐</p>
+                                <p>UI100天APP，设计师的交流社区中心</p>
                             </figure>
                         </div>
                     </div>
                 </div>
-                <div className={style.nameItem}>
-                    <div className={style.nameSetWidth}>
-                        <article className={style.nameLeft}>
-                            <div className={style.avatar}>
-                                <img src={AVATAR} alt=""/>
-                            </div>
-                            <h3>定制方案解决专家</h3>
-                            <h5>custom holistic solution specialist</h5>
-                            <div className={style.star}>
-                                <Rate disabled defaultValue={5} />
-                            </div>
-                        </article>
-                        <article className={style.nameRight}>
-                            <div className={style.contact}>
-                                <div className={style.email}>
-                                    <h3 className={style.EmailTitle}>电子邮箱:</h3>
-                                    <p>maldek@qq.com</p>
-                                </div>
-                                <div className={style.phone}>
-                                    <h3 className={style.PhoneTitle}>电话号码:</h3>
-                                    <p>17603090160</p>
-                                </div>
-                            </div>
-                            <div className={style.label}>
-                                <h3 className={style.LabelTitle}>
-                                    印象标签:
-                                </h3>
-                                <div className={style.impression}>
-                                    <span>负责人</span>
-                                    <span>技术精湛</span>
-                                    <span>按时完成</span>
-                                    <span>合作愉快</span>
-                                    <span>懂技术，会优化</span>
-                                    <span>后端哥哥666</span>
-                                    <span>UI/UX满分</span>
-                                    <span>大牌人气站酷设计师</span>
-                                    <span>项目经理优秀</span>
-                                    <span>前端妹纸可爱</span>
-                                    <span>前端小哥辛苦了</span>
-                                    <span>同行合作愉快</span>
-                                    <span>不错的团队</span>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
+
+
                 <div className={style.others}>
                     <div className={style.otherSetWidth}>
 
                         <h3 className={style.othersTitle}>
-                            OTHERS
+                            服务
                         </h3>
                         <article className={style.othersCon}>
+
                             <div className={style.othersConItem}>
                                 <div className={style.othersConItemImg}>
-                                    {/*<img src={AVATAR} alt=""/>*/}
+                                    {/*<img src={require('./')} alt=""/>*/}
                                 </div>
                                 <div className={style.othersConItemText}>
-                                    <h3>Cat</h3>
-                                    <h5>
-                                        The story goes that some time ago.
-                                    </h5>
-                                    <p>Money was tight and he became infuriated when the child tried </p>
+                                    <h3>设计与用户体验</h3>
+                                    <p>
+                                        通过数字艺术和战略内容架构创建的基于研究和魔术的用户旅程。 </p>
                                     <div className={style.othersConItemStore}>
-    <span className={style.othersConItemStoreLike}>
-    <Icon type='heart'></Icon><span>123456</span>
-        </span>
-                                        <span className={style.othersConItemStoreLook}>
-    <Icon type='eye'></Icon><span>123456</span>
-        </span>
+                                        <span>阅读 ></span>
                                     </div>
                                 </div>
                             </div>
+
                             <div className={style.othersConItem}>
                                 <div className={style.othersConItemImg}>
-                                    {/*<img src={AVATAR} alt=""/>*/}
+                                    {/*<img src={require('./')} alt=""/>*/}
                                 </div>
                                 <div className={style.othersConItemText}>
-                                    <h3>Cat</h3>
-                                    <h5>
-                                        The story goes that some time ago.
-                                    </h5>
-                                    <p>Money was tight and he became infuriated when the child tried </p>
+                                    <h3>技术开发</h3>
+                                    <p>
+                                        丰富，身临其境，响应迅速的开发解决方案，植根于通信和转换。 </p>
                                     <div className={style.othersConItemStore}>
-    <span className={style.othersConItemStoreLike}>
-    <Icon type='heart'></Icon><span>123456</span>
-        </span>
-                                        <span className={style.othersConItemStoreLook}>
-    <Icon type='eye'></Icon><span>123456</span>
-        </span>
+                                        <span>阅读 ></span>
                                     </div>
                                 </div>
                             </div>
+
                             <div className={style.othersConItem}>
                                 <div className={style.othersConItemImg}>
-                                    {/*<img src={AVATAR} alt=""/>*/}
+                                    {/*<img src={require('./')} alt=""/>*/}
                                 </div>
                                 <div className={style.othersConItemText}>
-                                    <h3>Cat</h3>
-                                    <h5>
-                                        The story goes that some time ago.
-                                    </h5>
-                                    <p>Money was tight and he became infuriated when the child tried </p>
+                                    <h3>社交内容和参与</h3>
+                                    <p>
+                                        创意和战略团队共同努力设计美学，声音和路线图，以便在地球上最直接面向消费者的平台上进行交流。 </p>
                                     <div className={style.othersConItemStore}>
-    <span className={style.othersConItemStoreLike}>
-    <Icon type='heart'></Icon><span>123456</span>
-        </span>
-                                        <span className={style.othersConItemStoreLook}>
-    <Icon type='eye'></Icon><span>123456</span>
-        </span>
+                                        <span>阅读 ></span>
                                     </div>
                                 </div>
                             </div>
 
                         </article>
+                    </div>
+                </div>
+
+                <div className={style.step}>
+                    <div className={style.stepSetWidth}>
+                        <h3 className={style.stepTitle}>
+                            设计、数据、流量和资本是驱动商业创新的基础，协调生态圈伙伴关系，为客户带来更大的商业价值
+                        </h3>
+                        <div className={style.stepItemCon}>
+                            <div className={style.stepItem}></div>
+                            <div className={style.stepItem}></div>
+                            <div className={style.stepItem}></div>
+                            <div className={style.stepItem}></div>
+                        </div>
+                        <p className={style.moreCase}>了解我们更多案例 ></p>
                     </div>
                 </div>
             </div>
