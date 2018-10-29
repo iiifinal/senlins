@@ -8,8 +8,8 @@ class Item extends React.Component {
     }
 
     render() {
-
-       const imgList = [
+        console.log(this.props.case);
+        const imgList = [
            {
                url:require('./item-1.jpg')
            },
@@ -21,8 +21,8 @@ class Item extends React.Component {
         ]
 
         return (
-
             <div className={style.itemListCon}>
+
                 {imgList.map((item,index)=> {return <img key={index} className={style.imgItem} src={item.url} alt=""/>})}
             </div>
         )

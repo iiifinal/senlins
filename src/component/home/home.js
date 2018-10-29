@@ -1,28 +1,54 @@
 import React from 'react'
 // import {Carousel, Row, Card, Icon, Rate} from 'antd'
 
-// import {connect} from 'react-redux'
-// import {TestF} from "../../redux/user.redux";
+import {connect} from 'react-redux'
+import {TestF} from "../../redux/user.redux";
 import style from './home.css'
 import {Link} from 'react-router-dom'
 
-// @connect(
-//     state => state.user,
-//     {TestF}
-// )
+@connect(
+    state => state.user,
+    {TestF}
+)
+
+// function imgItem(props) {
+//     return (
+//         <div className={style.ConItem}>
+//             <div className={style.title}>
+//                 <h5>{props.number}</h5>
+//                 <p>
+//                     {props.text}
+//                 </p>
+//             </div>
+//             <figure className={style.imgCon}>
+//                 <Link to="./item" className={style.imgSetWidth} onClick={this.handleTestF}>
+//                     <img src={require('./img/home_item_1.jpg')} alt=""/>
+//                 </Link>
+//                 <p>独书app，共同分享阅读各自不一样的快乐</p>
+//             </figure>
+//         </div>
+//     )
+// }
 
 class Home extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            Text: '测试'
+            caseName: '1'
         }
+        this.handleTestF = this.handleTestF.bind(this)
     }
+
 
     handleChange(key, val) {
         this.setState({
             [key]: val
         })
+    }
+
+    handleTestF() {
+        this.handleChange('caseName', '2')
+        this.props.TestF(this.state.caseName)
     }
 
     render() {
@@ -62,9 +88,8 @@ class Home extends React.Component {
                                 </p>
                             </div>
                             <figure className={style.imgCon}>
-                                <Link to="./item" className={style.imgSetWidth} onClick={() => {
-                                    this.handleChange('google', 'flag')
-                                }}>
+                                <Link to="./item" className={style.imgSetWidth} onClick={this.handleTestF}
+                                      case={'传递成功'}>
                                     <img src={require('./img/home_item_1.jpg')} alt=""/>
                                 </Link>
                                 <p>独书app，共同分享阅读各自不一样的快乐</p>

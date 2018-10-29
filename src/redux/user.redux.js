@@ -1,21 +1,24 @@
-
 const LOAD_DATA = 'LOAD_DATA'
 
-const initState={
-    users:'',
-    url:''
+const initState = {
+    caseName: '',
+    url: ''
 }
 
 export function user(state = initState, action) {
-    // console.log(action.type);
     switch (action.type) {
         case LOAD_DATA:
-            return {...state, ...action.payload}
+            return {...state, caseName:action.payload}
         default:
             return state
     }
 }
+function Success(data) {
+    return{type:LOAD_DATA,payload:data}
+}
 
-export function TestF() {
-    console.log(11111);
+export function TestF(data) {
+    return dispatch => {
+        dispatch(Success(data))
+    }
 }

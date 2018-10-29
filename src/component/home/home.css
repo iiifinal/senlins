@@ -182,6 +182,7 @@
 .othersConItemImg {
     width: 100%;
     flex: 50% 0;
+    max-width: 452px;
     background-color: deepskyblue;
 
 }
