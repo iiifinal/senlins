@@ -150,8 +150,8 @@
 }
 
 .otherSetWidth {
-    margin-left: 10%;
-    width: 80%;
+    margin-left: 15%;
+    max-width: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -234,7 +234,7 @@
     justify-content: center;
 }
 .stepSetWidth {
-    width: 80%;
+    width: 70%;
 
 }
 .stepTitle{

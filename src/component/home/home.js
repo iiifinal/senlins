@@ -1,41 +1,24 @@
 import React from 'react'
 // import {Carousel, Row, Card, Icon, Rate} from 'antd'
-
 import {connect} from 'react-redux'
-import {TestF} from "../../redux/user.redux";
+import {TestF} from "../../redux/home.redux";
+
 import style from './home.css'
-import {Link} from 'react-router-dom'
+
 
 @connect(
-    state => state.user,
+    // state属性映射到props
+    state => state.homeState,
+    // dispatch方法映射到props
     {TestF}
 )
 
-// function imgItem(props) {
-//     return (
-//         <div className={style.ConItem}>
-//             <div className={style.title}>
-//                 <h5>{props.number}</h5>
-//                 <p>
-//                     {props.text}
-//                 </p>
-//             </div>
-//             <figure className={style.imgCon}>
-//                 <Link to="./item" className={style.imgSetWidth} onClick={this.handleTestF}>
-//                     <img src={require('./img/home_item_1.jpg')} alt=""/>
-//                 </Link>
-//                 <p>独书app，共同分享阅读各自不一样的快乐</p>
-//             </figure>
-//         </div>
-//     )
-// }
+
 
 class Home extends React.Component {
+
     constructor(props) {
         super(props)
-        this.state = {
-            caseName: '1'
-        }
         this.handleTestF = this.handleTestF.bind(this)
     }
 
@@ -43,14 +26,19 @@ class Home extends React.Component {
     handleChange(key, val) {
         this.setState({
             [key]: val
+        },()=>{})
+    }
+
+    handleTestF(value) {
+        this.setState({'caseName':value},()=>{
+            this.props.TestF(this.state.caseName)
+            this.props.history.push('./item')
         })
     }
 
-    handleTestF() {
-        this.handleChange('caseName', '2')
-        this.props.TestF(this.state.caseName)
-    }
+    componentDidUpdate(){
 
+    }
     render() {
         return (
             <div className={style.content}>
@@ -88,10 +76,9 @@ class Home extends React.Component {
                                 </p>
                             </div>
                             <figure className={style.imgCon}>
-                                <Link to="./item" className={style.imgSetWidth} onClick={this.handleTestF}
-                                      case={'传递成功'}>
-                                    <img src={require('./img/home_item_1.jpg')} alt=""/>
-                                </Link>
+                                <div className={style.imgSetWidth}>
+                                    <img src={require('./img/home_item_1.jpg')} alt=""  onClick={()=>{this.handleTestF('独书')}} />
+                                </div>
                                 <p>独书app，共同分享阅读各自不一样的快乐</p>
                             </figure>
                         </div>
@@ -103,9 +90,9 @@ class Home extends React.Component {
                                 </p>
                             </div>
                             <figure className={style.imgCon}>
-                                <Link to="./item" className={style.imgSetWidth}>
-                                    <img src={require('./img/home_item_2.jpg')} alt=""/>
-                                </Link>
+                                <div  className={style.imgSetWidth}>
+                                    <img src={require('./img/home_item_2.jpg')} alt="" onClick={()=>{this.handleTestF('我懂了')}} />
+                                </div>
                                 <p>"哦懂了"，你的掌上教学APP</p>
                             </figure>
                         </div>
@@ -117,12 +104,14 @@ class Home extends React.Component {
                                 </p>
                             </div>
                             <figure className={style.imgCon}>
-                                <Link to="./item" className={style.imgSetWidth}>
-                                    <img src={require('./img/home_item_3.jpg')} alt=""/>
-                                </Link>
+                                <div  className={style.imgSetWidth}>
+                                    <img src={require('./img/home_item_3.jpg')} alt="" onClick={()=>{this.handleTestF('UI100')}}/>
+                                </div>
                                 <p>UI100天APP，设计师的交流社区中心</p>
                             </figure>
                         </div>
+
+                        {/*<ImgItemli url={'./img/home_item_3.jpg'}></ImgItemli>*/}
                     </div>
                 </div>
 
