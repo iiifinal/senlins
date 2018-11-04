@@ -10,8 +10,9 @@ import Home from './component/home/home'
 import Case from './component/case/case'
 import Concect from './component/concect/concect'
 import Meetus from './component/meetus/meetus'
-import Item from './component/item/item'
-
+import Recommend from './component/recommend/recommend'
+import Skill from './component/skill/skill'
+import DetailedCase from './component/detailedCase/detailedCase'
 
 
 function Header() {
@@ -20,7 +21,9 @@ function Header() {
         <Row type="flex" justify='center'>
             <Col span={10} push={1}>
                 <div className={styles.senlins}>
-                    <Link to='/'>SENLINS</Link>
+                    <Link to='/' className={styles.senlinsLink}>
+                        <img src={require('./common/images/senlins.png')} alt=""/>
+                    </Link>
                 </div>
             </Col>
 
@@ -99,7 +102,9 @@ class App extends Component {
                         <Route exact path='/case' component={Case}/>
                         <Route exact path='/concect' component={Concect}/>
                         <Route exact path='/meetus' component={Meetus}/>
-                        <Route exact path='/item' component={Item}/>
+                        <Route exact path='/recommend' component={Recommend}/>
+                        <Route exact path='/skill' component={Skill}/>
+                        <Route exact path='/detailedCase' component={DetailedCase}/>
                     </div>
                     <Route component={Footer}></Route>
                 </div>

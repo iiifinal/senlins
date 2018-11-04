@@ -1,0 +1,213 @@
+.detailedCase {
+
+}
+
+/*----------------------------------------头部*/
+.titleCon {
+    width: 100%;
+    display: flex;
+    height: 600px;
+}
+
+.titleConText {
+    flex: 50% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+
+}
+
+.titleConText > span {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.titleConText > p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.titleConText > a {
+    width: 160px;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px 20px;
+    border: 1px solid deepskyblue;
+}
+
+.titleConImg {
+    flex: 50% 0;
+    overflow: hidden;
+}
+
+.titleConImg > img {
+    max-width: 100%;
+}
+
+/*------------------------------------------------需求*/
+.pageDemand {
+    min-height: 300px;
+    display: flex;
+    background: #f7f7f7;
+    align-items: center;
+    justify-content: center;
+}
+
+.pageDemand > p {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+/*----------------------------------------------简介*/
+.introduction {
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+}
+
+.introductionText {
+    flex: 70% 0;
+    padding-left: 10%;
+    padding-top: 10%;
+    padding-right: 5%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.introductionTextItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+}
+
+.introductionTextItem > h5 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.introductionTextItem > p {
+    font-size: 16px;
+    line-height: 22px;
+    color: #888888;
+    margin-bottom: 24px;
+}
+
+.introductionImg {
+    flex: 30% 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.introductionImg > img {
+    max-width: 150%;
+}
+
+/*----------------------------------------成果*/
+.result {
+    margin-top: 60px;
+    width: 100%;
+}
+
+.resultTitle {
+    display: flex;
+    justify-content: center;
+}
+
+.resultTitle > h3 {
+    font-size: 30px;
+    margin-bottom: 60px;
+}
+
+.resultCon {
+    display: flex;
+    justify-content: space-between;
+}
+
+.resultConItem {
+    flex: 50% 0;
+    box-sizing: border-box;
+    height: 300px;
+    display: flex;
+    margin-right: 4px;
+    background: rgb(255, 143, 128);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.resultConItem > span {
+    font-size: 16px;
+    color: #f7f7f7;
+    margin-bottom: 30px;
+}
+
+.resultConItem > h5 {
+    font-size: 40px;
+    color: white;
+}
+
+/*------------------------------------------总结*/
+.summary {
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    box-sizing: border-box;
+}
+
+.summary > p {
+    font-size: 20px;
+    color: #666666;
+    line-height: 30px;
+}
+
+/*----------------------------------------分析*/
+.analysis {
+    width: 100%;
+    min-height: 100px;
+}
+
+.analysisBanner {
+    height: 800px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.analysisBanner > img {
+    width: 100%;
+}
+
+.analysisItem {
+
+}
+
+.analysisItemTitle {
+    min-height: 200px;
+    padding: 0 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.analysisItemTitle > p {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 40px 0;
+
+}
+.analysisItemImg{
+    min-height: 1px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.analysisItemImg>img{
+    width: 100%;
+}
+

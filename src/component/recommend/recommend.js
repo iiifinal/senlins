@@ -1,21 +1,20 @@
 import React from 'react'
-import style from './item.css'
+import style from './recommend.css'
 import {connect} from 'react-redux'
-
 
 @connect(
     state => state.homeState
 )
 
 
-class Item extends React.Component {
+class Recommend extends React.Component {
     constructor(props) {
         super(props)
         this.state = {}
     }
 
     componentDidMount() {
-        console.log(this.props.caseName);
+        console.log(this.props.recommendName);
     }
 
     render() {
@@ -90,7 +89,7 @@ class Item extends React.Component {
 
         ]
 
-        let index=Allurl.findIndex(v=>v.itemName===this.props.caseName)
+        let index=Allurl.findIndex(v=>v.itemName===this.props.recommendName)
         let imgList=Allurl[index].itemUrl
         return (
             <div className={style.itemListCon}>
@@ -105,4 +104,4 @@ class Item extends React.Component {
 }
 
 
-export default Item
+export default Recommend

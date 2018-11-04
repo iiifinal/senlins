@@ -77,115 +77,108 @@
     width: 85%;
     margin-left: 8%;
     height: 180px;
-    background: rgba(0, 191, 255, 0.98);
+    background: rgba(247, 247, 247, 0.95);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     border-radius: 5px;
-    box-shadow: 10px 3px 20px 5px rgba(0, 191, 255, 0.1);
+    box-shadow: 10px 3px 20px 5px rgba(247, 247, 247, 0.3);
 }
 
 .Cooperation > div {
     flex: 20%;
     text-align: center;
-    color: white;
+    color: #666666;
 }
 
 /*----------------------------------------------------------*/
 /*这是案例列表信息区域*/
-
-.CaseList {
-    width: 85%;
-    margin-left: 8%;
-    margin-right: 7%;
-    /*height: 600px;*/
-    margin-top: 40px;
-    box-sizing: border-box;
+.caseList {
     display: flex;
     flex-direction: column;
-    /*background: darkseagreen;*/
 }
 
-.CaseListTitle {
-
+.caseListTitle {
+    margin-top: 100px;
+    display: flex;
+    padding: 0 20%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.CaseListTitle > h3 {
-    font-size: 20px;
+.caseListTitle > h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.caseListTitle > p {
+    font-size: 16px;
+    color: #666666;
+    margin-bottom: 60px;
+}
+
+.tabsCon {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
     margin-top: 40px;
-    margin-bottom: 14px;
 }
 
-.CaseListTitle > p {
-    font-size: 14px;
-    margin-bottom: 40px;
-}
-
-.CaseListCon {
+.caseListCon {
+    min-height: 500px;
     display: flex;
     width: 100%;
-    justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 40px;
+    background: white;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
-
-.CaseListItem {
-    flex: 30%;
-    margin: 10px;
-    align-items: center;
-    box-sizing: border-box;
-    border: 1px solid rgba(0, 191, 255, 0.2);
-    box-shadow: 1px 1px 5px 1px rgba(0, 191, 255, 0.1);
-
-}
-
-.CaseListItemImg {
-    width: 100%;
+.caseListConItem{
+    flex: 50% 0;
     height: 300px;
+    display: flex;
+    /*border: 1px solid rgba(0, 191, 255, 0.1);*/
+}
+.caseListConItemImg{
+    flex: 50% 0;
     overflow: hidden;
+}
+.caseListConItemImg>img{
+    max-width: 100%;
 
 }
-
-.CaseListItemImg > img {
-    width: 100%;
-    height: 100%;
+.caseListConItemText{
+    flex: 50% 0;
+    display: flex;
+    justify-content: center;
+    padding: 30px 10px;
 }
-
-.CaseListItem > h3 {
-    margin-top: 20px;
-    font-size: 20px;
-    color: deepskyblue;
-    text-align: center;
-    padding: 0 10%;
-    overflow: hidden;
-    /*text-overflow:ellipsis;*/
-    /*white-space:nowrap;*/
-    /*box-sizing: border-box;*/
+.caseListConItemTextSetBg{
+    flex: 1;
+    background:#f7f7f7;
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    flex-direction: column;
+    justify-content: center;
 }
-
-.CaseListItem > h5 {
-    margin-top: 16px;
-    padding-bottom: 6px;
-    font-size: 16px;
-    text-align: center;
-    box-sizing: border-box;
+.caseListConItemTextSetBg>h5{
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: right;
 }
-
-.CaseListItemLine {
-    height: 2px;
-    width: 25%;
-    background: rgba(0, 191, 255, 0.6);
-    margin-bottom: 16px;
-    box-shadow: 3px 3px 3px rgba(65, 125, 225, 0.2);
+.caseListConItemTextSetBg>span{
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: right;
 }
-
-.CaseListItem > p {
-    padding: 0 10%;
+.caseListConItemTextSetBg>p{
     font-size: 12px;
+    margin-bottom: 20px;
     line-height: 18px;
-    margin-bottom: 40px;
-    box-sizing: border-box;
+    text-align: right;
 }
 
 /*-----------------------------------------------------------*/
@@ -294,6 +287,7 @@
     font-size: 14px;
     line-height: 20px;
 }
+
 .workProcessRight > span {
     padding: 10px 20px;
     width: 200px;
@@ -305,13 +299,14 @@
 
 /*-----------------------------------------------*/
 /*搜索区域*/
-.searchCon{
+.searchCon {
     display: flex;
     justify-items: center;
     padding-bottom: 60px;
 
- }
-.searchConSetWidth{
+}
+
+.searchConSetWidth {
     flex: 80%;
     margin-left: 10%;
     margin-right: 10%;
@@ -319,19 +314,23 @@
     flex-direction: column;
     align-items: center;
 }
-.searchConSetWidth>p{
+
+.searchConSetWidth > p {
     /*margin-top: 30px;*/
     margin-bottom: 26px;
     font-size: 14px;
 }
-.searchConSetWidth>.search{
+
+.searchConSetWidth > .search {
     display: flex;
     align-items: center;
 }
-.searchConSetWidth>.search>.input{
+
+.searchConSetWidth > .search > .input {
     width: 300px;
     border-radius: 0;
 }
-.searchConSetWidth>.search>.button{
+
+.searchConSetWidth > .search > .button {
     border-radius: 0;
 }

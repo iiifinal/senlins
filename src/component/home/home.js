@@ -1,44 +1,48 @@
 import React from 'react'
 // import {Carousel, Row, Card, Icon, Rate} from 'antd'
-import {connect} from 'react-redux'
-import {TestF} from "../../redux/home.redux";
-
 import style from './home.css'
-
+import {connect} from 'react-redux'
+import {TestF, Skillchange} from "../../redux/home.redux";
 
 @connect(
     // state属性映射到props
     state => state.homeState,
     // dispatch方法映射到props
-    {TestF}
+    {TestF, Skillchange}
 )
-
 
 
 class Home extends React.Component {
 
-    constructor(props) {
-        super(props)
-        this.handleTestF = this.handleTestF.bind(this)
-    }
+    // constructor(props) {
+    //     super(props)
+    //     // this.handleTestF = this.handleTestF.bind(this)
+    // }
 
 
     handleChange(key, val) {
         this.setState({
             [key]: val
-        },()=>{})
-    }
-
-    handleTestF(value) {
-        this.setState({'caseName':value},()=>{
-            this.props.TestF(this.state.caseName)
-            this.props.history.push('./item')
         })
     }
 
-    componentDidUpdate(){
 
+    handleTestF(value) {
+        this.props.TestF(value)
+        this.props.history.push('./recommend')
+        window.scrollTo(0, 0)
     }
+
+    handleSkill(val) {
+        this.props.Skillchange(val)
+        this.props.history.push('./skill')
+        window.scrollTo(0, 0)
+    }
+    handleCase() {
+        this.props.history.push('/case')
+        window.scrollTo(0, 0)
+    }
+
     render() {
         return (
             <div className={style.content}>
@@ -77,7 +81,9 @@ class Home extends React.Component {
                             </div>
                             <figure className={style.imgCon}>
                                 <div className={style.imgSetWidth}>
-                                    <img src={require('./img/home_item_1.jpg')} alt=""  onClick={()=>{this.handleTestF('独书')}} />
+                                    <img src={require('./img/home_item_1.jpg')} alt="" onClick={() => {
+                                        this.handleTestF('独书')
+                                    }}/>
                                 </div>
                                 <p>独书app，共同分享阅读各自不一样的快乐</p>
                             </figure>
@@ -90,8 +96,10 @@ class Home extends React.Component {
                                 </p>
                             </div>
                             <figure className={style.imgCon}>
-                                <div  className={style.imgSetWidth}>
-                                    <img src={require('./img/home_item_2.jpg')} alt="" onClick={()=>{this.handleTestF('我懂了')}} />
+                                <div className={style.imgSetWidth}>
+                                    <img src={require('./img/home_item_2.jpg')} alt="" onClick={() => {
+                                        this.handleTestF('我懂了')
+                                    }}/>
                                 </div>
                                 <p>"哦懂了"，你的掌上教学APP</p>
                             </figure>
@@ -104,8 +112,10 @@ class Home extends React.Component {
                                 </p>
                             </div>
                             <figure className={style.imgCon}>
-                                <div  className={style.imgSetWidth}>
-                                    <img src={require('./img/home_item_3.jpg')} alt="" onClick={()=>{this.handleTestF('UI100')}}/>
+                                <div className={style.imgSetWidth}>
+                                    <img src={require('./img/home_item_3.jpg')} alt="" onClick={() => {
+                                        this.handleTestF('UI100')
+                                    }}/>
                                 </div>
                                 <p>UI100天APP，设计师的交流社区中心</p>
                             </figure>
@@ -124,9 +134,9 @@ class Home extends React.Component {
                         </h3>
                         <article className={style.othersCon}>
 
-                            <div className={style.othersConItem}>
+                            <div className={style.othersConItem}  onClick={() => {this.handleSkill('设计')}}>
                                 <div className={style.othersConItemImg}>
-                                    {/*<img src={require('./')} alt=""/>*/}
+                                    <img src={require('./img/service1.jpg')} alt=""/>
                                 </div>
                                 <div className={style.othersConItemText}>
                                     <h3>设计与用户体验</h3>
@@ -138,9 +148,9 @@ class Home extends React.Component {
                                 </div>
                             </div>
 
-                            <div className={style.othersConItem}>
+                            <div className={style.othersConItem}  onClick={() => {this.handleSkill('开发')}}>
                                 <div className={style.othersConItemImg}>
-                                    {/*<img src={require('./')} alt=""/>*/}
+                                    <img src={require('./img/service2.jpg')} alt=""/>
                                 </div>
                                 <div className={style.othersConItemText}>
                                     <h3>技术开发</h3>
@@ -152,9 +162,9 @@ class Home extends React.Component {
                                 </div>
                             </div>
 
-                            <div className={style.othersConItem}>
+                            <div className={style.othersConItem} onClick={() => {this.handleSkill('社交')}}>
                                 <div className={style.othersConItemImg}>
-                                    {/*<img src={require('./')} alt=""/>*/}
+                                    <img src={require('./img/service3.jpg')} alt=""/>
                                 </div>
                                 <div className={style.othersConItemText}>
                                     <h3>社交内容和参与</h3>
@@ -176,12 +186,20 @@ class Home extends React.Component {
                             设计、数据、流量和资本是驱动商业创新的基础，协调生态圈伙伴关系，为客户带来更大的商业价值
                         </h3>
                         <div className={style.stepItemCon}>
-                            <div className={style.stepItem}></div>
-                            <div className={style.stepItem}></div>
-                            <div className={style.stepItem}></div>
-                            <div className={style.stepItem}></div>
+                            <div className={style.stepItem}>
+                                <img src={require('./img/step1.jpg')} alt=""/>
+                            </div>
+                            <div className={style.stepItem}>
+                                <img src={require('./img/step2.jpg')} alt=""/>
+                            </div>
+                            <div className={style.stepItem}>
+                                <img src={require('./img/step3.jpg')} alt=""/>
+                            </div>
+                            <div className={style.stepItem}>
+                                <img src={require('./img/step4.jpg')} alt=""/>
+                            </div>
                         </div>
-                        <p className={style.moreCase}>了解我们更多案例 ></p>
+                        <p className={style.moreCase} onClick={()=>{this.handleCase()}}>了解我们更多案例 ></p>
                     </div>
                 </div>
             </div>

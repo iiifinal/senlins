@@ -1,16 +1,181 @@
 import React from 'react'
-import {Input, Drawer, Button} from 'antd';
+import {Route} from 'react-router-dom'
+import {Tabs} from 'antd';
 import style from './case.css'
-import App1 from './img/app_1.jpg'
-import App2 from './img/app_2.jpg'
-import App3 from './img/app_3.jpg'
-import DetailedCase1 from './img/DetailedCase_1.jpg'
-import DetailedCase2 from './img/DetailedCase_2.jpg'
+import {connect} from 'react-redux'
+import {SelectdCase} from '../../redux/home.redux'
+
+
+
+
+
+function caseTitle() {
+    return (
+        <div className={style.caseListTitle}>
+            <h3>最近的工作</h3>
+            <p>超过10亿用户，在使用我们设计的产品与服务100+合作伙伴，100+项目案例，80%项目落地</p>
+        </div>
+    )
+}
+
+function TabsList() {
+    const TabPane = Tabs.TabPane;
+    function callback(key) {
+        console.log(key);
+    }
+
+    return (
+
+        <Tabs defaultActiveKey="1" size={'large'} onChange={callback}
+              className={style.tabsCon}>
+            <TabPane tab="网站" key="1" className={style.tabsConItem}>
+
+            </TabPane>
+            <TabPane tab="app" key="2">
+
+            </TabPane>
+            <TabPane tab="小程序" key="3">
+
+            </TabPane>
+            <TabPane tab="UI/UX设计" key="4">
+
+            </TabPane>
+        </Tabs>
+
+    )
+}
+
+
+@connect(
+    state => state.homeState,
+    {SelectdCase}
+)
+
+
+class caseList extends React.Component{
+    constructor(props){
+        super(props)
+    }
+    selectCaseItem(val){
+        this.props.SelectdCase(val)
+        this.props.history.push('./detailedCase')
+        window.scrollTo(0, 0)
+    }
+    render(){
+        return(
+            <div className={style.caseListCon}>
+
+                <div className={style.caseListConItem}>
+                    <div className={style.caseListConItemImg}>
+                        <img src={require('./img/app_1.jpg')} alt=""/>
+                    </div>
+                    <div className={style.caseListConItemText} onClick={() => {this.selectCaseItem('独书')}}>
+                        <div className={style.caseListConItemTextSetBg}>
+                            <h5>阅读类</h5>
+                            <span >独书APP ></span>
+                            <p>汇聚当下最优秀最震撼人心的书籍阅读社区</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className={style.caseListConItem}>
+                    <div className={style.caseListConItemImg}>
+                        <img src={require('./img/app_1.jpg')} alt=""/>
+                    </div>
+                    <div className={style.caseListConItemText} onClick={() => {this.selectCaseItem('我懂了')}}>
+                        <div className={style.caseListConItemTextSetBg}>
+                            <h5>教育类分享</h5>
+                            <span>我懂了APP ></span>
+                            <p>汇聚当下最优秀最震撼人心的书籍阅读社区</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className={style.caseListConItem}>
+                    <div className={style.caseListConItemImg}>
+                        <img src={require('./img/app_1.jpg')} alt=""/>
+                    </div>
+                    <div className={style.caseListConItemText} onClick={() => {this.selectCaseItem('UI100')}}>
+                        <div className={style.caseListConItemTextSetBg}>
+                            <h5>社交平台</h5>
+                            <span >UI100></span>
+                            <p>汇聚当下最优秀最震撼人心的书籍阅读社区</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className={style.caseListConItem}>
+                    <div className={style.caseListConItemImg}>
+                        <img src={require('./img/app_1.jpg')} alt=""/>
+                    </div>
+                    <div className={style.caseListConItemText}>
+                        <div className={style.caseListConItemTextSetBg}>
+                            <h5>数据分析</h5>
+                            <span onClick={() => {this.selectCaseItem('大数据')}}>UI100></span>
+                            <p>汇聚当下最优秀最震撼人心的书籍阅读社区</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
+
+@connect(
+    state => state.homeState,
+    {SelectdCase}
+)
+class Process extends React.Component {
+   constructor(props){
+       super(props)
+   }
+    selectProcessItem(val){
+        this.props.SelectdCase(val)
+        this.props.history.push('./detailedCase')
+        window.scrollTo(0, 0)
+    }
+    render(){
+        return(
+            <div>
+                <div className={style.workProcess}>
+                    <div className={style.workProcessLeft}>
+                        <img src={require('./img/DetailedCase_1.jpg')} alt=""/>
+                    </div>
+                    <div className={style.workProcessRight}>
+                        <h3>德雷塞尔大学网站</h3>
+                        <p>通过高度可共享的视频内容建立品牌知名度</p>
+                        <p>德雷塞尔大学是一所私立研究型大学，在费城和萨克拉门托设有校区。当地萨克拉门托机构Misfit要求Bukwild与他们合作，创建一个数字宣传活动，旨在利用鼓舞人心的校友故事招募新生。</p>
+                        <span onClick={() => {this.selectProcessItem('独书')}}>GO IT !</span>
+                    </div>
+                </div>
+                <div className={style.detailedCase}>
+                    <div className={style.detailedCaseLeft}>
+                        <h3>百年杯网站</h3>
+                        <p className={style.detailedCaseLeftSubtitle}>
+                            面向目标的战略，设计和发展为世界上最受欢迎的运动。
+                        </p>
+                        <p className={style.detailedCaseLeftText}>
+                            COPA是由美国足球和CONCACAF（两个国际足联赞助的国际职业足球组织）组成的合作实体，以促进世界上最大的足球锦标赛之一。
+                        </p>
+                        <span onClick={() => {this.selectProcessItem('独书')}}>GO IT !</span>
+
+                    </div>
+                    <div className={style.detailedCaseRight}>
+                        <img src={require('./img/DetailedCase_2.jpg')} alt=""/>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
+
 
 
 class Case extends React.Component {
-
-    state = {visible: false};
+    constructor(props) {
+        super(props)
+        this.state = {visible: false};
+    }
 
     showDrawer = () => {
         this.setState({
@@ -24,6 +189,7 @@ class Case extends React.Component {
         });
     };
 
+
     render() {
         return (
             <div className={style.caseContent}>
@@ -31,8 +197,8 @@ class Case extends React.Component {
                     <div className={style.FirstCase}>
                         <div className={style.FirstCaseLeft}>
                             <span>HELLO</span>
-                            <h3>I"m Senlins</h3>
-                            <h5>A professional custom solution solution expert</h5>
+                            <h3>我是森林猫</h3>
+                            <h5>一个专注于品牌项目实现的推动者。</h5>
                             <p> HIRE ME</p>
                         </div>
                         <div className={style.FirstCaseRight}>
@@ -44,134 +210,17 @@ class Case extends React.Component {
                         <div>合作品牌1</div>
                         <div>合作品牌1</div>
                     </div>
-                    <div className={style.CaseList}>
-                        <div className={style.CaseListTitle}>
-                            <h3>精选案例</h3>
-                            <p>
-                                "Oh, Daddy, it's not empty at all. I blew kisses into the box. They're all for you,
-                                Daddy."
-                            </p>
-                        </div>
-                        <div className={style.CaseListCon}>
-                            <div className={style.CaseListItem}>
-                                <div className={style.CaseListItemImg}>
-                                    <img src={App2} alt=""/>
-                                </div>
-                                <h3>Apple is a kind of fruit that can be eaten.</h3>
-                                <h5>Avatar: <span>Apple</span></h5>
-                                <span className={style.CaseListItemLine}></span>
-                                <p>苹果（学名：Malus pumila）是水果的一种，是蔷薇科苹果亚科苹果属植物，其树为落叶乔木。苹果的果实富含矿物质和维生素，是人们经常食用的水果之一。</p>
-                            </div>
-                            <div className={style.CaseListItem}>
-                                <div className={style.CaseListItemImg}>
-                                    <img src={App1} alt=""/>
-                                </div>
-                                <h3>Apple is a kind of fruit that can be eaten.</h3>
-                                <h5>Avatar: <span>Apple</span></h5>
-                                <span className={style.CaseListItemLine}></span>
-                                <p>苹果（学名：Malus pumila）是水果的一种，是蔷薇科苹果亚科苹果属植物，其树为落叶乔木。苹果的果实富含矿物质和维生素，是人们经常食用的水果之一。</p>
-                            </div>
-                            <div className={style.CaseListItem}>
-                                <div className={style.CaseListItemImg}>
-                                    <img src={App1} alt=""/>
-                                </div>
-                                <h3>Apple is a kind of fruit that can be eaten.</h3>
-                                <h5>Avatar: <span>Apple</span></h5>
-                                <span className={style.CaseListItemLine}></span>
-                                <p>苹果（学名：Malus pumila）是水果的一种，是蔷薇科苹果亚科苹果属植物，其树为落叶乔木。苹果的果实富含矿物质和维生素，是人们经常食用的水果之一。</p>
-                            </div>
-                            <div className={style.CaseListItem}>
-                                <div className={style.CaseListItemImg}>
-                                    <img src={App3} alt=""/>
-                                </div>
-                                <h3>Apple is a kind of fruit that can be eaten.</h3>
-                                <h5>Avatar: <span>Apple</span></h5>
-                                <span className={style.CaseListItemLine}></span>
-                                <p>苹果（学名：Malus pumila）是水果的一种，是蔷薇科苹果亚科苹果属植物，其树为落叶乔木。苹果的果实富含矿物质和维生素，是人们经常食用的水果之一。</p>
-                            </div>
-                            <div className={style.CaseListItem}>
-                                <div className={style.CaseListItemImg}>
-                                    <img src={App1} alt=""/>
-                                </div>
-                                <h3>Apple is a kind of fruit that can be eaten.</h3>
-                                <h5>Avatar: <span>Apple</span></h5>
-                                <span className={style.CaseListItemLine}></span>
-                                <p>苹果（学名：Malus pumila）是水果的一种，是蔷薇科苹果亚科苹果属植物，其树为落叶乔木。苹果的果实富含矿物质和维生素，是人们经常食用的水果之一。</p>
-                            </div>
-                            <div className={style.CaseListItem}>
-                                <div className={style.CaseListItemImg}>
-                                    <img src={App2} alt=""/>
-                                </div>
-                                <h3>Apple is a kind of fruit that can be eaten.</h3>
-                                <h5>Avatar: <span>Apple</span></h5>
-                                <span className={style.CaseListItemLine}></span>
-                                <p>苹果（学名：Malus pumila）是水果的一种，是蔷薇科苹果亚科苹果属植物，其树为落叶乔木。苹果的果实富含矿物质和维生素，是人们经常食用的水果之一。</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <div className={style.detailedCase}>
-                    <div className={style.detailedCaseLeft}>
-                        <h3>Latest Work</h3>
-                        <p className={style.detailedCaseLeftSubtitle}>
-                            Finally the woman realized what the child meant,and why she was crying.Kneeling down she
-                            gently cradled the child in her arms and together they cried for the mommy that was gone.
-                        </p>
-                        <p className={style.detailedCaseLeftText}>
-                            Then suddenly the little girl did something that the woman thought was a bit strange.She
-                            stopped crying,stepped back from the woman and began to sing.She sang so softly that it was
-                            almost a whisper. It was the sweetest sound the woman had ever heard,almost like the song of
-                            a very small bird.
-                        </p>
-                        <span>
-                            SEE MORE
-                        </span>
+                <div className={style.caseList}>
+                    <Route component={caseTitle}></Route>
+                    <Route component={caseList}></Route>
 
-                    </div>
-                    <div className={style.detailedCaseRight}>
-                        <img src={DetailedCase1} alt=""/>
-                    </div>
                 </div>
-                <div className={style.workProcess}>
-                    <div className={style.workProcessLeft}>
-                        <img src={DetailedCase2} alt=""/>
-                    </div>
-                    <div className={style.workProcessRight}>
-                        <h3>HOW TO WORD !</h3>
-                        <p>Pointing to a spot on her dress,she said,"Right here is where my mommy kissed my dress,and
-                            here,"pointing to another spot,"and here is another kiss, and here,and here.Mommy said that
-                            she put all those kisses on my dress so that I would have her kisses for every booboo'that
-                            made me cry."</p>
-                        <span>GO IT !</span>
-                    </div>
-                </div>
-                <div className={style.searchCon}>
-                    <div className={style.searchConSetWidth}>
+
+                <Route component={Process}></Route>
 
 
-                        <p>
-                            Can't find the project case you want to know ? Please try it out and see more cases ...
-                        </p>
-                        <div className={style.search}>
-                            <Input className={style.input}/>
-                            <Button type="primary" className={style.button}
-                                    onClick={this.showDrawer}>
-                                Search More
-                            </Button>
-                        </div>
-                        <Drawer
-                            title="显示结果"
-                            placement="right"
-                            closable={false}
-                            onClose={this.onClose}
-                            visible={this.state.visible}
-                        >
-                            <p>Some contents...</p>
-                            <p>Some contents...</p>
-                            <p>Some contents...</p>
-                        </Drawer>
-                    </div>
-                </div>
+
             </div>
         )
     }
