@@ -1,4 +1,5 @@
 import React from 'react'
+import {Route} from 'react-router-dom'
 import {Popover} from 'antd';
 import style from './meetus.css'
 import BGIMG from './img/meetus_bg.jpg'
@@ -16,6 +17,247 @@ const content = (
     </div>
 )
 
+
+function JoinUs() {
+    return(
+        <div className={style.joinUs}>
+            <div className={style.joinUsSetWidth}>
+
+                <p className={style.joinUsTitle}>产品核心论</p>
+                <div className={style.joinUsText}>
+                    我们善于将商业逻辑有序的以产品形态传递给消费者，协助从0-1的起跑者规划商业图谱与产品发展路径。
+                </div>
+                <div className={style.joinUsGraphic}>
+                    <div className={style.joinUsGraphicLeft}>
+                        <p>
+                            策略与产品之间不应该有任何介质与翻译。我们的任务就是将各行业丰富的行业通理与合作伙伴的业务特征与优势结合，打造每个领域中的杀手产品。
+                        </p>
+                        <div>
+                            <img src={JOIN} alt=""/>
+                        </div>
+                    </div>
+                    <div className={style.joinUsGraphicRight}>
+                        <p>
+                            优秀的产品扮演着商业路径中每一次跳跃的起点，我们将利用所有方式与经验将每个产品打造为品牌助推器。
+                        </p>
+                        <p>
+                            我们最自信的经验不来自于任何一个行业，它来自于所有行业。这有赖于我们引以为荣的团队学习能力，对于每个行业我们都着迷的想去了解它的运作机制，并贡献我们的经验参与塑造它的未来 。
+                        </p>
+                        <p>
+                            我们深入学习理解众多行业，与品牌伙伴一起成长。
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    )
+}
+
+function TeamEvery() {
+    return(
+        <div className={style.teamEveryMan}>
+            <div className={style.teamEveryManTitle}>
+                <h3>我们自豪地由两个小组组成：规划师和制造者</h3>
+                <p>
+                    剃刀锋利的战略家，研究人员和分析师，与折衷的艺术家和诗人独特地交织在一起。
+                </p>
+                <p>
+                    这是一个非常奇怪的混合体，丰富而内在的张力导致了灵感的解决方案。
+                </p>
+            </div>
+            <div className={style.teamEveryManCon}>
+
+                <div className={style.teamEveryManConItem}>
+                    <Popover
+                        content={content} title="Apple" trigger="click"
+                        className={style.teamEveryManConItemImg}>
+                        <img src={ItemImg} alt=""/>
+                    </Popover>
+                </div>
+                <div className={style.teamEveryManConItem}>
+                    <Popover
+                        content={content} title="Title" trigger="click"
+                        className={style.teamEveryManConItemImg}>
+                        <img src={ItemImg} alt=""/>
+                    </Popover>
+                    <Popover
+                        content={content} title="Title" trigger="click"
+                        className={style.teamEveryManConItemImg}>
+                        <img src={ItemImg} alt=""/>
+                    </Popover>
+                </div>
+
+                <div className={style.teamEveryManConItem}>
+                    <Popover
+                        content={content} title="Title" trigger="click"
+                        className={style.teamEveryManConItemImg}>
+                        <img src={ItemImg} alt=""/>
+                    </Popover>
+                    <Popover
+                        content={content} title="Title" trigger="click"
+                        className={style.teamEveryManConItemImg}>
+                        <img src={ItemImg} alt=""/>
+                    </Popover>
+                    <Popover
+                        content={content} title="Title" trigger="click"
+                        className={style.teamEveryManConItemImg}>
+                        <img src={ItemImg} alt=""/>
+                    </Popover>
+                </div>
+
+                <div className={style.teamEveryManConItem}>
+                    <Popover
+                        content={content} title="Title" trigger="click"
+                        className={style.teamEveryManConItemImg}>
+                        <img src={ItemImg} alt=""/>
+                    </Popover>
+                    <Popover
+                        content={content} title="Title" trigger="click"
+                        className={style.teamEveryManConItemImg}>
+                        <img src={ItemImg} alt=""/>
+                    </Popover>
+                    <Popover
+                        content={content} title="Title" trigger="click"
+                        className={style.teamEveryManConItemImg}>
+                        <img src={ItemImg} alt=""/>
+                    </Popover>
+                </div>
+                <div className={style.teamEveryManConItem}>
+                    <Popover
+                        content={content} title="Title" trigger="click"
+                        className={style.teamEveryManConItemImg}>
+                        <img src={ItemImg} alt=""/>
+                    </Popover>
+                </div>
+            </div>
+        </div>
+
+
+    )
+}
+
+class TeamList extends React.Component {
+    constructor(props){
+        super(props)
+    }
+
+    selectPersonal=(val)=>{
+        console.log(val);
+        this.props.history.push('./personal')
+    }
+
+    render(){
+        return(
+            <div className={style.teamList}>
+                <div className={style.teamListTitle}>
+                    <h3>我们自豪地由两个小组组成：规划师和制造者。</h3>
+                    <p>剃刀锋利的战略家，研究人员和分析师，与折衷的艺术家和诗人独特地交织在一起。这是一个非常奇怪的混合体，丰富而内在的张力导致了灵感的解决方案。</p>
+                </div>
+                <div className={style.teamListCon}>
+
+                    <div className={style.teamListConItem} onClick={()=>{this.selectPersonal('Apple')}}>
+                        <img src={require('./img/teamItem.jpg')} alt=""/>
+                        <div className={style.teamListConItemText}>
+                            <div className={style.teamListConItemTextLeft}>
+                                <span className={style.teamListConItemTextName}>Apple</span>
+                                <span className={style.teamListConItemTextCareer}>CEO/创始人</span>
+                            </div>
+                            <div className={style.teamListConItemTextRight}> ></div>
+                        </div>
+                    </div>
+
+                    <div className={style.teamListConItem} onClick={()=>{this.selectPersonal('Apple')}}>
+                        <img src={require('./img/teamItem.jpg')} alt=""/>
+                        <div className={style.teamListConItemText}>
+                            <div className={style.teamListConItemTextLeft}>
+                                <span className={style.teamListConItemTextName}>Apple</span>
+                                <span className={style.teamListConItemTextCareer}>CEO/创始人</span>
+                            </div>
+                            <div className={style.teamListConItemTextRight}> ></div>
+                        </div>
+                    </div>
+
+                    <div className={style.teamListConItem} onClick={()=>{this.selectPersonal('Apple')}}>
+                        <img src={require('./img/teamItem.jpg')} alt=""/>
+                        <div className={style.teamListConItemText}>
+                            <div className={style.teamListConItemTextLeft}>
+                                <span className={style.teamListConItemTextName}>Apple</span>
+                                <span className={style.teamListConItemTextCareer}>CEO/创始人</span>
+                            </div>
+                            <div className={style.teamListConItemTextRight}> ></div>
+                        </div>
+                    </div>
+
+                    <div className={style.teamListConItem} onClick={()=>{this.selectPersonal('Apple')}}>
+                        <img src={require('./img/teamItem.jpg')} alt=""/>
+                        <div className={style.teamListConItemText}>
+                            <div className={style.teamListConItemTextLeft}>
+                                <span className={style.teamListConItemTextName}>Apple</span>
+                                <span className={style.teamListConItemTextCareer}>CEO/创始人</span>
+                            </div>
+                            <div className={style.teamListConItemTextRight}> ></div>
+                        </div>
+                    </div>
+
+                    <div className={style.teamListConItem} onClick={()=>{this.selectPersonal('Apple')}}>
+                        <img src={require('./img/teamItem.jpg')} alt=""/>
+                        <div className={style.teamListConItemText}>
+                            <div className={style.teamListConItemTextLeft}>
+                                <span className={style.teamListConItemTextName}>Apple</span>
+                                <span className={style.teamListConItemTextCareer}>CEO/创始人</span>
+                            </div>
+                            <div className={style.teamListConItemTextRight}> ></div>
+                        </div>
+                    </div>
+
+                    <div className={style.teamListConItem} onClick={()=>{this.selectPersonal('Apple')}}>
+                        <img src={require('./img/teamItem.jpg')} alt=""/>
+                        <div className={style.teamListConItemText}>
+                            <div className={style.teamListConItemTextLeft}>
+                                <span className={style.teamListConItemTextName}>Apple</span>
+                                <span className={style.teamListConItemTextCareer}>CEO/创始人</span>
+                            </div>
+                            <div className={style.teamListConItemTextRight}> ></div>
+                        </div>
+                    </div>
+
+                    <div className={style.teamListConItem} onClick={()=>{this.selectPersonal('Apple')}}>
+                        <img src={require('./img/teamItem.jpg')} alt=""/>
+                        <div className={style.teamListConItemText}>
+                            <div className={style.teamListConItemTextLeft}>
+                                <span className={style.teamListConItemTextName}>Apple</span>
+                                <span className={style.teamListConItemTextCareer}>CEO/创始人</span>
+                            </div>
+                            <div className={style.teamListConItemTextRight}> ></div>
+                        </div>
+                    </div>
+
+                    <div className={style.teamListConItem} onClick={()=>{this.selectPersonal('Apple')}}>
+                        <img src={require('./img/teamItem.jpg')} alt=""/>
+                        <div className={style.teamListConItemText}>
+                            <div className={style.teamListConItemTextLeft}>
+                                <span className={style.teamListConItemTextName}>Apple</span>
+                                <span className={style.teamListConItemTextCareer}>CEO/创始人</span>
+                            </div>
+                            <div className={style.teamListConItemTextRight}> ></div>
+                        </div>
+                    </div>
+
+                    <div className={style.teamListConItem}>
+                    <div className={style.joinTeam}>
+                        <h5>加入我们</h5>
+                        <span>查看当前的工作</span>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
+
+
 class Meetus extends React.Component {
     render() {
         return (
@@ -31,9 +273,9 @@ class Meetus extends React.Component {
                         <div className={style.meetusHeaderRight}>
 
                             <div className={style.meetusHeaderText}>
-                                <span>Hello!我是森林猫</span>
-                                <h3>一个整体方案解决专家</h3>
-                                <p>欢迎了解我们</p>
+                                <span>欢迎认识我们</span>
+                                <h3>我们是规划师和制造者团队</h3>
+                                <p>梦想家，实干家和甜甜圈爱好者。（有些人更喜欢当地种植的水果和蔬菜，但我们很清楚。）</p>
                             </div>
                         </div>
                     </div>
@@ -52,7 +294,7 @@ class Meetus extends React.Component {
                             <p>团队位置照片</p>
                         </div>
                         <div className={style.summaryRightImg}>
-                            {/*<img src={TEAM} alt=""/>*/}
+                            <img src={require('./img/summary.jpg')} alt=""/>
                         </div>
                     </div>
                 </div>
@@ -60,123 +302,10 @@ class Meetus extends React.Component {
                     <div className={style.teamEveryImg}>
                         <img src={TEAM} alt=""/>
                     </div>
-                    <div className={style.teamEveryMan}>
-                        <div className={style.teamEveryManTitle}>
-                            <h3>我们不仅仅只是开发者</h3>
-                            <p>
-                               创造你所想
-                            </p>
-                            <p>
-                                完成你所求
-                            </p>
-                            <p>
-                                以我们的技术基石去推动你所梦想的新世界
-                            </p>
-                        </div>
-                        <div className={style.teamEveryManCon}>
 
-
-                            <div className={style.teamEveryManConItem}>
-                                <Popover
-                                    content={content} title="Apple" trigger="click"
-                                    className={style.teamEveryManConItemImg}>
-                                    <img src={ItemImg} alt=""/>
-                                </Popover>
-                            </div>
-
-
-                            <div className={style.teamEveryManConItem}>
-                                <Popover
-                                    content={content} title="Title" trigger="click"
-                                    className={style.teamEveryManConItemImg}>
-                                    <img src={ItemImg} alt=""/>
-                                </Popover>
-                                <Popover
-                                    content={content} title="Title" trigger="click"
-                                    className={style.teamEveryManConItemImg}>
-                                    <img src={ItemImg} alt=""/>
-                                </Popover>
-                            </div>
-
-                            <div className={style.teamEveryManConItem}>
-                                <Popover
-                                    content={content} title="Title" trigger="click"
-                                    className={style.teamEveryManConItemImg}>
-                                    <img src={ItemImg} alt=""/>
-                                </Popover>
-                                <Popover
-                                    content={content} title="Title" trigger="click"
-                                    className={style.teamEveryManConItemImg}>
-                                    <img src={ItemImg} alt=""/>
-                                </Popover>
-                                <Popover
-                                    content={content} title="Title" trigger="click"
-                                    className={style.teamEveryManConItemImg}>
-                                    <img src={ItemImg} alt=""/>
-                                </Popover>
-                            </div>
-
-                            <div className={style.teamEveryManConItem}>
-                                <Popover
-                                    content={content} title="Title" trigger="click"
-                                    className={style.teamEveryManConItemImg}>
-                                    <img src={ItemImg} alt=""/>
-                                </Popover>
-                                <Popover
-                                    content={content} title="Title" trigger="click"
-                                    className={style.teamEveryManConItemImg}>
-                                    <img src={ItemImg} alt=""/>
-                                </Popover>
-                                <Popover
-                                    content={content} title="Title" trigger="click"
-                                    className={style.teamEveryManConItemImg}>
-                                    <img src={ItemImg} alt=""/>
-                                </Popover>
-                            </div>
-                            <div className={style.teamEveryManConItem}>
-                                <Popover
-                                    content={content} title="Title" trigger="click"
-                                    className={style.teamEveryManConItemImg}>
-                                    <img src={ItemImg} alt=""/>
-                                </Popover>
-                            </div>
-
-
-                        </div>
-                    </div>
+                    <Route component={TeamList}></Route>
                 </div>
-                <div className={style.joinUs}>
-                    <div className={style.joinUsSetWidth}>
 
-                        <p className={style.joinUsTitle}>产品核心论</p>
-                        <div className={style.joinUsText}>
-                          我们善于将商业逻辑有序的以产品形态传递给消费者，协助从0-1的起跑者规划商业图谱与产品发展路径。
-                        </div>
-                        <div className={style.joinUsGraphic}>
-                            <div className={style.joinUsGraphicLeft}>
-                                <p>
-                                    策略与产品之间不应该有任何介质与翻译。我们的任务就是将各行业丰富的行业通理与合作伙伴的业务特征与优势结合，打造每个领域中的杀手产品。
-                                </p>
-                                <div>
-                                    <img src={JOIN} alt=""/>
-                                </div>
-                            </div>
-                            <div className={style.joinUsGraphicRight}>
-                                <p>
-                                    优秀的产品扮演着商业路径中每一次跳跃的起点，我们将利用所有方式与经验将每个产品打造为品牌助推器。
-                                </p>
-                                <p>
-                                    我们最自信的经验不来自于任何一个行业，它来自于所有行业。这有赖于我们引以为荣的团队学习能力，对于每个行业我们都着迷的想去了解它的运作机制，并贡献我们的经验参与塑造它的未来 。
-                                </p>
-                                <p>
-                                    我们深入学习理解众多行业，与品牌伙伴一起成长。
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
             </div>
         )
     }

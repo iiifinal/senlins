@@ -17,9 +17,9 @@
 }
 
 .meetusHeaderLeft {
-    flex: 50%;
+    flex: 40% 0;
     padding-top: 5%;
-    padding-right: 10%;
+    padding-right: 5%;
     background: rgba(138, 138, 138, 0.1);
     /*background: rgba(7,206,255,0.8);*/
     /*box-sizing: border-box;*/
@@ -32,12 +32,11 @@
 }
 
 .meetusHeaderLeftImg > img {
-    width: 100%;
-    height: 100%;
+    max-height: 100%;
 }
 
 .meetusHeaderRight {
-    flex: 50%;
+    flex: 60% 0;
     background: rgba(138, 138, 138, 0.2);
 }
 
@@ -53,16 +52,16 @@
     margin-top: 140px;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-size: 20px;
 
 }
 
 .meetusHeaderText > h3 {
-    font-size: 50px;
+    font-size: 42px;
     font-weight: 600;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-family: "Andale Mono";
     line-height: 60px;
 }
@@ -86,21 +85,25 @@
 }
 
 .summaryLeft {
-    flex: 50%;
-    padding-top: 15%;
+    flex: 50% 0;
     padding-right: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .summaryLeft > h3 {
-    font-size: 16px;
+    margin-top: 25%;
+    font-size: 18px;
     font-weight: 600;
-    line-height: 22px;
+    line-height: 24px;
     margin-bottom: 22px;
 }
 
 .summaryLeft > p {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 22px;
 }
 
 .summaryRight {
@@ -129,12 +132,12 @@
     height: 100%;
     /*padding: 20px;*/
     box-sizing: border-box;
-    border: 20px solid rgba(4, 138, 255, 0.6);
+    border: 15px solid rgba(4, 138, 255, 0.3);
     overflow: hidden;
-    background: url("./img/summary.jpg") no-repeat;
-    background-size: cover;
 }
-
+.summaryRightImg>img{
+    width: 100%;
+}
 /*-----------------------------------------------------------*/
 /*成员简介*/
 .teamEvery {
@@ -149,7 +152,7 @@
 }
 
 .teamEveryImg > img {
-    max-width: 100%;
+   width: 100%;
 }
 
 .teamEveryMan {
@@ -161,7 +164,7 @@
     position: absolute;
     left: 10%;
     top: 10%;
-    width: 20%;
+    /*width: 20%;*/
 }
 
 .teamEveryManTitle > h3 {
@@ -189,8 +192,8 @@
 }
 
 .teamEveryManConItemImg {
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
     margin: 2px;
     overflow: hidden;
 }
@@ -213,6 +216,101 @@
 .teamItemText>span>img{
     width: 100%;
     height: 100%;
+}
+
+/*------------------------------------------------团队列表*/
+.teamList{
+    width: 100%;
+    padding-bottom: 40px;
+}
+.teamListTitle{
+    width: 100%;
+    min-height: 200px;
+    padding: 0 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.teamListTitle>h3{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.teamListTitle>p{
+    font-size: 16px;
+    color: #666666;
+    line-height: 24px;
+}
+.teamListCon{
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.teamListConItem{
+    flex: 20% 0;
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid white;
+    overflow: hidden;
+}
+.teamListConItem>img{
+    vertical-align:top;
+    max-width: 100%;
+}
+.teamListConItemText{
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.teamListConItemTextLeft{
+    display: flex;
+    flex-direction: column;
+}
+.teamListConItemTextName{
+    font-size: 28px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.teamListConItemTextCareer{
+    font-size: 14px;
+    color: white;
+}
+.teamListConItemTextRight{
+    font-size: 30px;
+    color: white;
+}
+
+.teamListConItem:last-child{
+    background: #c6e7e5;
+    display: flex;
+
+}
+.joinTeam{
+    margin: 10%;
+    flex: 1;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.joinTeam>h5{
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+.joinTeam>span{
+    font-size: 12px;
+    padding: 8px 14px;
+    border: 1px solid #f7f7f7;
 }
 /*---------------------------------------------------------*/
 /*加入我们*/

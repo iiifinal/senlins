@@ -130,9 +130,9 @@ class Concect extends React.Component {
                                 <div className={style.concectFormRight}>
                                     <FormItem
                                         {...formItemLayout}
-                                        label="项目的顶级描述:"
+                                        label=""
                                     >
-                                        <TextArea  placeholder="请输入项目相关需求"
+                                        <TextArea  placeholder="项目的顶级描述"
                                                    className={style.concectFormTextArea}
                                          // autosize={{ minRows: 2, maxRows: 60 }}
                                         />

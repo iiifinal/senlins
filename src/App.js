@@ -13,6 +13,7 @@ import Meetus from './component/meetus/meetus'
 import Recommend from './component/recommend/recommend'
 import Skill from './component/skill/skill'
 import DetailedCase from './component/detailedCase/detailedCase'
+import Personal from './component/personal/personal'
 
 
 function Header() {
@@ -105,6 +106,7 @@ class App extends Component {
                         <Route exact path='/recommend' component={Recommend}/>
                         <Route exact path='/skill' component={Skill}/>
                         <Route exact path='/detailedCase' component={DetailedCase}/>
+                        <Route exact path='/personal' component={Personal}/>
                     </div>
                     <Route component={Footer}></Route>
                 </div>

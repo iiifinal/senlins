@@ -1,0 +1,14 @@
+.personal{
+    width: 100%;
+}
+.carouseItem{
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    vertical-align: top;
+}
+.carouseItem>img{
+    display: inline-block;
+    width: 100%;
+    opacity: 0.1;
+}
