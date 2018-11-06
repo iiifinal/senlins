@@ -38,6 +38,18 @@ class Personal extends React.Component {
                 <div className={style.carouseItem}><img src={require('./img/personal-3.jpg')} alt=""/></div>
                 <div className={style.carouseItem}><img src={require('./img/personal-4.jpg')} alt=""/></div>
                 </Carousel>
+                <div className={style.personalText}>
+                    <h3>Martin</h3>
+                    <span>技术总监</span>
+                    <div className={style.personalTextP}>
+                        <p>数字通才逐渐成为流程和运营的管家。在任何给定时间至少打开7个电子表格。爸爸的笑话笑话和及时的讽刺。制造数据驱动的决策和便携式食品。骑自行车的人似乎总是向后停车。  </p>
+                    </div>
+                    <div className={style.personalTextSwop}>
+                        <span>微博</span>
+                        <span>微信</span>
+                        <span>知乎</span>
+                    </div>
+                </div>
             </div>
         )
     }

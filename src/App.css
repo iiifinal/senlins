@@ -14,7 +14,7 @@
     /*background-image: url("./common/images/head_bg.jpg");*/
     font-size: 14px;
     font-family: "PingFang SC";
-    background: rgba(126,140,141,1);
+    background: rgba(126, 140, 141, 1);
     /*background-size: cover;*/
 }
 
@@ -29,10 +29,12 @@
     align-items: center;
     justify-content: flex-start;
 }
-.senlinsLink{
+
+.senlinsLink {
     height: 40px;
 }
-.senlinsLink>img{
+
+.senlinsLink > img {
     max-height: 100%;
 }
 
@@ -61,91 +63,84 @@
     color: white;
 }
 
-
 /*=============================================================*/
 /*底部*/
 
 .footer {
     width: 100%;
-    /*height: 300px;*/
     background: #f7f7f7;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     align-items: center;
 }
 
-.FooterSetWidth {
-    margin-left: 5%;
-    /*background: deepskyblue;*/
-    width: 90%;
-    margin-right: 5%;
-    padding: 0 5% 0 5%;
-    box-sizing: border-box;
+.footerSetWidth {
+    margin-left: 10%;
+    width: 80%;
+    margin-right: 10%;
+    padding: 100px 5%;
     display: flex;
     justify-content: space-between;
 }
 
-.FooterItem {
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    padding: 5% 0;
-    /*box-sizing: border-box;*/
-}
-
-.FooterItemTitle {
-    font-size: 20px;
-    color: #666666;
-    height: 40px;
-}
-.FooterItem>div{
-    height: 30px;
-}
-.FooterItemFlag{
+.footerLift {
+    flex: 50% 0;
     display: flex;
-    height: 100%;
-    flex: 30% 0;
     flex-direction: column;
-    padding: 5% 0;
-    box-sizing: border-box;
-}
-.FooterFlagTitle{
-    font-size: 20px;
-    color: #666666;
-    flex: 20% 0;
+
 }
 
-.FooterItemFlag>span{
-    font-size: 14px;
-    line-height: 20px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-.FooterItemFlagCon{
+.footerLiftLogo {
     display: flex;
-    flex-wrap: wrap;
-    /*justify-content: space-between;*/
-}
-
-
-.FooterItemFlagCon>div{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin: 5px 5px;
-    text-align: center;
-    line-height: 30px;
-    background: #F7EDF7;
-}
-
-
-.senlinCat{
-    flex: 40px;
+    margin-bottom: 30px;
     flex-direction: column;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    justify-content: flex-start;
+
+}
+
+.footerLiftLogo > h5 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.footerLiftLogo > p {
     font-size: 14px;
-    width: 85%;
-    text-align: center;
-    border-top: 1px solid #F7EDF7;
+    color: #666666;
+}
+
+.footerLiftPhone {
+    display: flex;
+    flex-direction: row;
+}
+
+.footerLiftPhone > h5 {
+    padding: 6px 16px;
+    font-size: 14px;
+    border: 1px solid #888888;
+    border-right: 0;
+}
+
+.footerLiftPhone > span {
+    padding: 6px 16px;
+    font-size: 14px;
+    border: 1px solid #888888;
+}
+
+.footerRight{
+    flex: 50% 0;
+    padding-left: 10%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.footerRightMenu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footerRightMenuItem{
+    font-size: 14px;
+}
+.footerRightMedia{
+    display: flex;
+    justify-content: flex-end;
 }

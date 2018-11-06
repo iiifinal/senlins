@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {BrowserRouter, Route, Link} from 'react-router-dom'
 
 
-
 import {Menu, Icon, Row, Col} from 'antd'
 import styles from './App.css';
 
@@ -17,74 +16,84 @@ import Personal from './component/personal/personal'
 
 
 function Header() {
-    return(
+    return (
         <div className={styles.header}>
-        <Row type="flex" justify='center'>
-            <Col span={10} push={1}>
-                <div className={styles.senlins}>
-                    <Link to='/' className={styles.senlinsLink}>
-                        <img src={require('./common/images/senlins.png')} alt=""/>
-                    </Link>
-                </div>
-            </Col>
+            <Row type="flex" justify='center'>
+                <Col span={10} push={1}>
+                    <div className={styles.senlins}>
+                        <Link to='/' className={styles.senlinsLink}>
+                            <img src={require('./common/images/senlins.png')} alt=""/>
+                        </Link>
+                    </div>
+                </Col>
 
-            <Col pull={1}>
-                <Menu className={styles.menu}
+                <Col pull={1}>
+                    <Menu className={styles.menu}
 
-                      mode="horizontal"
-                >
-                    <Menu.Item key="app" className={styles.menuitem}>
-                        <Link to={'/'}><Icon type="appstore"/>首页</Link>
-                    </Menu.Item>
+                          mode="horizontal"
+                    >
+                        <Menu.Item key="app" className={styles.menuitem}>
+                            <Link to={'/'}><Icon type="home" theme="outlined" />首页</Link>
+                        </Menu.Item>
 
-                    <Menu.Item key="case" className={styles.menuitem}>
-                        <Link to={'/case'}><Icon type="search"/>案例</Link>
-                    </Menu.Item>
+                        <Menu.Item key="case" className={styles.menuitem}>
+                            <Link to={'/case'}><Icon type="ordered-list" theme="outlined" />案例</Link>
+                        </Menu.Item>
 
-                    <Menu.Item key="meetus" className={styles.menuitem}>
-                        <Link to={'/meetus'}><Icon type="book"/>我们</Link>
-                    </Menu.Item>
-                    <Menu.Item key="concect" className={styles.menuitem}>
-                        <Link to={'/concect'}><Icon type="phone"/>联系</Link>
-                    </Menu.Item>
+                        <Menu.Item key="meetus" className={styles.menuitem}>
+                            <Link to={'/meetus'}><Icon type="team" theme="outlined" />我们</Link>
+                        </Menu.Item>
+                        <Menu.Item key="concect" className={styles.menuitem}>
+                            <Link to={'/concect'}><Icon type="phone"/>联系</Link>
+                        </Menu.Item>
 
-                </Menu>
-            </Col>
-        </Row>
-    </div>
+                    </Menu>
+                </Col>
+            </Row>
+        </div>
     )
 }
+
 function Footer() {
-    return(
+    return (
         <div className={styles.footer}>
-            <div className={styles.FooterSetWidth}>
-                <div className={styles.FooterItem}>
-                    <h3 className={styles.FooterItemTitle}>商务电话</h3>
-
-                    <div>17603090160</div>
-                </div>
-                <div className={styles.FooterItem}>
-                    <h3 className={styles.FooterItemTitle}>商务邮箱</h3>
-
-                    <div>senlins.com</div>
-                </div>
-                <div className={styles.FooterItem}>
-                    <h3 className={styles.FooterItemTitle}>媒体联系</h3>
-
-                    <div>17603090160</div>
-                </div>
-                <div className={styles.FooterItemFlag}>
-                    <h3 className={styles.FooterFlagTitle}>关注我们</h3>
-                    <span>想了解我们的最新动态？可以点击关注哦</span>
-                    <div className={styles.FooterItemFlagCon}>
-                        <div>v</div>
-                        <div>v</div>
+            <div className={styles.footerSetWidth}>
+                <div className={styles.footerLift}>
+                    <div className={styles.footerLiftLogo}>
+                        <h5>SENLINS</h5>
+                        <p>项目定制化整体方案解决的企业</p>
                     </div>
-
+                    <div className={styles.footerLiftPhone}>
+                        <h5>senlins@qq.com</h5>
+                        <span>保持联系</span>
+                    </div>
                 </div>
-            </div>
-            <div className={styles.senlinCat}>
-                <p>深圳市森林猫网络科技有限公司@..SenLinsCat@qq.com</p>
+                <div className={styles.footerRight}>
+                    <div className={styles.footerRightMenu}>
+                        <div className={styles.footerRightMenuItem}>首页</div>
+                        <div className={styles.footerRightMenuItem}>案例</div>
+                        <div className={styles.footerRightMenuItem}>关于</div>
+                        <div className={styles.footerRightMenuItem}>联系</div>
+                        <div className={styles.footerRightMenuItem}>招聘</div>
+                    </div>
+                    <div className={styles.footerRightMedia}>
+                        <Icon
+                              style={
+                                  {fontSize: 24, paddingBottom: 6, paddingLeft: 16, paddingTop: 6, paddingRight: 16}
+                              } type="weibo" theme="outlined"/>
+
+                        <Icon
+                              style={
+                                  {fontSize: 24, paddingBottom: 6, paddingLeft: 16, paddingTop: 6, paddingRight: 16}
+                              }
+                              type="zhihu" theme="outlined"/>
+
+                        <Icon
+                              style={
+                                  {fontSize: 24, paddingBottom: 6, paddingLeft: 16, paddingTop: 6}}
+                              type="twitter" theme="outlined"/>
+                    </div>
+                </div>
             </div>
         </div>
     )

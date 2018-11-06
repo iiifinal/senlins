@@ -50,215 +50,55 @@
 }
 
 /*--------------------------------------------------------------------------*/
-/*about信息top区域*/
-.about {
-    /*display: flex;*/
-}
-
-.aboutTop {
+/*团队情报*/
+.information{
     width: 100%;
-    /*height: 600px;*/
-    display: flex;
-    /*padding-top: 40px;*/
-    padding-bottom: 80px;
-    /*background: deepskyblue;*/
-
+    min-height: 1px;
+    padding: 6% ;
 }
-
-.aboutTopImg {
-    flex: 10% 0;
-    min-width: 10%;
-    height: 300px;
-    background: deepskyblue;
-    position: relative;
+.informationTitle{
+    margin-bottom: 40px;
 }
-
-.aboutTopImgTitle {
-    position: absolute;
-    left: 0;
-    top: 40%;
-    font-size: 20px;
-    color: white;
-    transform: rotate(270deg);
-}
-
-.aboutTopImgimg {
-    position: absolute;
-    top: 50%;
-    right: -20px;
-    margin-top: -40px;
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-    font-size: 20px;
-    line-height: 80px;
+.informationTitle>h3{
+    font-size: 30px;
     text-align: center;
-    color: white;
-    background: royalblue;
-    box-shadow: 3px 3px 4px 2px rgba(0, 192, 255, 0.1);
 }
 
-.aboutTopText {
-    margin-left: 15%;
-    margin-right: 15%;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-}
-
-.aboutTopText > h3 {
-    margin-top: 40px;
-    font-size: 26px;
-    color: royalblue;
-    margin-bottom: 30px;
-}
-
-.aboutTopTextCon {
-
-}
-
-.aboutTopTextCon > p {
-    font-size: 14px;
-    line-height: 20px;
-    margin-bottom: 20px;
-}
-
-/*-----------------------------------------------------------------*/
-/*about信息center区域*/
-.aboutCenter {
-    width: 80%;
-    margin-top: 40px;
-    margin-bottom: 120px;
-    height: 400px;
-    margin-left: 10%;
-    margin-right: 10%;
-    /*background: deepskyblue;*/
-    display: flex;
-}
-
-.aboutCenterLeft {
-    flex: 40% 0;
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.aboutCenterLeftColor {
-    flex: 5% 0;
-    height: 40%;
-    background: yellow;
-}
-
-.aboutCenterLeftImg {
-    flex: 400px 0;
-    height: 100%;
-    background: url("./img/about_center.jpg") no-repeat;
-    background-size: cover;
-    box-shadow: 5px 5px 20px 3px rgba(0,192,255,0.1);
-}
-.aboutCenterRight{
-    flex: 60% 0;
-    margin-left: 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /*align-items: center;*/
-}
-.aboutCenterRight>h3{
-    font-size: 22px;
-    margin-bottom: 20px;
-    line-height: 32px;
-}
-.aboutCenterRight>p{
-    font-size: 14px;
-    margin-bottom: 20px;
-    line-height: 20px;
-}
-.aboutCenterRight>span{
-    font-size: 14px;
-    width: 20%;
-    text-align: center;
-    padding:10px 30px;
-    border:1px solid rgba(0,125,255,0.2);
-}
-
-
-/*-----------------------------------------------------------------*/
-/*about信息bottom区域*/
-.aboutBottom{
-    width: 80%;
-    margin-top: 40px;
-    margin-bottom: 220px;
-    height: 400px;
-    margin-left: 10%;
-    margin-right: 10%;
-    /*background: deepskyblue;*/
-    display: flex;
-}
-.aboutBottomLeft{
-    flex: 60% 0;
-    margin-right: 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /*align-items: center;*/
-}
-.aboutBottomLeft>h3{
-    font-size: 22px;
-    margin-bottom: 20px;
-    line-height: 32px;
-}
-.aboutBottomLeft>p{
-    font-size: 14px;
-    margin-bottom: 20px;
-    line-height: 20px;
-}
-.aboutBottomLeft>span{
-    font-size: 14px;
-    width: 20%;
-    text-align: center;
-    padding:10px 30px;
-    border:1px solid rgba(0,125,255,0.2);
-}
-
-.aboutBottomRight {
-    flex: 40% 0;
-    height: 100%;
+.informationCon{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+}
+.informationConItem{
+    display: flex;
+    flex: 20% 0;
+    margin: 0 10px;
+    justify-content: center;
     align-items: center;
-    box-sizing: border-box;
+    padding: 10px 20px;
+    border: 1px solid #666666;
 }
-
-.aboutBottomRightImg {
-    flex: 400px 0;
-    height: 100%;
-    background: url("./img/about_center.jpg") no-repeat;
-    background-size: cover;
-    box-shadow: 5px 5px 20px 3px rgba(0,192,255,0.1);
+.informationConItem>span{
+    font-size: 18px;
+    padding-left: 10px;
 }
-.aboutBottomRightColor {
-    flex: 5% 0;
-    height: 40%;
-    background: yellow;
-}
-
 
 /*-------------------------------------------------------------*/
-/*联系我们区域*/
+/*留言*/
 .concect{
     width: 100%;
-    height: 500px;
+    min-height: 500px;
     background: url("./img/contact_bg-0.5.jpg");
-    position: relative;
+    /*position: relative;*/
     background-size: cover;
+    border: 1px solid #f7f7f7;
+
 
 }
 .concectSetWidth{
-    position: absolute;
-    top:-100px;
+    /*position: absolute;*/
+    /*top:0;*/
+    /*top:-100px;*/
     width: 80%;
     /*height: 600px;*/
     margin-left: 10%;
@@ -268,14 +108,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 6% 0;
     background-size: cover;
 }
 .concectTitle{
-    margin-top: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 .concectTitle>p{
-font-size: 20px;
+    font-size: 30px;
     text-align: center;
 }
 .concectForm{
@@ -303,14 +143,14 @@ font-size: 20px;
     flex: 50%;
 }
 .concectFormTextArea{
- min-height: 200px!important;
+ min-height: 230px!important;
     /*min-width: 300px !important;*/
 }
 .concectButton{
     max-width: 20%;
     text-align: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 60px;
+    /*margin-bottom: 60px;*/
 }
 .concectFormItem .ant-form-item-label label{
     color: white!important;
