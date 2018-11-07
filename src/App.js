@@ -13,6 +13,8 @@ import Recommend from './component/recommend/recommend'
 import Skill from './component/skill/skill'
 import DetailedCase from './component/detailedCase/detailedCase'
 import Personal from './component/personal/personal'
+import Dynamic from './component/dynamic/dynamic'
+import Join from './component/join/join'
 
 
 function Header() {
@@ -40,9 +42,14 @@ function Header() {
                             <Link to={'/case'}><Icon type="ordered-list" theme="outlined" />案例</Link>
                         </Menu.Item>
 
+                        <Menu.Item key="dynamic" className={styles.menuitem}>
+                            <Link to={'/dynamic'}><Icon type="loading" theme="outlined" />动态</Link>
+                        </Menu.Item>
+
                         <Menu.Item key="meetus" className={styles.menuitem}>
                             <Link to={'/meetus'}><Icon type="team" theme="outlined" />我们</Link>
                         </Menu.Item>
+
                         <Menu.Item key="concect" className={styles.menuitem}>
                             <Link to={'/concect'}><Icon type="phone"/>联系</Link>
                         </Menu.Item>
@@ -116,6 +123,8 @@ class App extends Component {
                         <Route exact path='/skill' component={Skill}/>
                         <Route exact path='/detailedCase' component={DetailedCase}/>
                         <Route exact path='/personal' component={Personal}/>
+                        <Route exact path='/dynamic' component={Dynamic}/>
+                        <Route exact path='/join' component={Join}/>
                     </div>
                     <Route component={Footer}></Route>
                 </div>

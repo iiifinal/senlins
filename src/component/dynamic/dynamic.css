@@ -2,316 +2,112 @@
 
 }
 
-/*-----------------------------------------------------------------*/
-/*顶部信息区域*/
-
-.header {
-    /*margin-top: -60px;*/
+.banner {
     width: 100%;
-    height: 700px;
-    background: url("./img/contact_bg-0.5.jpg");
-    background-size: cover;
+    height: 600px;
+    padding: 1%;
+}
+
+.bannerSet {
+    width: 100%;
+    height: 100%;
+    background: #d55d59;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
 
 }
 
-.headerBgImg {
-    flex: 80% 0;
-    margin-left: 5%;
-    margin-right: 5%;
-    height: 80%;
+.bannerLeft{
+    flex: 70% 0;
     display: flex;
     flex-direction: column;
+    padding-left: 10%;
     justify-content: center;
-    align-items: center;
-    background: url("./img/contact_bg.jpg");
-    background-size: cover;
 }
-
-.headerBgImg > p {
-    font-size: 18px;
+.bannerLeft > span {
     color: white;
-    margin-bottom: 10px;
-}
-
-.headerBgImg > h3 {
     font-size: 40px;
-    margin-bottom: 20px;
-    color: white;
-}
-
-.headerBgImg > span {
-    font-size: 14px;
-    color: white;
-    padding: 8px 24px;
-    background: rgba(255, 255, 255, .5);
-}
-
-/*--------------------------------------------------------------------------*/
-/*about信息top区域*/
-.about {
-    /*display: flex;*/
-}
-
-.aboutTop {
-    width: 100%;
-    /*height: 600px;*/
-    display: flex;
-    /*padding-top: 40px;*/
-    padding-bottom: 80px;
-    /*background: deepskyblue;*/
-
-}
-
-.aboutTopImg {
-    flex: 10% 0;
-    min-width: 10%;
-    height: 300px;
-    background: deepskyblue;
-    position: relative;
-}
-
-.aboutTopImgTitle {
-    position: absolute;
-    left: 0;
-    top: 40%;
-    font-size: 20px;
-    color: white;
-    transform: rotate(270deg);
-}
-
-.aboutTopImgimg {
-    position: absolute;
-    top: 50%;
-    right: -20px;
-    margin-top: -40px;
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-    font-size: 20px;
-    line-height: 80px;
-    text-align: center;
-    color: white;
-    background: royalblue;
-    box-shadow: 3px 3px 4px 2px rgba(0, 192, 255, 0.1);
-}
-
-.aboutTopText {
-    margin-left: 15%;
-    margin-right: 15%;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-}
-
-.aboutTopText > h3 {
-    margin-top: 40px;
-    font-size: 26px;
-    color: royalblue;
     margin-bottom: 30px;
 }
 
-.aboutTopTextCon {
-
+.bannerLeft > p {
+    color: white;
+    font-size: 18px;
+    line-height: 26px;
 }
-
-.aboutTopTextCon > p {
-    font-size: 14px;
-    line-height: 20px;
-    margin-bottom: 20px;
-}
-
-/*-----------------------------------------------------------------*/
-/*about信息center区域*/
-.aboutCenter {
-    width: 80%;
-    margin-top: 40px;
-    margin-bottom: 120px;
-    height: 400px;
-    margin-left: 10%;
-    margin-right: 10%;
-    /*background: deepskyblue;*/
-    display: flex;
-}
-
-.aboutCenterLeft {
-    flex: 40% 0;
-    height: 100%;
+.bannerRight{
+    flex: 30% 0;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-.aboutCenterLeftColor {
-    flex: 5% 0;
-    height: 40%;
-    background: yellow;
+/*--------------------------------------------------文章*/
+.article{
+    width: 100%;
+    padding: 60px 15%;
+    min-height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
+.articleItem{
+    flex: 48% 0;
 
-.aboutCenterLeftImg {
-    flex: 400px 0;
-    height: 100%;
-    background: url("./img/about_center.jpg") no-repeat;
-    background-size: cover;
-    box-shadow: 5px 5px 20px 3px rgba(0,192,255,0.1);
-}
-.aboutCenterRight{
-    flex: 60% 0;
-    margin-left: 10%;
+    margin: 1%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    /*align-items: center;*/
+    border: 1px solid #f7f7f7;
+    padding: 20px;
 }
-.aboutCenterRight>h3{
-    font-size: 22px;
-    margin-bottom: 20px;
-    line-height: 32px;
+.articleItemImg{
+    flex: 350px;
+    overflow: hidden;
 }
-.aboutCenterRight>p{
-    font-size: 14px;
-    margin-bottom: 20px;
-    line-height: 20px;
+.articleItemImg>img{
+    width: 100%;
 }
-.aboutCenterRight>span{
-    font-size: 14px;
-    width: 20%;
-    text-align: center;
-    padding:10px 30px;
-    border:1px solid rgba(0,125,255,0.2);
-}
-
-
-/*-----------------------------------------------------------------*/
-/*about信息bottom区域*/
-.aboutBottom{
-    width: 80%;
-    margin-top: 40px;
-    margin-bottom: 220px;
-    height: 400px;
-    margin-left: 10%;
-    margin-right: 10%;
-    /*background: deepskyblue;*/
+.articleItemText{
     display: flex;
+    margin-top: 30px;
+    align-items: center;
+    margin-bottom: 40px;
+    justify-content: flex-end;
 }
-.aboutBottomLeft{
-    flex: 60% 0;
-    margin-right: 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /*align-items: center;*/
+.articleItemText>p{
+    flex: 90% 0;
+    padding-right: 20px;
+    text-align: right;
 }
-.aboutBottomLeft>h3{
-    font-size: 22px;
-    margin-bottom: 20px;
-    line-height: 32px;
-}
-.aboutBottomLeft>p{
-    font-size: 14px;
-    margin-bottom: 20px;
-    line-height: 20px;
-}
-.aboutBottomLeft>span{
-    font-size: 14px;
-    width: 20%;
-    text-align: center;
-    padding:10px 30px;
-    border:1px solid rgba(0,125,255,0.2);
-}
-
-.aboutBottomRight {
-    flex: 40% 0;
-    height: 100%;
+.articleItemAvatar{
     display: flex;
     flex-direction: row;
     align-items: center;
-    box-sizing: border-box;
+    justify-content: flex-end;
 }
-
-.aboutBottomRightImg {
-    flex: 400px 0;
+.articleItemAvatarName{
+    padding-right: 20px;
+}
+.articleItemAvatarImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.articleItemAvatarImg>img{
     height: 100%;
-    background: url("./img/about_center.jpg") no-repeat;
-    background-size: cover;
-    box-shadow: 5px 5px 20px 3px rgba(0,192,255,0.1);
-}
-.aboutBottomRightColor {
-    flex: 5% 0;
-    height: 40%;
-    background: yellow;
 }
 
-
-/*-------------------------------------------------------------*/
-/*联系我们区域*/
-.concect{
+/*-----------------------------------加载更多*/
+.loadMore{
     width: 100%;
-    height: 500px;
-    background: url("./img/contact_bg-0.5.jpg");
-    position: relative;
-    background-size: cover;
-
-}
-.concectSetWidth{
-    position: absolute;
-    top:-100px;
-    width: 80%;
-    /*height: 600px;*/
-    margin-left: 10%;
-    margin-right: 10%;
-    /*background: #40a9ff;*/
-    background: rgba(255,255,255,1);
+    min-height: 1px;
+    /*padding-top: 30px;*/
+    padding-bottom: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-size: cover;
 }
-.concectTitle{
-    margin-top: 40px;
-    margin-bottom: 30px;
-}
-.concectTitle>p{
-    font-size: 20px;
-    text-align: center;
-}
-.concectForm{
-    display: flex;
-    margin-left: 5%;
-    margin-right: 5%;
-    font-size: 14px;
-    width: 90%;
-    color: white;
-    border: 1px solid #f7f7f7;
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-.concectFormItem{
-    margin-bottom: 10px;
-    margin-left: 40px;
-
-}
-
-
-.concectFormLeft{
-    flex: 50%;
-}
-.concectFormRight{
-    flex: 50%;
-}
-.concectFormTextArea{
-    min-height: 200px!important;
-    /*min-width: 300px !important;*/
-}
-.concectButton{
-    max-width: 20%;
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-.concectFormItem .ant-form-item-label label{
-    color: white!important;
+.loadMore>span{
+    margin-top: 4px;
+    font-size: 10px;
 }

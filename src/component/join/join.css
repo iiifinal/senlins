@@ -1,0 +1,124 @@
+.joinBanner {
+    width: 100%;
+    height: 700px;
+    background: url("./img/joinBanner-1.jpg") no-repeat;
+    background-size: cover;
+    padding: 3%;
+}
+
+.joinBannerCon {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    padding-right: 50%;
+    justify-content: center;
+
+}
+
+.joinBannerCon > h3 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.joinBannerCon > p {
+    font-size: 18px;
+    line-height: 26px;
+}
+
+/*-----------------------------------------------理由*/
+.joinReason {
+    width: 100%;
+    min-height: 1px;
+    display: flex;
+    flex-direction: column;
+}
+
+.joinReasonTitle {
+    width: 100%;
+    padding-left: 30%;
+    margin: 80px 0;
+
+}
+
+.joinReasonTitle > h5 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.joinReasonTitle > p {
+    font-size: 16px;
+    color: #888888;
+}
+
+.joinReasonCon {
+    width: 100%;
+}
+
+.joinReasonConItem {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+    padding: 50px 30%;
+    background: url("./img/joinBanner.jpg");
+
+}
+
+.joinReasonConItemText {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    padding: 5%;
+    justify-content: center;
+    align-items: center;
+}
+
+.joinReasonConItemText > p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/*-------------------------------------------------------开发职位*/
+.joinPosition {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+.joinPositionTitle {
+    margin: 60px 0;
+}
+
+.joinPositionTitle > h3 {
+    font-size: 30px;
+}
+.joinPositionCon{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.joinPositionConSet{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.joinPositionConItem{
+    display: flex;
+    width: 100%;
+    min-height: 40px;
+    align-items: center;
+    padding: 15px;
+    justify-content: space-between;
+}
+.joinPositionConItem>span{
+   font-size: 14px;
+}
