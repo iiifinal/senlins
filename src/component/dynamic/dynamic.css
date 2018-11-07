@@ -100,7 +100,7 @@
 /*-----------------------------------加载更多*/
 .loadMore{
     width: 100%;
-    min-height: 1px;
+    min-height: 10px;
     /*padding-top: 30px;*/
     padding-bottom: 80px;
     display: flex;
