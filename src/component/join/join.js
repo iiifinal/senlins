@@ -52,42 +52,63 @@ function JoinReason() {
     )
 }
 
-function JoinPosition() {
-    return(
-        <div className={style.joinPosition}>
-            <div className={style.joinPositionTitle}>
-                <h3>目前职位</h3>
-            </div>
-            <div className={style.joinPositionCon}>
-                <div className={style.joinPositionConSet}>
-                    <div className={style.joinPositionConItem}>
-                        <span>高级UI/UE交互设计师</span>
-                        <Icon type="arrow-right" theme="outlined" />
-                    </div>
-                    <div className={style.joinPositionConItem}>
-                        <span>前端工程师</span>
-                        <Icon type="arrow-right" theme="outlined" />
-                    </div>
-                    <div className={style.joinPositionConItem}>
-                        <span>PHP后端工程师</span>
-                        <Icon type="arrow-right" theme="outlined" />
-                    </div>
-                    <div className={style.joinPositionConItem}>
-                        <span>项目管理</span>
-                        <Icon type="arrow-right" theme="outlined" />
-                    </div>
-                    <div className={style.joinPositionConItem}>
-                        <span>业务经理</span>
-                        <Icon type="arrow-right" theme="outlined" />
-                    </div>
+class JoinPosition extends React.Component{
+    constructor(props) {
+        super(props)
+    }
+    selectedrecruitment(){
+        console.log(1);
+        this.props.history.push('./recruitment')
+    }
+    render(){
+        return(
+            <div className={style.joinPosition}>
+                <div className={style.joinPositionTitle}>
+                    <h3>目前职位</h3>
                 </div>
+                <div className={style.joinPositionCon}>
+                    <div className={style.joinPositionConSet}>
+                        <div className={style.joinPositionConItem}
+                             onClick={()=>{this.selectedrecruitment()}}
+                        >
+                            <span>高级UI/UE交互设计师</span>
+                            <Icon type="arrow-right" theme="outlined" />
+                        </div>
 
+                        <div className={style.joinPositionConItem}
+                             onClick={()=>{this.selectedrecruitment()}}
+                        >
+                            <span>前端工程师</span>
+                            <Icon type="arrow-right" theme="outlined" />
+                        </div>
+
+                        <div className={style.joinPositionConItem}
+                             onClick={()=>{this.selectedrecruitment()}}
+                        >
+                            <span>PHP后端工程师</span>
+                            <Icon type="arrow-right" theme="outlined" />
+                        </div>
+
+                        <div className={style.joinPositionConItem}
+                             onClick={()=>{this.selectedrecruitment()}}
+                        >
+                            <span>业务经理</span>
+                            <Icon type="arrow-right" theme="outlined" />
+                        </div>
+
+                    </div>
+
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
+
 }
 
 class Join extends React.Component {
+    componentDidMount(){
+        window.scrollTo(0, 0)
+    }
     render() {
         return (
             <div className={style.page}>

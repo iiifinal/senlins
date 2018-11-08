@@ -51,9 +51,8 @@
     flex-direction: row;
 }
 .articleItem{
-    flex: 48% 0;
-
-    margin: 1%;
+    flex: 47% 0;
+    margin: 1.5%;
     display: flex;
     flex-direction: column;
     border: 1px solid #f7f7f7;
@@ -75,6 +74,8 @@
 }
 .articleItemText>p{
     flex: 90% 0;
+    font-size: 18px;
+    line-height: 26px;
     padding-right: 20px;
     text-align: right;
 }

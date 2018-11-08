@@ -15,6 +15,8 @@ import DetailedCase from './component/detailedCase/detailedCase'
 import Personal from './component/personal/personal'
 import Dynamic from './component/dynamic/dynamic'
 import Join from './component/join/join'
+import Article from './component/article/article'
+import Recruitment from './component/recruitment/recruitment'
 
 
 function Header() {
@@ -77,11 +79,22 @@ function Footer() {
                 </div>
                 <div className={styles.footerRight}>
                     <div className={styles.footerRightMenu}>
-                        <div className={styles.footerRightMenuItem}>首页</div>
-                        <div className={styles.footerRightMenuItem}>案例</div>
-                        <div className={styles.footerRightMenuItem}>关于</div>
-                        <div className={styles.footerRightMenuItem}>联系</div>
-                        <div className={styles.footerRightMenuItem}>招聘</div>
+                        <div className={styles.footerRightMenuItem}>
+                            <Link to='./'>首页</Link>
+                        </div>
+                        <div className={styles.footerRightMenuItem}>
+                            <Link to='./case'>案例</Link>
+
+                        </div>
+                        <div className={styles.footerRightMenuItem}>
+                            <Link to='./dynamic'>动态</Link>
+                        </div>
+                        <div className={styles.footerRightMenuItem}>
+                            <Link to='./connect'>联系</Link>
+                        </div>
+                        <div className={styles.footerRightMenuItem}>
+                            <Link to='./join'>招聘</Link>
+                        </div>
                     </div>
                     <div className={styles.footerRightMedia}>
                         <Icon
@@ -125,6 +138,8 @@ class App extends Component {
                         <Route exact path='/personal' component={Personal}/>
                         <Route exact path='/dynamic' component={Dynamic}/>
                         <Route exact path='/join' component={Join}/>
+                        <Route exact path='/article' component={Article}/>
+                        <Route exact path='/recruitment' component={Recruitment}/>
                     </div>
                     <Route component={Footer}></Route>
                 </div>

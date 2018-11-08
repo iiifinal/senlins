@@ -1,5 +1,5 @@
 import React from 'react'
-import {Carousel} from 'antd'
+import {Carousel,Icon} from 'antd'
 import style from './personal.css'
 import {connect} from 'react-redux'
 
@@ -45,9 +45,18 @@ class Personal extends React.Component {
                         <p>数字通才逐渐成为流程和运营的管家。在任何给定时间至少打开7个电子表格。爸爸的笑话笑话和及时的讽刺。制造数据驱动的决策和便携式食品。骑自行车的人似乎总是向后停车。  </p>
                     </div>
                     <div className={style.personalTextSwop}>
-                        <span>微博</span>
-                        <span>微信</span>
-                        <span>知乎</span>
+                        <Icon  style={
+                            {fontSize: 30, marginRight:24}
+                        }
+                               type="twitter" theme="outlined" />
+                        <Icon  style={
+                            {fontSize: 30, marginRight:24}
+                        }
+                               type="weibo" theme="outlined" />
+                        <Icon  style={
+                            {fontSize: 30, marginRight:24}
+                        }
+                               type="github" theme="outlined" />
                     </div>
                 </div>
             </div>

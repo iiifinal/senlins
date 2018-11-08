@@ -25,11 +25,20 @@ function banner() {
 }
 
 class Article extends React.Component {
+    constructor(props){
+        super(props)
+        this.selectedItem=this.selectedItem.bind(this)
+    }
+
+    selectedItem(){
+        this.props.history.push('./article')
+    }
+
     render() {
         return (
             <div className={style.article}>
 
-                <div className={style.articleItem}>
+                <div className={style.articleItem} onClick={this.selectedItem}>
                     <div className={style.articleItemImg}>
                         <img src={require('./img/article-1.jpg')} alt=""/>
                     </div>
@@ -47,12 +56,12 @@ class Article extends React.Component {
                     </div>
                 </div>
 
-                <div className={style.articleItem}>
+                <div className={style.articleItem} onClick={this.selectedItem}>
                     <div className={style.articleItemImg}>
                         <img src={require('./img/article-1.jpg')} alt=""/>
                     </div>
                     <div className={style.articleItemText}>
-                        <p>规划师和制造者：友好的紧张局势</p>
+                        <p>Facebook的2018年新闻Feed改变：它对品牌的真正含义</p>
                         <Icon type="right" theme="outlined"
                               style={
                                   {fontSize: 14,color:'#666666'}}/>
@@ -65,12 +74,12 @@ class Article extends React.Component {
                     </div>
                 </div>
 
-                <div className={style.articleItem}>
+                <div className={style.articleItem} onClick={this.selectedItem}>
                     <div className={style.articleItemImg}>
                         <img src={require('./img/article-1.jpg')} alt=""/>
                     </div>
                     <div className={style.articleItemText}>
-                        <p>规划师和制造者：友好的紧张局势</p>
+                        <p>SPA的SEO</p>
                         <Icon type="right" theme="outlined"
                               style={
                                   {fontSize: 14,color:'#666666'}}/>
@@ -83,12 +92,12 @@ class Article extends React.Component {
                     </div>
                 </div>
 
-                <div className={style.articleItem}>
+                <div className={style.articleItem} onClick={this.selectedItem}>
                     <div className={style.articleItemImg}>
                         <img src={require('./img/article-1.jpg')} alt=""/>
                     </div>
                     <div className={style.articleItemText}>
-                        <p>规划师和制造者：友好的紧张局势</p>
+                        <p>Bukwild重新启动Coachella的Web服务，为访客提供更高效的规划体验</p>
                         <Icon type="right" theme="outlined"
                               style={
                                   {fontSize: 14,color:'#666666'}}/>
@@ -101,12 +110,30 @@ class Article extends React.Component {
                     </div>
                 </div>
 
-                <div className={style.articleItem}>
+                <div className={style.articleItem} onClick={this.selectedItem}>
                     <div className={style.articleItemImg}>
                         <img src={require('./img/article-1.jpg')} alt=""/>
                     </div>
                     <div className={style.articleItemText}>
-                        <p>规划师和制造者：友好的紧张局势</p>
+                        <p>从珍贵的社交媒体投资中获取最大价值（由AdWeek发布）</p>
+                        <Icon type="right" theme="outlined"
+                              style={
+                                  {fontSize: 14,color:'#666666'}}/>
+                    </div>
+                    <div className={style.articleItemAvatar}>
+                        <span className={style.articleItemAvatarName}>腐烂苹果</span>
+                        <div className={style.articleItemAvatarImg}>
+                            <img src={require('./img/avatar-1.jpg')} alt=""/>
+                        </div>
+                    </div>
+                </div>
+
+                <div className={style.articleItem} onClick={this.selectedItem}>
+                    <div className={style.articleItemImg}>
+                        <img src={require('./img/article-1.jpg')} alt=""/>
+                    </div>
+                    <div className={style.articleItemText}>
+                        <p>用户研究与测试的成本分析</p>
                         <Icon type="right" theme="outlined"
                               style={
                                   {fontSize: 14,color:'#666666'}}/>

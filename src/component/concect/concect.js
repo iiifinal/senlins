@@ -29,7 +29,7 @@ class Information extends React.Component{
                 </div>
                 <div className={style.informationCon}>
                     <div className={style.informationConItem}>
-                        <Icon type="environment"
+                        <Icon type="compass"
                               style={
                                   {fontSize: 24}}
                               theme="outlined" />
@@ -54,11 +54,11 @@ class Information extends React.Component{
 
                     <div className={style.informationConItem}>
 
-                        <Icon type="heart"
+                        <Icon type="environment"
                               style={
                                   {fontSize: 24}}
                               theme="outlined" />
-                        <span>喜欢标记</span>
+                        <span>深圳市龙岗区西湖路创业园C座312室</span>
                     </div>
 
 

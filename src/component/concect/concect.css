@@ -76,11 +76,12 @@
     justify-content: center;
     align-items: center;
     padding: 10px 20px;
-    border: 1px solid #666666;
+    border: 1px solid rgba(102,102,102,0.3);
 }
 .informationConItem>span{
-    font-size: 18px;
+    font-size: 14px;
     padding-left: 10px;
+    line-height: 22px;
 }
 
 /*-------------------------------------------------------------*/

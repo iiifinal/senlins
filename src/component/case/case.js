@@ -18,39 +18,12 @@ function caseTitle() {
     )
 }
 
-function TabsList() {
-    const TabPane = Tabs.TabPane;
-    function callback(key) {
-        console.log(key);
-    }
-
-    return (
-
-        <Tabs defaultActiveKey="1" size={'large'} onChange={callback}
-              className={style.tabsCon}>
-            <TabPane tab="网站" key="1" className={style.tabsConItem}>
-
-            </TabPane>
-            <TabPane tab="app" key="2">
-
-            </TabPane>
-            <TabPane tab="小程序" key="3">
-
-            </TabPane>
-            <TabPane tab="UI/UX设计" key="4">
-
-            </TabPane>
-        </Tabs>
-
-    )
-}
 
 
 @connect(
     state => state.homeState,
     {SelectdCase}
 )
-
 
 class caseList extends React.Component{
     constructor(props){
@@ -104,18 +77,86 @@ class caseList extends React.Component{
                     </div>
                 </div>
 
+
                 <div className={style.caseListConItem}>
                     <div className={style.caseListConItemImg}>
                         <img src={require('./img/app_1.jpg')} alt=""/>
                     </div>
-                    <div className={style.caseListConItemText}>
+                    <div className={style.caseListConItemText} onClick={() => {this.selectCaseItem('独书')}}>
                         <div className={style.caseListConItemTextSetBg}>
-                            <h5>数据分析</h5>
-                            <span onClick={() => {this.selectCaseItem('大数据')}}>UI100></span>
+                            <h5>阅读类</h5>
+                            <span >独书APP ></span>
                             <p>汇聚当下最优秀最震撼人心的书籍阅读社区</p>
                         </div>
                     </div>
                 </div>
+
+                <div className={style.caseListConItem}>
+                    <div className={style.caseListConItemImg}>
+                        <img src={require('./img/app_1.jpg')} alt=""/>
+                    </div>
+                    <div className={style.caseListConItemText} onClick={() => {this.selectCaseItem('我懂了')}}>
+                        <div className={style.caseListConItemTextSetBg}>
+                            <h5>教育类分享</h5>
+                            <span>我懂了APP ></span>
+                            <p>汇聚当下最优秀最震撼人心的书籍阅读社区</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className={style.caseListConItem}>
+                    <div className={style.caseListConItemImg}>
+                        <img src={require('./img/app_1.jpg')} alt=""/>
+                    </div>
+                    <div className={style.caseListConItemText} onClick={() => {this.selectCaseItem('UI100')}}>
+                        <div className={style.caseListConItemTextSetBg}>
+                            <h5>社交平台</h5>
+                            <span >UI100></span>
+                            <p>汇聚当下最优秀最震撼人心的书籍阅读社区</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div className={style.caseListConItem}>
+                    <div className={style.caseListConItemImg}>
+                        <img src={require('./img/app_1.jpg')} alt=""/>
+                    </div>
+                    <div className={style.caseListConItemText} onClick={() => {this.selectCaseItem('独书')}}>
+                        <div className={style.caseListConItemTextSetBg}>
+                            <h5>阅读类</h5>
+                            <span >独书APP ></span>
+                            <p>汇聚当下最优秀最震撼人心的书籍阅读社区</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className={style.caseListConItem}>
+                    <div className={style.caseListConItemImg}>
+                        <img src={require('./img/app_1.jpg')} alt=""/>
+                    </div>
+                    <div className={style.caseListConItemText} onClick={() => {this.selectCaseItem('我懂了')}}>
+                        <div className={style.caseListConItemTextSetBg}>
+                            <h5>教育类分享</h5>
+                            <span>我懂了APP ></span>
+                            <p>汇聚当下最优秀最震撼人心的书籍阅读社区</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className={style.caseListConItem}>
+                    <div className={style.caseListConItemImg}>
+                        <img src={require('./img/app_1.jpg')} alt=""/>
+                    </div>
+                    <div className={style.caseListConItemText} onClick={() => {this.selectCaseItem('UI100')}}>
+                        <div className={style.caseListConItemTextSetBg}>
+                            <h5>社交平台</h5>
+                            <span >UI100></span>
+                            <p>汇聚当下最优秀最震撼人心的书籍阅读社区</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         )
     }
@@ -217,7 +258,7 @@ class Case extends React.Component {
 
                 </div>
 
-                <Route component={Process}></Route>
+                {/*<Route component={Process}></Route>*/}
 
 
 
