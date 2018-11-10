@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import {BrowserRouter, Route, Link} from 'react-router-dom'
-
+import {connect} from 'react-redux'
+import { getAllData} from "./redux/home.redux";
 
 import {Menu, Icon, Row, Col} from 'antd'
 import styles from './App.css';
-
+import config from './config'
 import Home from './component/home/home'
 import Case from './component/case/case'
 import Concect from './component/concect/concect'
@@ -118,6 +119,8 @@ function Footer() {
         </div>
     )
 }
+
+
 
 class App extends Component {
 

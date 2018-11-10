@@ -1,46 +1,67 @@
-// 设置订阅状态
-const RECOMMEND_DATA = 'RECOMMEND_DATA'
-const SKILL_DATA='SKILL_DATA'
-const CASE_DATA='CASE_DATA'
+import axios from 'axios'
+
+// 设置所有数据状态
+const   HOME_DATA = 'HOME_DATA'
+const   SKILL_DATA = 'SKILL_DATA'
+
+// 设置选择推荐案例状态
+const RECOMMEND_NAME = 'RECOMMEND_NAME'
+
+const SKILL_ID = 'SKILL_ID'
+
 // 初始化状态
 const initState = {
-    recommendName: '',
-    skillName:'',
-    selectedCase:''
+    homePageData:[],
+    skillPageData:[],
+
+
+    recommendName: 'A',
+    selectedSkillId: 'design',
+
 }
 
 export function homeState(state = initState, action) {
     switch (action.type) {
-        case RECOMMEND_DATA:
+        case HOME_DATA:
+            return {...state, homePageData:action.payload}
+        case SKILL_DATA:
+            return {...state, skillPageData:action.payload}
+        case RECOMMEND_NAME:
             return {...state, recommendName: action.payload}
-        case  SKILL_DATA:
-            return{...state,skillName:action.payload}
-        case  CASE_DATA:
-            return{...state,selectedCase:action.payload}
+        case  SKILL_ID:
+            return {...state, selectedSkillId: action.payload}
         default:
             return state
     }
 }
 
-function Success(data) {
-    return {type: RECOMMEND_DATA, payload: data}
-}
 
-export function TestF(data) {
+
+export function recommendSelect(data) {
     return dispatch => {
-        dispatch(Success(data))
+        dispatch({type: RECOMMEND_NAME, payload: data})
     }
 }
 
-export function Skillchange(data) {
-    return dispatch=>{
-        dispatch({type:CASE_DATA,payload:data})
-    }
-}
-export function SelectdCase(data) {
-    return dispatch=>{
-        dispatch({type:SKILL_DATA,payload:data})
+
+export function SelectedSkill(data) {
+    return dispatch => {
+        dispatch({type: SKILL_ID, payload: data})
     }
 }
 
-// export default connect(mapStateToProps)(Item)
+export function getHomeData() {
+    return (dispatch) => {
+        axios.get('http://localhost:3000/dataCenter/senlins.json').then(res => {
+            dispatch({type: HOME_DATA, payload: res.data.home})
+        })
+    }
+}
+
+export function getSkillData() {
+    return (dispatch) => {
+        axios.get('http://localhost:3000/dataCenter/senlins.json').then(res => {
+            dispatch({type: SKILL_DATA, payload: res.data.skills})
+        })
+    }
+}

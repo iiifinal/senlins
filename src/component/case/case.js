@@ -3,7 +3,7 @@ import {Route} from 'react-router-dom'
 import {Tabs} from 'antd';
 import style from './case.css'
 import {connect} from 'react-redux'
-import {SelectdCase} from '../../redux/home.redux'
+import {} from '../../redux/home.redux'
 
 
 
@@ -22,7 +22,7 @@ function caseTitle() {
 
 @connect(
     state => state.homeState,
-    {SelectdCase}
+    {}
 )
 
 class caseList extends React.Component{
@@ -30,7 +30,7 @@ class caseList extends React.Component{
         super(props)
     }
     selectCaseItem(val){
-        this.props.SelectdCase(val)
+        // this.props.SelectdCase(val)
         this.props.history.push('./detailedCase')
         window.scrollTo(0, 0)
     }
@@ -164,14 +164,14 @@ class caseList extends React.Component{
 
 @connect(
     state => state.homeState,
-    {SelectdCase}
+    {}
 )
 class Process extends React.Component {
    constructor(props){
        super(props)
    }
     selectProcessItem(val){
-        this.props.SelectdCase(val)
+        // this.props.SelectdCase(val)
         this.props.history.push('./detailedCase')
         window.scrollTo(0, 0)
     }

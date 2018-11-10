@@ -1,24 +1,60 @@
 import React from 'react'
 // import {Carousel, Row, Card, Icon, Rate} from 'antd'
+
 import style from './home.css'
 import {connect} from 'react-redux'
-import {TestF, Skillchange} from "../../redux/home.redux";
+import {getHomeData,recommendSelect, SelectedSkill} from "../../redux/home.redux";
+
 
 @connect(
-    // state属性映射到props
-    state => state.homeState,
-    // dispatch方法映射到props
-    {TestF, Skillchange}
+    state => ({}),
+    {recommendSelect}
 )
+class ThreeCases extends React.Component {
 
+    selectedItem(value) {
+        this.props.recommendSelect(value)
+        this.props.history.push('./recommend')
+        window.scrollTo(0, 0)
+    }
 
+    render() {
+        return (
+            <div className={style.ConRight}>
+                {this.props.caseList ? this.props.caseList.map((item) => {
+                    return (
+                        <div className={style.ConItem} key={item.sequence}>
+                            <div className={style.title}>
+                                <h5>{item.sequence}</h5>
+                                <p>
+                                    {item.detailed}
+                                </p>
+                            </div>
+                            <figure className={style.imgCon}>
+                                <div className={style.imgSetWidth}>
+                                    <img src={require(`${item.imgUrl}`)} alt="" onClick={() => {
+                                        this.selectedItem(item.sequence)
+                                    }}/>
+                                </div>
+                                <p>{item.brief}</p>
+                            </figure>
+                        </div>)
+                }) : null}
+            </div>
+        )
+    }
+}
+
+@connect(
+    state => state.homeState,
+    {SelectedSkill,getHomeData}
+)
 class Home extends React.Component {
 
-    // constructor(props) {
-    //     super(props)
-    //     // this.handleTestF = this.handleTestF.bind(this)
-    // }
+    componentDidMount(){
+        this.props.getHomeData()
 
+    }
 
     handleChange(key, val) {
         this.setState({
@@ -27,17 +63,12 @@ class Home extends React.Component {
     }
 
 
-    handleTestF(value) {
-        this.props.TestF(value)
-        this.props.history.push('./recommend')
-        window.scrollTo(0, 0)
-    }
-
     handleSkill(val) {
-        this.props.Skillchange(val)
+        this.props.SelectedSkill(val)
         this.props.history.push('./skill')
         window.scrollTo(0, 0)
     }
+
     handleCase() {
         this.props.history.push('/case')
         window.scrollTo(0, 0)
@@ -70,59 +101,9 @@ class Home extends React.Component {
                             <span>3</span>
                         </div>
                     </div>
-                    <div className={style.ConRight}>
-                        <div className={style.ConItem}>
-                            <div className={style.title}>
-                                <h5>A</h5>
-                                <p>
-                                    独书是一款汇聚当下最优秀最震撼人心的书籍的阅读APP,为你开启文艺社区新旅程。每天推出精选内容,诗歌、文学、艺术、电影、音乐等,带给你精神上的饱满体验！
-                                    在这里你不但可以认识书里更为辽阔新奇有趣的世界，还可以找到与你志同道合的小伙伴，与他们一起共同分享彼此阅读的乐趣。
-                                </p>
-                            </div>
-                            <figure className={style.imgCon}>
-                                <div className={style.imgSetWidth}>
-                                    <img src={require('./img/home_item_1.jpg')} alt="" onClick={() => {
-                                        this.handleTestF('独书')
-                                    }}/>
-                                </div>
-                                <p>独书app，共同分享阅读各自不一样的快乐</p>
-                            </figure>
-                        </div>
-                        <div className={style.ConItem}>
-                            <div className={style.title}>
-                                <h5>B</h5>
-                                <p>
-                                    "哦懂了"是一款为广大的学生群体免费提供优质的同步课堂视频的APP，视频内容涵盖了小学初中高中所有科目的所有课程，旨在解决学生预习复习的需求，为普及基础教育做贡献。
-                                </p>
-                            </div>
-                            <figure className={style.imgCon}>
-                                <div className={style.imgSetWidth}>
-                                    <img src={require('./img/home_item_2.jpg')} alt="" onClick={() => {
-                                        this.handleTestF('我懂了')
-                                    }}/>
-                                </div>
-                                <p>"哦懂了"，你的掌上教学APP</p>
-                            </figure>
-                        </div>
-                        <div className={style.ConItem}>
-                            <div className={style.title}>
-                                <h5>C</h5>
-                                <p>
-                                    UI100Days是一款提供给广大的设计师作品浏览与交流互动的轻量级应用，旨在为设计师们短时间内高效地欣赏社区内各个领域优秀的作品，帮助设计师们互动交流，不同的思维碰撞，让彼此的设计水平可以达到快速有效的成长。
-                                </p>
-                            </div>
-                            <figure className={style.imgCon}>
-                                <div className={style.imgSetWidth}>
-                                    <img src={require('./img/home_item_3.jpg')} alt="" onClick={() => {
-                                        this.handleTestF('UI100')
-                                    }}/>
-                                </div>
-                                <p>UI100天APP，设计师的交流社区中心</p>
-                            </figure>
-                        </div>
-
-                        {/*<ImgItemli url={'./img/home_item_3.jpg'}></ImgItemli>*/}
-                    </div>
+                    {this.props.homePageData ?
+                        <ThreeCases caseList={this.props.homePageData} history={this.props.history}></ThreeCases>:null
+                    }
                 </div>
 
 
@@ -134,7 +115,9 @@ class Home extends React.Component {
                         </h3>
                         <article className={style.othersCon}>
 
-                            <div className={style.othersConItem}  onClick={() => {this.handleSkill('设计')}}>
+                            <div className={style.othersConItem} onClick={() => {
+                                this.handleSkill('design')
+                            }}>
                                 <div className={style.othersConItemImg}>
                                     <img src={require('./img/service1.jpg')} alt=""/>
                                 </div>
@@ -148,7 +131,9 @@ class Home extends React.Component {
                                 </div>
                             </div>
 
-                            <div className={style.othersConItem}  onClick={() => {this.handleSkill('开发')}}>
+                            <div className={style.othersConItem} onClick={() => {
+                                this.handleSkill('develop')
+                            }}>
                                 <div className={style.othersConItemImg}>
                                     <img src={require('./img/service2.jpg')} alt=""/>
                                 </div>
@@ -162,7 +147,9 @@ class Home extends React.Component {
                                 </div>
                             </div>
 
-                            <div className={style.othersConItem} onClick={() => {this.handleSkill('社交')}}>
+                            <div className={style.othersConItem} onClick={() => {
+                                this.handleSkill('social')
+                            }}>
                                 <div className={style.othersConItemImg}>
                                     <img src={require('./img/service3.jpg')} alt=""/>
                                 </div>
@@ -199,13 +186,14 @@ class Home extends React.Component {
                                 <img src={require('./img/step4.jpg')} alt=""/>
                             </div>
                         </div>
-                        <p className={style.moreCase} onClick={()=>{this.handleCase()}}>了解我们更多案例 ></p>
+                        <p className={style.moreCase} onClick={() => {
+                            this.handleCase()
+                        }}>了解我们更多案例 ></p>
                     </div>
                 </div>
             </div>
         )
     }
-
 }
 
 export default Home

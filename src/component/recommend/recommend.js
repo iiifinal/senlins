@@ -21,7 +21,7 @@ class Recommend extends React.Component {
 
         const Allurl = [
             {
-                itemName: '独书',
+                itemName: 'A',
                 itemUrl: [
 
                     {
@@ -38,7 +38,7 @@ class Recommend extends React.Component {
                 ]
             },
             {
-                itemName: '我懂了',
+                itemName: 'B',
                 itemUrl: [
 
                     {
@@ -55,7 +55,7 @@ class Recommend extends React.Component {
                 ]
             },
             {
-                itemName: 'UI100',
+                itemName: 'C',
                 itemUrl: [
 
                     {
@@ -93,7 +93,6 @@ class Recommend extends React.Component {
         let imgList=Allurl[index].itemUrl
         return (
             <div className={style.itemListCon}>
-                {/*<div>{this.props.caseName}</div>*/}
                 {imgList.map((item, index) => {
                     return <img key={index} className={style.imgItem} src={item.url} alt={item.text}/>
                 })}
