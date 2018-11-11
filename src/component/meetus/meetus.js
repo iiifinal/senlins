@@ -1,31 +1,40 @@
 import React from 'react'
 import {Route} from 'react-router-dom'
-import {Popover} from 'antd';
+import {connect} from 'react-redux'
+import {getTeamData,SelectedPersonal} from '../../redux/home.redux'
+
 import style from './meetus.css'
 import BGIMG from './img/meetus_bg.jpg'
 import TEAM from './img/sea_team.jpg'
 
 
-
-
-
-
-
+@connect(
+    state => state.homeState,
+    {getTeamData,SelectedPersonal}
+)
 class TeamList extends React.Component {
-    constructor(props){
-        super(props)
+    // constructor(props) {
+    //     super(props)
+    // }
+
+    componentDidMount() {
+        this.props.getTeamData()
     }
 
-    selectPersonal=(val)=>{
-        console.log(val);
+    // getTeamData
+    selectPersonal = (val) => {
+        this.props.SelectedPersonal(val)
         this.props.history.push('./personal')
+        window.scrollTo(0, 0)
     }
-    selectJoin=()=>{
+    selectJoin = () => {
         this.props.history.push('./join')
+        window.scrollTo(0, 0)
     }
 
-    render(){
-        return(
+    render() {
+        const data = this.props.meetusPageData
+        return (
             <div className={style.teamList}>
                 <div className={style.teamListTitle}>
                     <h3>我们自豪地由两个小组组成：规划师和制造者。</h3>
@@ -33,99 +42,29 @@ class TeamList extends React.Component {
                 </div>
                 <div className={style.teamListCon}>
 
-                    <div className={style.teamListConItem} onClick={()=>{this.selectPersonal('Apple')}}>
-                        <img src={require('./img/teamItem.jpg')} alt=""/>
-                        <div className={style.teamListConItemText}>
-                            <div className={style.teamListConItemTextLeft}>
-                                <span className={style.teamListConItemTextName}>Apple</span>
-                                <span className={style.teamListConItemTextCareer}>CEO/创始人</span>
+                    {data ? data.map((item, index) =>
+                        <div className={style.teamListConItem} key={index}
+                             onClick={() => {
+                            this.selectPersonal(item.member_id)
+                        }}>
+                            <img src={require(`${item.member_avatar}`)} alt=""/>
+                            <div className={style.teamListConItemText}>
+                                <div className={style.teamListConItemTextLeft}>
+                                    <span className={style.teamListConItemTextName}>{item.member_name}</span>
+                                    <span className={style.teamListConItemTextCareer}>{item.member_position}</span>
+                                </div>
+                                <div className={style.teamListConItemTextRight}> ></div>
                             </div>
-                            <div className={style.teamListConItemTextRight}> ></div>
-                        </div>
-                    </div>
+                        </div>) : null}
 
-                    <div className={style.teamListConItem} onClick={()=>{this.selectPersonal('Apple')}}>
-                        <img src={require('./img/teamItem.jpg')} alt=""/>
-                        <div className={style.teamListConItemText}>
-                            <div className={style.teamListConItemTextLeft}>
-                                <span className={style.teamListConItemTextName}>Apple</span>
-                                <span className={style.teamListConItemTextCareer}>CEO/创始人</span>
-                            </div>
-                            <div className={style.teamListConItemTextRight}> ></div>
-                        </div>
-                    </div>
 
-                    <div className={style.teamListConItem} onClick={()=>{this.selectPersonal('Apple')}}>
-                        <img src={require('./img/teamItem.jpg')} alt=""/>
-                        <div className={style.teamListConItemText}>
-                            <div className={style.teamListConItemTextLeft}>
-                                <span className={style.teamListConItemTextName}>Apple</span>
-                                <span className={style.teamListConItemTextCareer}>CEO/创始人</span>
-                            </div>
-                            <div className={style.teamListConItemTextRight}> ></div>
+                    <div className={style.teamListConItem} onClick={() => {
+                        this.selectJoin()
+                    }}>
+                        <div className={style.joinTeam}>
+                            <h5>加入我们</h5>
+                            <span>查看当前的工作</span>
                         </div>
-                    </div>
-
-                    <div className={style.teamListConItem} onClick={()=>{this.selectPersonal('Apple')}}>
-                        <img src={require('./img/teamItem.jpg')} alt=""/>
-                        <div className={style.teamListConItemText}>
-                            <div className={style.teamListConItemTextLeft}>
-                                <span className={style.teamListConItemTextName}>Apple</span>
-                                <span className={style.teamListConItemTextCareer}>CEO/创始人</span>
-                            </div>
-                            <div className={style.teamListConItemTextRight}> ></div>
-                        </div>
-                    </div>
-
-                    <div className={style.teamListConItem} onClick={()=>{this.selectPersonal('Apple')}}>
-                        <img src={require('./img/teamItem.jpg')} alt=""/>
-                        <div className={style.teamListConItemText}>
-                            <div className={style.teamListConItemTextLeft}>
-                                <span className={style.teamListConItemTextName}>Apple</span>
-                                <span className={style.teamListConItemTextCareer}>CEO/创始人</span>
-                            </div>
-                            <div className={style.teamListConItemTextRight}> ></div>
-                        </div>
-                    </div>
-
-                    <div className={style.teamListConItem} onClick={()=>{this.selectPersonal('Apple')}}>
-                        <img src={require('./img/teamItem.jpg')} alt=""/>
-                        <div className={style.teamListConItemText}>
-                            <div className={style.teamListConItemTextLeft}>
-                                <span className={style.teamListConItemTextName}>Apple</span>
-                                <span className={style.teamListConItemTextCareer}>CEO/创始人</span>
-                            </div>
-                            <div className={style.teamListConItemTextRight}> ></div>
-                        </div>
-                    </div>
-
-                    <div className={style.teamListConItem} onClick={()=>{this.selectPersonal('Apple')}}>
-                        <img src={require('./img/teamItem.jpg')} alt=""/>
-                        <div className={style.teamListConItemText}>
-                            <div className={style.teamListConItemTextLeft}>
-                                <span className={style.teamListConItemTextName}>Apple</span>
-                                <span className={style.teamListConItemTextCareer}>CEO/创始人</span>
-                            </div>
-                            <div className={style.teamListConItemTextRight}> ></div>
-                        </div>
-                    </div>
-
-                    <div className={style.teamListConItem} onClick={()=>{this.selectPersonal('Apple')}}>
-                        <img src={require('./img/teamItem.jpg')} alt=""/>
-                        <div className={style.teamListConItemText}>
-                            <div className={style.teamListConItemTextLeft}>
-                                <span className={style.teamListConItemTextName}>Apple</span>
-                                <span className={style.teamListConItemTextCareer}>CEO/创始人</span>
-                            </div>
-                            <div className={style.teamListConItemTextRight}> ></div>
-                        </div>
-                    </div>
-
-                    <div className={style.teamListConItem} onClick={()=>{this.selectJoin()}}>
-                    <div className={style.joinTeam}>
-                        <h5>加入我们</h5>
-                        <span>查看当前的工作</span>
-                    </div>
                     </div>
                 </div>
             </div>

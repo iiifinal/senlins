@@ -53,9 +53,9 @@ function JoinReason() {
 }
 
 class JoinPosition extends React.Component{
-    constructor(props) {
-        super(props)
-    }
+    // constructor(props) {
+    //     super(props)
+    // }
     selectedrecruitment(){
         console.log(1);
         this.props.history.push('./recruitment')

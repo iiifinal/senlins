@@ -1,64 +1,73 @@
 import React from 'react'
-import {Carousel,Icon} from 'antd'
+import {Carousel, Icon} from 'antd'
 import style from './personal.css'
 import {connect} from 'react-redux'
+import {getTeamData} from '../../redux/home.redux'
+
+
+
 
 @connect(
-    state => state.homeState
+    state => state.homeState,
+    {getTeamData}
 )
 
-class PersonalText extends React.Component{
-    render(){
-        return(
-            <div className={style.personalText}>
-
-            </div>
-        )
-    }
-}
-
-
 class Personal extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {}
-    }
 
     componentDidMount() {
-
+        this.props.getTeamData()
     }
 
     render() {
-
+        const data = this.props.meetusPageData.find(item => item.member_id === this.props.personalId)
         return (
             <div className={style.personal}>
-                <Carousel effect={'fade'} autoplay  vertical={true}>
-                <div className={style.carouseItem}><img src={require('./img/personal-1.jpg')} alt=""/></div>
-                <div className={style.carouseItem}><img src={require('./img/personal-2.jpg')} alt=""/></div>
-                <div className={style.carouseItem}><img src={require('./img/personal-3.jpg')} alt=""/></div>
-                <div className={style.carouseItem}><img src={require('./img/personal-4.jpg')} alt=""/></div>
+                <Carousel effect={'fade'} autoplay>
+                    {data ? data.member_photo.map(
+                        (item, index) => <div key={index} className={style.carouseItem}>
+                            <img src={require(`${item}`)} alt=""/>
+                        </div>
+                    ) : <div className={style.carouseItem}>
+                        <img src={require('./img/personal-1.jpg')} alt=""/>
+                    </div>}
+
                 </Carousel>
-                <div className={style.personalText}>
-                    <h3>Martin</h3>
-                    <span>技术总监</span>
-                    <div className={style.personalTextP}>
-                        <p>数字通才逐渐成为流程和运营的管家。在任何给定时间至少打开7个电子表格。爸爸的笑话笑话和及时的讽刺。制造数据驱动的决策和便携式食品。骑自行车的人似乎总是向后停车。  </p>
-                    </div>
-                    <div className={style.personalTextSwop}>
-                        <Icon  style={
-                            {fontSize: 30, marginRight:24}
-                        }
-                               type="twitter" theme="outlined" />
-                        <Icon  style={
-                            {fontSize: 30, marginRight:24}
-                        }
-                               type="weibo" theme="outlined" />
-                        <Icon  style={
-                            {fontSize: 30, marginRight:24}
-                        }
-                               type="github" theme="outlined" />
-                    </div>
-                </div>
+                {data?
+                    <div className={style.personalText}>
+                        <h3>{data.member_name}</h3>
+                        <span>{data.member_position}</span>
+                        <div className={style.personalTextP}>
+                            <p>{data.member_motto} </p>
+                        </div>
+                        <div className={style.personalTextSwop}>
+                            <a href={`${data.member_contact.facebook}`}>
+                                <Icon style={
+                                    {fontSize: 30, marginRight: 24}
+                                }
+                                      type="twitter" theme="outlined"/>
+                            </a>
+
+                            <a href={`${data.member_contact.weibo}`}>
+
+                                <Icon style={
+                                    {fontSize: 30, marginRight: 24}
+                                }
+                                      type="github" theme="outlined"/>
+                            </a>
+
+                            <a href={`${data.member_contact.github}`}>
+                                <Icon style={
+                                    {fontSize: 30, marginRight: 24}
+                                }
+                                      type="twitter" theme="outlined"/>
+                            </a>
+
+
+
+
+                        </div>
+                    </div>:null}
+
             </div>
         )
     }

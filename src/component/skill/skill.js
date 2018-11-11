@@ -2,7 +2,7 @@ import React from 'react'
 import {Carousel} from 'antd'
 import style from './skill.css'
 import {connect} from 'react-redux'
-import {getSkillData, recommendSelect, SelectedSkill} from "../../redux/home.redux";
+import {getSkillData} from "../../redux/home.redux";
 
 
 class CarouselItem extends React.Component {

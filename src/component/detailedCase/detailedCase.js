@@ -1,27 +1,15 @@
 import React from 'react'
 import style from './detailedCase.css'
 import {connect} from 'react-redux'
-import {Route} from 'react-router-dom'
+import {getDetailedCaseData} from "../../redux/home.redux";
 
-function pageTitle() {
-    return (
-        <div className={style.titleCon}>
-            <div className={style.titleConText}>
-                <span>科切拉网站</span>
-                <p>一个数字目的地，旨在与世界上最受欢迎的现场活动之一和谐共处</p>
-                <a href="http://www.visithumboldt.com/">启动项目</a>
-            </div>
-            <div className={style.titleConImg}>
-                <img src={require('./img/title.jpg')} alt=""/>
-            </div>
-        </div>
-    )
-}
 
-function pageIntroduction() {
+
+function IntroductionSkeleton() {
     return (
         <div className={style.introduction}>
             <div className={style.introductionText}>
+
                 <div className={style.introductionTextItem}>
                     <h5>他们是谁</h5>
                     <p>
@@ -63,13 +51,38 @@ function pageIntroduction() {
                 </div>
             </div>
             <div className={style.introductionImg}>
-                <img src={require('./img/introduction.png')} alt=""/>
+                <img src={require(`./img/introduction.png`)} alt=""/>
             </div>
         </div>
     )
 }
+class Introduction extends React.Component {
 
-function Result() {
+    render() {
+        const data = this.props.data
+        return (
+            <div className={style.introduction}>
+                <div className={style.introductionText}>
+
+                    {data.case_analysis_text.map(item =>
+
+                        <div className={style.introductionTextItem} key={item.title}>
+                            <h5>{item.title}</h5>
+                            {item.content.map((v,key) => <p key={key}>{v}</p>)}
+                        </div>
+                    )}
+
+                </div>
+                <div className={style.introductionImg}>
+                    <img src={require(`${data.case_analysis_img}`)} alt=""/>
+                </div>
+            </div>
+        )
+    }
+
+}
+
+function ResultSkeleton() {
     return (
         <div className={style.result}>
             <div className={style.resultTitle}>
@@ -89,16 +102,29 @@ function Result() {
         </div>
     )
 }
+class Result extends React.Component {
+    render() {
+        return (
+            <div className={style.result}>
+                <div className={style.resultTitle}>
+                    <h3>成果</h3>
+                </div>
+                <div className={style.resultCon}>
+                    {this.props.data.map((item, index) =>
+                        <div className={style.resultConItem} key={index}>
+                            <span>{item.start}</span>
+                            <h5>{item.end}</h5>
+                        </div>
+                    )}
+                </div>
+            </div>
+        )
+    }
 
-function Summary() {
-    return (
-        <div className={style.summary}>
-            <p>这是Bukwild做出最好的事情的机会......简单明了。</p>
-        </div>
-    )
 }
 
-function Analysis() {
+
+function AnalysisSkeleton() {
     return (
         <div className={style.analysis}>
             <div className={style.analysisBanner}>
@@ -156,29 +182,78 @@ function Analysis() {
     )
 
 }
-
-@connect(
-    state => state.homeState
-)
-
-
-class DetailedCase extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {}
-    }
+class Analysis extends React.Component {
 
     render() {
         return (
-            <div className={style.detailedCase}>
-                <Route component={pageTitle}></Route>
-                <div className={style.pageDemand}>
-                    <p>门票销售和支持，引导活动计划和现场寻路都是优先考虑的事项，以及适合Goldenvoice金蛋的丰富，美丽和异想天开的体验。</p>
+            <div className={style.analysis}>
+                <div className={style.analysisBanner}>
+                    <img src={require(`${this.props.case_figure}`)} alt=""/>
                 </div>
-                <Route component={pageIntroduction}></Route>
-                <Route component={Result}></Route>
-                <Route component={Summary}></Route>
-                <Route component={Analysis}></Route>
+                {this.props.data.map((item, index) =>
+                    <div className={style.analysisItem} key={index}>
+                        <div className={style.analysisItemTitle}>
+                            {item.explain.map((v,key) => <p key={key}>{v}</p>)}
+
+                        </div>
+                        <div className={style.analysisItemImg}>
+                            {item.img.map((k,key) =><img key={key} src={require(`${k}`)} alt=""/>)}
+                        </div>
+                    </div>
+                )}
+            </div>
+        )
+    }
+
+
+}
+
+@connect(
+    state => state.homeState,
+    {getDetailedCaseData}
+)
+class DetailedCase extends React.Component {
+
+    componentDidMount() {
+        this.props.getDetailedCaseData()
+    }
+
+    render() {
+
+        const caseData = this.props.detailedCaseData.find(item => item.case_id === this.props.selectedCaseId)
+
+
+        return (
+            <div className={style.detailedCase}>
+
+                <div className={style.titleCon}>
+                    {caseData ? <div className={style.titleConText}>
+                        <span>{caseData.case_name}</span>
+                        <p>{caseData.case_brief}</p>
+                        <a href={`${caseData.case_href}`}>启动项目</a>
+                    </div> : <div className={style.titleConText}>暂无数据</div>}
+
+                    <div className={style.titleConImg}>
+                        {caseData ? <img src={require(`${caseData.case_title_img}`)} alt=""/> : null}
+                    </div>
+                </div>
+
+                <div className={style.pageDemand}>
+                    {caseData ? <p>{caseData.case_demand}</p> : null}
+                </div>
+
+                {caseData ? <Introduction data={caseData.case_analysis}></Introduction> :
+                    <IntroductionSkeleton></IntroductionSkeleton>}
+                {caseData ? <Result data={caseData.case_result}></Result> : <ResultSkeleton></ResultSkeleton>}
+
+                <div className={style.summary}>
+                    <p>{caseData ? caseData.case_to_sum_up : null}</p>
+                </div>
+
+                {caseData ? <Analysis case_figure={caseData.case_figure}
+                                      data={caseData.case_show}
+                ></Analysis> : <AnalysisSkeleton></AnalysisSkeleton>}
+
             </div>
         )
     }
