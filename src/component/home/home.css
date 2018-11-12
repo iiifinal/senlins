@@ -34,8 +34,8 @@
     font-size: 30px;
     padding-left: 22%;
     min-height: 90px;
+    padding-top: 30px;
     line-height: 40px;
-    padding-top: 10px;
 }
 
 .cascade > p {
@@ -126,10 +126,12 @@
     border: 1px solid rgba(120, 141, 140, 0.1);
     border-radius: 2px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .imgSetWidth > img {
     max-width: 100%;
+
 }
 
 .imgCon > p {
@@ -151,8 +153,8 @@
 }
 
 .otherSetWidth {
-    margin-left: 15%;
-    max-width: 70%;
+    margin-left: 10%;
+    max-width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -173,7 +175,8 @@
 }
 
 .othersConItem {
-    flex: 31% 0;
+    flex: 24% 0;
+    cursor: pointer;
     background: white;
     display: flex;
     flex-direction: column;
@@ -184,7 +187,7 @@
     width: 100%;
     flex: 50% 0;
    overflow: hidden;
-    background-color: deepskyblue;
+
 }
 
 .othersConItemImg>img {
@@ -258,12 +261,28 @@
 .stepItem{
     height: 200px;
     width: 200px;
-    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid rgba(213,93,89,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
 }
-.stepItem>img{
-    max-width: 100%;
+.stepItem>h5{
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+.stepItem>p{
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
 }
 .moreCase{
+    margin: 0 auto;
+    max-width: 20%;
+    cursor: pointer;
     font-size: 18px;
     text-align: center;
     padding-bottom: 50px;

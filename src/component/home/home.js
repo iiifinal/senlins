@@ -119,7 +119,7 @@ class Home extends React.Component {
                                 this.handleSkill('design')
                             }}>
                                 <div className={style.othersConItemImg}>
-                                    <img src={require('./img/service1.jpg')} alt=""/>
+                                    <img src={require('./img/design.png')} alt=""/>
                                 </div>
                                 <div className={style.othersConItemText}>
                                     <h3>设计与用户体验</h3>
@@ -132,10 +132,10 @@ class Home extends React.Component {
                             </div>
 
                             <div className={style.othersConItem} onClick={() => {
-                                this.handleSkill('develop')
+                                this.handleSkill('tech')
                             }}>
                                 <div className={style.othersConItemImg}>
-                                    <img src={require('./img/service2.jpg')} alt=""/>
+                                    <img src={require('./img/tech.png')} alt=""/>
                                 </div>
                                 <div className={style.othersConItemText}>
                                     <h3>技术开发</h3>
@@ -151,17 +151,34 @@ class Home extends React.Component {
                                 this.handleSkill('social')
                             }}>
                                 <div className={style.othersConItemImg}>
-                                    <img src={require('./img/service3.jpg')} alt=""/>
+                                    <img src={require('./img/social.png')} alt=""/>
                                 </div>
                                 <div className={style.othersConItemText}>
-                                    <h3>社交内容和参与</h3>
+                                    <h3>社交互动参与</h3>
                                     <p>
-                                        创意和战略团队共同努力设计美学，声音和路线图，以便在地球上最直接面向消费者的平台上进行交流。 </p>
+                                        创意和战略团队共同努力设计体验美学，直接面向消费者的平台上进行交流。</p>
                                     <div className={style.othersConItemStore}>
                                         <span>阅读 ></span>
                                     </div>
                                 </div>
                             </div>
+
+                            <div className={style.othersConItem} onClick={() => {
+                                this.handleSkill('holistic')
+                            }}>
+                                <div className={style.othersConItemImg}>
+                                    <img src={require('./img/holistic.png')} alt=""/>
+                                </div>
+                                <div className={style.othersConItemText}>
+                                    <h3>整体数字战略</h3>
+                                    <p>
+                                        规划，生产，资产，工具，数据驱动的见解以及超越发布的合作伙伴关系的结合。 </p>
+                                    <div className={style.othersConItemStore}>
+                                        <span>阅读 ></span>
+                                    </div>
+                                </div>
+                            </div>
+
 
                         </article>
                     </div>
@@ -170,20 +187,24 @@ class Home extends React.Component {
                 <div className={style.step}>
                     <div className={style.stepSetWidth}>
                         <h3 className={style.stepTitle}>
-                            设计、数据、流量和资本是驱动商业创新的基础，协调生态圈伙伴关系，为客户带来更大的商业价值
+                            驱动商业创新的基础，不仅仅项目的实现过程，更重要的是协调生态圈伙伴关系，彼此携手共进
                         </h3>
                         <div className={style.stepItemCon}>
                             <div className={style.stepItem}>
-                                <img src={require('./img/step1.jpg')} alt=""/>
+                                <h5>了解</h5>
+                                <p>360度了解分析企业与行业的背景</p>
                             </div>
                             <div className={style.stepItem}>
-                                <img src={require('./img/step2.jpg')} alt=""/>
+                                <h5>探索</h5>
+                                <p>结合用户洞察与商业目标挖掘可塑点</p>
                             </div>
                             <div className={style.stepItem}>
-                                <img src={require('./img/step3.jpg')} alt=""/>
+                                <h5>战略</h5>
+                                <p>制定企业发展的目标规划</p>
                             </div>
                             <div className={style.stepItem}>
-                                <img src={require('./img/step4.jpg')} alt=""/>
+                                <h5>执行</h5>
+                                <p>推进企业解决方案与创新概念</p>
                             </div>
                         </div>
                         <p className={style.moreCase} onClick={() => {
