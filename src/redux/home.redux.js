@@ -29,7 +29,7 @@ const initState = {
 
     recommendName: 'A',
     selectedSkillId: 'design',
-    selectedCaseId: 'app',
+    selectedCaseId: 'case_001',
     articleId:'',
     personalId: '0'
 

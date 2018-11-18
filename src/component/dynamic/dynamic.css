@@ -13,7 +13,6 @@
     height: 100%;
     background: #d55d59;
     display: flex;
-
 }
 
 .bannerLeft{
@@ -59,7 +58,8 @@
     padding: 20px;
 }
 .articleItemImg{
-    flex: 350px;
+    flex: 350px 0;
+    background: #cce5e4;
     overflow: hidden;
 }
 .articleItemImg>img{
@@ -95,7 +95,7 @@
     overflow: hidden;
 }
 .articleItemAvatarImg>img{
-    height: 100%;
+    max-width: 100%;
 }
 
 /*-----------------------------------加载更多*/

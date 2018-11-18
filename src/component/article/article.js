@@ -211,7 +211,6 @@ class Article extends React.Component {
             <div className={style.page}>
 
                 {data ? <Header data={data.title_img}></Header> : <HeaderSkeleton></HeaderSkeleton>}
-
                 {data ? <ContentText data={data}></ContentText> : <ContentSkeleton></ContentSkeleton>}
 
             </div>

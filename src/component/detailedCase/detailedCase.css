@@ -39,11 +39,16 @@
 
 .titleConImg {
     flex: 50% 0;
-    overflow: hidden;
+    position: relative;
+    /*overflow: hidden;*/
 }
 
 .titleConImg > img {
+    position: absolute;
+    top: 0;
+    left: 0;
     max-width: 100%;
+    /*max-height: 100%;*/
 }
 
 /*------------------------------------------------需求*/
@@ -100,11 +105,16 @@
 .introductionImg {
     flex: 30% 0;
     height: 100%;
-    overflow: hidden;
+    position: relative;
+    /*overflow: hidden;*/
 }
 
 .introductionImg > img {
-    max-width: 150%;
+    max-width: 120%;
+    /*max-width: 150%;*/
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 /*----------------------------------------成果*/
@@ -175,7 +185,7 @@
 }
 
 .analysisBanner {
-    height: 800px;
+    height: 100%;
     width: 100%;
     overflow: hidden;
 }

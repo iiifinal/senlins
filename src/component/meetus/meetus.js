@@ -13,15 +13,11 @@ import TEAM from './img/sea_team.jpg'
     {getTeamData,SelectedPersonal}
 )
 class TeamList extends React.Component {
-    // constructor(props) {
-    //     super(props)
-    // }
 
     componentDidMount() {
         this.props.getTeamData()
     }
 
-    // getTeamData
     selectPersonal = (val) => {
         this.props.SelectedPersonal(val)
         this.props.history.push('./personal')

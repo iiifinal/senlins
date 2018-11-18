@@ -51,7 +51,6 @@ function IntroductionSkeleton() {
                 </div>
             </div>
             <div className={style.introductionImg}>
-                <img src={require(`./img/introduction.png`)} alt=""/>
             </div>
         </div>
     )
@@ -65,7 +64,6 @@ class Introduction extends React.Component {
                 <div className={style.introductionText}>
 
                     {data.case_analysis_text.map(item =>
-
                         <div className={style.introductionTextItem} key={item.title}>
                             <h5>{item.title}</h5>
                             {item.content.map((v,key) => <p key={key}>{v}</p>)}
@@ -128,7 +126,7 @@ function AnalysisSkeleton() {
     return (
         <div className={style.analysis}>
             <div className={style.analysisBanner}>
-                <img src={require('./img/Analysis-banner.png')} alt=""/>
+
             </div>
             <div className={style.analysisItem}>
                 <div className={style.analysisItemTitle}>
@@ -136,8 +134,7 @@ function AnalysisSkeleton() {
                         我们都知道我们正在做些什么。我们为这个网站不仅看起来的方式感到自豪，而且感觉它的感觉也是如此。</p>
                 </div>
                 <div className={style.analysisItemImg}>
-                    <img src={require('./img/Analysis-item1.jpg')} alt=""/>
-                    <img src={require('./img/Analysis-item2.jpg')} alt=""/>
+
                 </div>
             </div>
 
@@ -150,8 +147,7 @@ function AnalysisSkeleton() {
                     </p>
                 </div>
                 <div className={style.analysisItemImg}>
-                    <img src={require('./img/Analysis-item1.jpg')} alt=""/>
-                    <img src={require('./img/Analysis-item2.jpg')} alt=""/>
+
                 </div>
             </div>
 
@@ -162,8 +158,7 @@ function AnalysisSkeleton() {
                     </p>
                 </div>
                 <div className={style.analysisItemImg}>
-                    <img src={require('./img/Analysis-item1.jpg')} alt=""/>
-                    <img src={require('./img/Analysis-item2.jpg')} alt=""/>
+
                 </div>
             </div>
 
@@ -174,8 +169,7 @@ function AnalysisSkeleton() {
                     </p>
                 </div>
                 <div className={style.analysisItemImg}>
-                    <img src={require('./img/Analysis-item1.jpg')} alt=""/>
-                    <img src={require('./img/Analysis-item2.jpg')} alt=""/>
+
                 </div>
             </div>
         </div>
@@ -230,7 +224,7 @@ class DetailedCase extends React.Component {
                     {caseData ? <div className={style.titleConText}>
                         <span>{caseData.case_name}</span>
                         <p>{caseData.case_brief}</p>
-                        <a href={`${caseData.case_href}`}>启动项目</a>
+                        {caseData.case_href?<a href={`${caseData.case_href}`}>启动项目</a>:null}
                     </div> : <div className={style.titleConText}>暂无数据</div>}
 
                     <div className={style.titleConImg}>

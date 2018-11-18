@@ -10,7 +10,7 @@ function caseTitle() {
     return (
         <div className={style.caseListTitle}>
             <h3>最近的工作</h3>
-            <p>超过10亿用户，在使用我们设计的产品与服务100+合作伙伴，100+项目案例，80%项目落地</p>
+            <p>我们不想以夸夸其谈的方式去展示我们，我们更愿意以实际例子去证明自己</p>
         </div>
     )
 }
@@ -137,10 +137,11 @@ class Case extends React.Component {
                             <p> HIRE ME</p>
                         </div>
                         <div className={style.FirstCaseRight}>
+                            <img src={require('./img/case_banner.png')} alt=""/>
                         </div>
                     </div>
                     <div className={style.Cooperation}>
-                        <div>合作品牌1</div>
+                        <div>火狐</div>
                         <div>合作品牌1</div>
                         <div>合作品牌1</div>
                         <div>合作品牌1</div>
