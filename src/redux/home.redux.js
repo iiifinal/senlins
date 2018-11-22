@@ -1,6 +1,10 @@
 import axios from 'axios'
 
 
+
+const debug = process.env.NODE_ENV !== 'production';
+const url = debug ? 'http://localhost:3000/dataCenter/senlins.json' : 'https://www.senlins.com/dataCenter/senlins.json';
+
 // 设置各个页面数据状态
 const HOME_DATA = 'HOME_DATA'
 const SKILL_DATA = 'SKILL_DATA'
