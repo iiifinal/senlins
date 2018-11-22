@@ -110,7 +110,7 @@
 }
 
 .introductionImg > img {
-    max-width: 120%;
+    max-width: 100%;
     /*max-width: 150%;*/
     position: absolute;
     left: 0;
