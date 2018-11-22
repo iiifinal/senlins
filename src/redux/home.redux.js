@@ -108,7 +108,7 @@ export function SelectedArticle(data) {
 
 export function getHomeData() {
     return (dispatch) => {
-        axios.get('http://localhost:3000/dataCenter/senlins.json').then(res => {
+        axios.get(url).then(res => {
             dispatch({type: HOME_DATA, payload: res.data.home})
         })
     }
@@ -116,7 +116,7 @@ export function getHomeData() {
 
 export function getSkillData() {
     return (dispatch) => {
-        axios.get('http://localhost:3000/dataCenter/senlins.json').then(res => {
+        axios.get(url).then(res => {
             dispatch({type: SKILL_DATA, payload: res.data.skills})
         })
     }
@@ -124,7 +124,7 @@ export function getSkillData() {
 
 export function getCaseData() {
     return (dispatch) => {
-        axios.get('http://localhost:3000/dataCenter/senlins.json').then(res => {
+        axios.get(url).then(res => {
             dispatch({type: CASE_DATA, payload: res.data.case})
         })
     }
@@ -132,7 +132,7 @@ export function getCaseData() {
 
 export function getDynamicData() {
     return (dispatch) => {
-        axios.get('http://localhost:3000/dataCenter/senlins.json').then(res => {
+        axios.get(url).then(res => {
             dispatch({type: DYNAMIC_DATA, payload: res.data.dynamic})
         })
     }
@@ -140,7 +140,7 @@ export function getDynamicData() {
 
 export function getTeamData() {
     return (dispatch) => {
-        axios.get('http://localhost:3000/dataCenter/senlins.json').then(res => {
+        axios.get(url).then(res => {
             dispatch({type: MEETUS_DATA, payload: res.data.team})
         })
     }
@@ -149,7 +149,7 @@ export function getTeamData() {
 
 export function getDetailedCaseData() {
     return (dispatch) => {
-        axios.get('http://localhost:3000/dataCenter/senlins.json').then(res => {
+        axios.get(url).then(res => {
             dispatch({type: DETAILCASE_DATA, payload: res.data.detailed})
         })
     }
@@ -157,7 +157,7 @@ export function getDetailedCaseData() {
 
 export function getArticleData() {
     return (dispatch) => {
-        axios.get('http://localhost:3000/dataCenter/senlins.json').then(res => {
+        axios.get(url).then(res => {
             dispatch({type: ARTICLE_DATA, payload: res.data.article})
         })
     }
