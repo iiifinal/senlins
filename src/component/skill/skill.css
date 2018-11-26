@@ -35,15 +35,120 @@
 
 }
 
-.carouselItemImg {
+/*.carouselItemImg {*/
+/*flex: 50% 0;*/
+/*max-height: 500px;*/
+/*overflow: hidden;*/
+/*background: url("./img/design-2.png")no-repeat 100px 80px;*/
+/*background-size: contain;*/
+/*}*/
+/*.carouselItemImg > img {*/
+/*max-height: 60%;*/
+/*}*/
+
+.carouselItemDesign {
     flex: 50% 0;
-    max-height: 500px;
-    overflow: hidden;
+    display: flex;
+    height: 100%;
+    flex-direction: row;
 }
 
-.carouselItemImg > img {
-    max-height: 100%;
+.Design_1 {
+    flex: 200px 0;
+    margin-top: 10px;
+    height: 450px;
+    background: url("./img/design-2.png") no-repeat 0 40px;
+    background-size: 100%;
+    margin-left: 20%;
+    position: relative;
+}
+
+.Design_1 > img {
+    position: absolute;
+    left: 13%;
+    top: 18%;
+    max-width: 74%;
+}
+
+.Design_2 {
+    flex: 200px 0;
+    margin-top: 40px;
+    height: 450px;
+    background: url("./img/design-2.png") no-repeat 0 40px;
+    background-size: contain;
+    margin-left: 2%;
+    position: relative;
+}
+
+.Design_2 > img {
+    position: absolute;
+    left: 13%;
+    top: 18%;
+    max-width: 74%;
+}
+
+.carouselItemTech {
+    flex: 50% 0;
+    display: flex;
     height: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.carouselItemTechGif{
+    height: 319px;
+    flex: 491px 0;
+    background: url("./img/websites.gif")no-repeat 0 0;
+    border: 6px solid white;
+    border-radius: 2px;
+    box-shadow: 5px 7px 15px 0 rgba(0,0,0,0.1);
+
+}
+
+/*social*/
+.carouselItemSocial{
+    flex: 50% 0;
+    display: flex;
+    justify-content: center;
+}
+.carouselItemSocial_1{
+    margin-top: 60px;
+    position: relative;
+    width: 447px;
+    height: 293px;
+    border: 6px solid white;
+    border-radius: 2px;
+    background: url("./img/film-yellow.gif")no-repeat 0 0;
+    box-shadow: 5px 7px 15px 0 rgba(0,0,0,0.1);
+}
+.carouselItemSocial_2{
+    position: absolute;
+    right: 20px;
+    bottom: -80px;
+    width: 169px;
+    height: 222px;
+    border: 6px solid white;
+    border-radius: 2px;
+    background: url("./img/film-teal.gif")no-repeat 0 0;
+    box-shadow: 5px 7px 15px 0 rgba(0,0,0,0.1);
+}
+
+.carouselItemHolistic{
+    flex: 50% 0;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.carouselItemHolisticGif{
+    height: 282px;
+    flex: 449px 0;
+    background: url("./img/holistic.gif")no-repeat 0 0;
+    border: 6px solid white;
+    border-radius: 2px;
+    box-shadow: 5px 7px 15px 0 rgba(0,0,0,0.1);
+
 }
 
 /*-------------------------------------------------技术类内容区域*/
@@ -125,10 +230,12 @@
     flex: 50% 0;
     display: flex;
     align-items: center;
+
 }
 
 .relatedWorkConItemLinkCon {
     width: 100%;
+    cursor: pointer;
     margin-left: 10%;
     margin-right: 5%;
     height: 80%;
@@ -176,59 +283,72 @@
     justify-content: center;
     margin-bottom: 20px;
 }
-.otherServiceConItemImg{
+
+.otherServiceConItemImg {
     flex: 50% 0;
-    text-align: right;
     padding-right: 5%;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
 }
-.otherServiceConItemImg>img{
-    max-height: 100%;
+
+.otherServiceConItemImg > img {
+    /*max-width: 40%;*/
+    max-height: 80%;
 }
-.otherServiceConItemText{
+
+.otherServiceConItemText {
     flex: 50% 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-right: 20%;
 }
-.otherServiceConItemText>h5{
+
+.otherServiceConItemText > h5 {
     font-size: 24px;
     margin-bottom: 30px;
 }
-.otherServiceConItemText>p{
+
+.otherServiceConItemText > p {
     font-size: 16px;
     color: #888888;
     line-height: 22px;
 }
 
 /*----------------------------------------团队链接*/
-.teamLink{
+.teamLink {
     width: 100%;
-    background: url("./img/skill-4.png")no-repeat;
+    background: url("./img/skill-bottom.png") no-repeat;
     height: 600px;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.teamLinkCon{
+
+.teamLinkCon {
     height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255, 255, 255, 0.9);
     padding: 10% 30%;
 }
-.teamLinkCon>h3{
+
+.teamLinkCon > h3 {
     font-size: 30px;
 }
-.teamLinkCon>p{
+
+.teamLinkCon > p {
     font-size: 18px;
     margin-top: 60px;
     line-height: 24px;
 }
-.teamLinkCon>span{
+
+.teamLinkCon > a {
     font-size: 16px;
     padding: 10px 20px;
     border: 1px solid #666666;

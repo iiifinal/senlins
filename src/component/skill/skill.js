@@ -1,9 +1,46 @@
 import React from 'react'
 import {Carousel} from 'antd'
 import style from './skill.css'
+import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
-import {getSkillData} from "../../redux/home.redux";
+import {getSkillData,SelectedCaseItem,SelectedSkill} from "../../redux/home.redux";
 
+
+function Design() {
+    return(
+        <div className={style.carouselItemDesign}>
+            <div className={style.Design_1}>
+                <img src={require(`./img/design-teal.gif`)} alt=""/>
+            </div>
+            <div className={style.Design_2}>
+                <img src={require(`./img/design-purple.gif`)} alt=""/>
+            </div>
+        </div>
+    )
+}
+function Tech() {
+    return(
+        <div className={style.carouselItemTech}>
+            <div className={style.carouselItemTechGif}></div>
+        </div>
+    )
+}
+function Social() {
+    return(
+        <div className={style.carouselItemSocial}>
+            <div className={style.carouselItemSocial_1}>
+                <div className={style.carouselItemSocial_2}></div>
+            </div>
+        </div>
+    )
+}
+function Holistic() {
+    return(
+        <div className={style.carouselItemHolistic}>
+            <div className={style.carouselItemHolisticGif}></div>
+        </div>
+    )
+}
 
 class CarouselItem extends React.Component {
 
@@ -17,9 +54,10 @@ class CarouselItem extends React.Component {
                             <h3>{Carousedata.subject}</h3>
                             <p>{Carousedata.subtopic}</p>
                         </div>
-                        <div className={style.carouselItemImg}>
-                            <img src={require(`${Carousedata.subject_img}`)} alt=""/>
-                        </div>
+                        {Carousedata.id==='design'?<Design></Design>:null}
+                        {Carousedata.id==='tech'?<Tech></Tech>:null}
+                        {Carousedata.id==='social'?<Social></Social>:null}
+                        {Carousedata.id==='holistic'?<Holistic></Holistic>:null}
                     </div>
                 </Carousel>
             </div>
@@ -50,7 +88,20 @@ class TextContent extends React.Component {
 
 }
 
+
+@connect(
+    state => ({}),
+    {SelectedCaseItem}
+)
 class RelatedWork extends React.Component {
+    constructor(props){
+        super(props)
+    }
+    selectedCaseItem(id){
+        this.props.SelectedCaseItem(id)
+        this.props.history.push('./detailedCase')
+        window.scrollTo(0, 0)
+    }
 
     render() {
         const Relatedata = this.props.data
@@ -60,15 +111,16 @@ class RelatedWork extends React.Component {
                 <h3 className={style.relatedWorkTitle}>相关工作</h3>
                 <div className={style.relatedWorkCon}>
 
-
                     {Relatedata.map((item, index) =>
-
                         < div className={style.relatedWorkConItem} key={index}>
                             <div className={style.relatedWorkConItemImg}>
                                 <img src={require(`${item.case_img}`)} alt=""/>
                             </div>
                             <div className={style.relatedWorkConItemLink}>
-                                <div className={style.relatedWorkConItemLinkCon}>
+                                <div className={style.relatedWorkConItemLinkCon}
+                                     onClick={()=>{
+                                         this.selectedCaseItem(item.case_id)
+                                     }}>
                                     <span>{item.case_type}</span>
                                     <span className={style.relatedWorkConItemLinkConFlag}>
                                         {item.case_name}
@@ -79,7 +131,6 @@ class RelatedWork extends React.Component {
                         </div>)
                     }
 
-
                 </div>
             </div>
         )
@@ -87,44 +138,39 @@ class RelatedWork extends React.Component {
 
 }
 
-class OtherService extends React.Component {
-    render() {
+@connect(
+    state => ({}),
+    {SelectedSkill}
+)
 
+class OtherService extends React.Component {
+
+    selectedTypeItem(id){
+        this.props.SelectedSkill(id)
+        this.props.history.push('./skill')
+        window.scrollTo(0, 0)
+    }
+
+    render() {
         return (
             <div className={style.otherService}>
                 <h3 className={style.otherServiceTitle}>其他服务</h3>
                 <div className={style.otherServiceCon}>
-
-                    <div className={style.otherServiceConItem}>
-                        <div className={style.otherServiceConItemImg}>
-                            <img src={require('./img/skill-3.jpg')} alt=""/>
-                        </div>
-                        <div className={style.otherServiceConItemText}>
-                            <h5>社交内容和参与</h5>
-                            <p>创意和战略团队共同努力设计美学，声音和路线图，以便在地球上最直接面向消费者的平台上进行交流。 </p>
-                        </div>
-                    </div>
-
-                    <div className={style.otherServiceConItem}>
-                        <div className={style.otherServiceConItemImg}>
-                            <img src={require('./img/skill-3.jpg')} alt=""/>
-                        </div>
-                        <div className={style.otherServiceConItemText}>
-                            <h5>社交内容和参与</h5>
-                            <p>创意和战略团队共同努力设计美学，声音和路线图，以便在地球上最直接面向消费者的平台上进行交流。 </p>
-                        </div>
-                    </div>
-
-                    <div className={style.otherServiceConItem}>
-                        <div className={style.otherServiceConItemImg}>
-                            <img src={require('./img/skill-3.jpg')} alt=""/>
-                        </div>
-                        <div className={style.otherServiceConItemText}>
-                            <h5>社交内容和参与</h5>
-                            <p>创意和战略团队共同努力设计美学，声音和路线图，以便在地球上最直接面向消费者的平台上进行交流。 </p>
-                        </div>
-                    </div>
-
+                    {this.props.data.map((item,index)=>{
+                        return (
+                            <div className={style.otherServiceConItem} key={index}
+                            onClick={()=>{this.selectedTypeItem(item.skill_id)}}
+                            >
+                                <div className={style.otherServiceConItemImg}>
+                                    <img src={require(`${item.img}`)} alt=""/>
+                                </div>
+                                <div className={style.otherServiceConItemText}>
+                                    <h5>{item.title}</h5>
+                                    <p>{item.contentText}</p>
+                                </div>
+                            </div>
+                        )
+                    })}
                 </div>
             </div>
         )
@@ -138,7 +184,8 @@ function TeamLink() {
             <div className={style.teamLinkCon}>
                 <h3>规划师和制造者团队</h3>
                 <p>在追求艺术与目标的协调中，健康的紧张是我们文化的必要组成部分。</p>
-                <span>阅读更多</span>
+                <Link to='./concect'>了解更多</Link>
+                {/*<span>了解更多</span>*/}
             </div>
         </div>
     )
@@ -167,19 +214,24 @@ class Skill extends React.Component {
                     data={{
                         subject: pageData.subject,
                         subtopic: pageData.subtopic,
-                        subject_img: pageData.subject_img
+                        subject_img: pageData.subject_img,
+                        id: pageData.skill_id
                     }}
                 ></CarouselItem> : null}
 
                 {pageData ? <TextContent
                     data={pageData.main_data}
+
                 ></TextContent> : null}
 
                 {pageData ? <RelatedWork
                     data={pageData.about_case}
+                    history={this.props.history}
                 ></RelatedWork> : null}
 
-                <OtherService></OtherService>
+                {pageData?<OtherService history={this.props.history}
+                    data={pageData.other_skill}></OtherService>:null}
+
                 <TeamLink></TeamLink>
 
             </div>

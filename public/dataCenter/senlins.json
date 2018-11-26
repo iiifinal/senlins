@@ -38,7 +38,7 @@
       "case_id": "case_003",
       "classify": "社交互动类",
       "projectName": "UI100",
-      "synopsis": "美丽的国度，广大设计师交流中心平台",
+      "synopsis": "美的发现，设计师优选的作品展示与交流平台",
       "imgUrl": "./img/UI100_app.png"
     }
   ],
@@ -46,7 +46,7 @@
     {
       "subject": "设计和用户体验",
       "skill_id": "design",
-      "subject_img": "./img/skill-1.png",
+      "subject_img": "./img/design-purple.gif",
       "subtopic": "通过数字艺术和战略内容架构创建的基于研究和魔术的用户旅程。",
       "main_data": {
         "main_title": "与您的想法相反，“设计”不仅仅是我们制作它的过程。它实际上是由数据，事实和经验驱动的数百个审美决策的结果",
@@ -75,35 +75,47 @@
       },
       "about_case": [
         {
-          "case_id": "科切拉",
-          "case_img": "./img/skill-2.jpg",
-          "case_type": "活动社交类",
-          "case_name": "科切拉网站",
-          "case_short": "一个数字目的地，旨在与世界上最受欢迎的现场活动之一和谐共处。"
+          "case_id": "case_001",
+          "case_img": "./img/dushu_app.png",
+          "case_type": "阅读应用",
+          "case_name": "独书APP",
+          "case_short": "独书app，一个分享阅读的乐趣的社区"
         },
         {
-          "case_id": "科切拉",
-          "case_img": "./img/skill-2.jpg",
-          "case_type": "活动社交类",
-          "case_name": "科切拉网站",
-          "case_short": "一个数字目的地，旨在与世界上最受欢迎的现场活动之一和谐共处。"
+          "case_id": "case_002",
+          "case_img": "./img/wodongle_app.png",
+          "case_type": "教育应用",
+          "case_name": "哦懂了",
+          "case_short": "一个专注于教学的社区平台"
         },
         {
-          "case_id": "科切拉",
-          "case_img": "./img/skill-2.jpg",
-          "case_type": "活动社交类",
-          "case_name": "科切拉网站",
-          "case_short": "一个数字目的地，旨在与世界上最受欢迎的现场活动之一和谐共处。"
-        },
-        {
-          "case_id": "科切拉",
-          "case_img": "./img/skill-2.jpg",
-          "case_type": "活动社交类",
-          "case_name": "科切拉网站",
-          "case_short": "一个数字目的地，旨在与世界上最受欢迎的现场活动之一和谐共处。"
+          "case_id": "case_003",
+          "case_img": "./img/UI100_app.png",
+          "case_type": "资讯类",
+          "case_name": "UI100",
+          "case_short": "设计师优选作品展示与交流平台"
         }
       ],
-      "other_skill": []
+      "other_skill": [
+        {
+          "skill_id":"tech",
+          "img":"./img/tech.png",
+          "title":"技术开发",
+          "contentText":"丰富，身临其境，响应迅速的开发解决方案，植根于通信和转换。"
+        },
+        {
+          "skill_id":"social",
+          "img":"./img/social.png",
+          "title":"社交活动参与",
+          "contentText":"创意和战略团队共同努力设计体验美学，直接面向消费者的平台上进行交流。"
+        },
+        {
+          "skill_id":"holistic",
+          "img":"./img/holistic.png",
+          "title":"整体数字战略",
+          "contentText":"规划，生产，资产，工具，数据驱动的见解以及超越发布的合作伙伴关系的结合。全程为长期"
+        }
+      ]
     },
     {
       "subject": "技术开发",
@@ -141,35 +153,47 @@
       },
       "about_case": [
         {
-          "case_id": "科切拉",
-          "case_img": "./img/skill-2.jpg",
-          "case_type": "活动社交类",
-          "case_name": "科切拉网站",
-          "case_short": "一个数字目的地，旨在与世界上最受欢迎的现场活动之一和谐共处。"
+          "case_id": "case_001",
+          "case_img": "./img/dushu_app.png",
+          "case_type": "阅读应用",
+          "case_name": "独书APP",
+          "case_short": "独书app，一个分享阅读的乐趣的社区"
         },
         {
-          "case_id": "科切拉",
-          "case_img": "./img/skill-2.jpg",
-          "case_type": "活动社交类",
-          "case_name": "科切拉网站",
-          "case_short": "一个数字目的地，旨在与世界上最受欢迎的现场活动之一和谐共处。"
+          "case_id": "case_002",
+          "case_img": "./img/wodongle_app.png",
+          "case_type": "教育应用",
+          "case_name": "哦懂了",
+          "case_short": "一个专注于教学的社区平台"
         },
         {
-          "case_id": "科切拉",
-          "case_img": "./img/skill-2.jpg",
-          "case_type": "活动社交类",
-          "case_name": "科切拉网站",
-          "case_short": "一个数字目的地，旨在与世界上最受欢迎的现场活动之一和谐共处。"
-        },
-        {
-          "case_id": "科切拉",
-          "case_img": "./img/skill-2.jpg",
-          "case_type": "活动社交类",
-          "case_name": "科切拉网站",
-          "case_short": "一个数字目的地，旨在与世界上最受欢迎的现场活动之一和谐共处。"
+          "case_id": "case_003",
+          "case_img": "./img/UI100_app.png",
+          "case_type": "资讯类",
+          "case_name": "UI100",
+          "case_short": "设计师优选作品展示与交流平台"
         }
       ],
-      "other_skill": []
+      "other_skill": [
+        {
+          "skill_id":"design",
+          "img":"./img/design.png",
+          "title":"设计和用户体验",
+          "contentText":"通过数字艺术和战略内容架构创建的基于研究和魔术的用户旅程。"
+        },
+        {
+          "skill_id":"social",
+          "img":"./img/social.png",
+          "title":"社交活动参与",
+          "contentText":"创意和战略团队共同努力设计体验美学，直接面向消费者的平台上进行交流。"
+        },
+        {
+          "skill_id":"holistic",
+          "img":"./img/holistic.png",
+          "title":"整体数字战略",
+          "contentText":"规划，生产，资产，工具，数据驱动的见解以及超越发布的合作伙伴关系的结合。全程为长期"
+        }
+      ]
     },
     {
       "subject": "社交互动参与",
@@ -203,35 +227,47 @@
       },
       "about_case": [
         {
-          "case_id": "科切拉",
-          "case_img": "./img/skill-2.jpg",
-          "case_type": "活动社交类",
-          "case_name": "科切拉网站",
-          "case_short": "一个数字目的地，旨在与世界上最受欢迎的现场活动之一和谐共处。"
+          "case_id": "case_001",
+          "case_img": "./img/dushu_app.png",
+          "case_type": "阅读应用",
+          "case_name": "独书APP",
+          "case_short": "独书app，一个分享阅读的乐趣的社区"
         },
         {
-          "case_id": "科切拉",
-          "case_img": "./img/skill-2.jpg",
-          "case_type": "活动社交类",
-          "case_name": "科切拉网站",
-          "case_short": "一个数字目的地，旨在与世界上最受欢迎的现场活动之一和谐共处。"
+          "case_id": "case_002",
+          "case_img": "./img/wodongle_app.png",
+          "case_type": "教育应用",
+          "case_name": "哦懂了",
+          "case_short": "一个专注于教学的社区平台"
         },
         {
-          "case_id": "科切拉",
-          "case_img": "./img/skill-2.jpg",
-          "case_type": "活动社交类",
-          "case_name": "科切拉网站",
-          "case_short": "一个数字目的地，旨在与世界上最受欢迎的现场活动之一和谐共处。"
-        },
-        {
-          "case_id": "科切拉",
-          "case_img": "./img/skill-2.jpg",
-          "case_type": "活动社交类",
-          "case_name": "科切拉网站",
-          "case_short": "一个数字目的地，旨在与世界上最受欢迎的现场活动之一和谐共处。"
+          "case_id": "case_003",
+          "case_img": "./img/UI100_app.png",
+          "case_type": "资讯类",
+          "case_name": "UI100",
+          "case_short": "设计师优选作品展示与交流平台"
         }
       ],
-      "other_skill": []
+      "other_skill": [
+        {
+          "skill_id":"design",
+          "img":"./img/design.png",
+          "title":"设计和用户体验",
+          "contentText":"通过数字艺术和战略内容架构创建的基于研究和魔术的用户旅程。"
+        },
+        {
+          "skill_id":"tech",
+          "img":"./img/tech.png",
+          "title":"技术开发",
+          "contentText":"丰富，身临其境，响应迅速的开发解决方案，植根于通信和转换。"
+        },
+        {
+          "skill_id":"holistic",
+          "img":"./img/holistic.png",
+          "title":"整体数字战略",
+          "contentText":"规划，生产，资产，工具，数据驱动的见解以及超越发布的合作伙伴关系的结合。全程为长期"
+        }
+      ]
     },
     {
       "subject": "整体数字战略",
@@ -261,35 +297,47 @@
       },
       "about_case": [
         {
-          "case_id": "科切拉",
-          "case_img": "./img/skill-2.jpg",
-          "case_type": "活动社交类",
-          "case_name": "科切拉网站",
-          "case_short": "一个数字目的地，旨在与世界上最受欢迎的现场活动之一和谐共处。"
+          "case_id": "case_001",
+          "case_img": "./img/dushu_app.png",
+          "case_type": "阅读应用",
+          "case_name": "独书APP",
+          "case_short": "独书app，一个分享阅读的乐趣的社区"
         },
         {
-          "case_id": "科切拉",
-          "case_img": "./img/skill-2.jpg",
-          "case_type": "活动社交类",
-          "case_name": "科切拉网站",
-          "case_short": "一个数字目的地，旨在与世界上最受欢迎的现场活动之一和谐共处。"
+          "case_id": "case_002",
+          "case_img": "./img/wodongle_app.png",
+          "case_type": "教育应用",
+          "case_name": "哦懂了",
+          "case_short": "一个专注于教学的社区平台"
         },
         {
-          "case_id": "科切拉",
-          "case_img": "./img/skill-2.jpg",
-          "case_type": "活动社交类",
-          "case_name": "科切拉网站",
-          "case_short": "一个数字目的地，旨在与世界上最受欢迎的现场活动之一和谐共处。"
-        },
-        {
-          "case_id": "科切拉",
-          "case_img": "./img/skill-2.jpg",
-          "case_type": "活动社交类",
-          "case_name": "科切拉网站",
-          "case_short": "一个数字目的地，旨在与世界上最受欢迎的现场活动之一和谐共处。"
+          "case_id": "case_003",
+          "case_img": "./img/UI100_app.png",
+          "case_type": "资讯类",
+          "case_name": "UI100",
+          "case_short": "设计师优选作品展示与交流平台"
         }
       ],
-      "other_skill": []
+      "other_skill": [
+        {
+          "skill_id":"design",
+          "img":"./img/design.png",
+          "title":"设计和用户体验",
+          "contentText":"通过数字艺术和战略内容架构创建的基于研究和魔术的用户旅程。"
+        },
+        {
+          "skill_id":"tech",
+          "img":"./img/tech.png",
+          "title":"技术开发",
+          "contentText":"丰富，身临其境，响应迅速的开发解决方案，植根于通信和转换。"
+        },
+        {
+          "skill_id":"social",
+          "img":"./img/social.png",
+          "title":"社交活动参与",
+          "contentText":"创意和战略团队共同努力设计体验美学，直接面向消费者的平台上进行交流。"
+        }
+      ]
     }
 
   ],
@@ -680,6 +728,90 @@
           ],
           "explain": [
             "通过层层分析筛选，我们让可复用的模块独立开来，将APP的结构划分更为清晰，组件间复用度大大提高，降低了后期维护的时间。"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "case_003",
+      "case_name": "Ui100APP",
+      "case_title_img": "./img/case_003-header.png",
+      "case_brief": "美的发现，设计师优选的作品展示与交流平台",
+      "case_href": "",
+      "case_demand": "艺术源于生活高于生活。作为特定群体，设计师总是有着独具一格的眼光，我们希望能够营造一个发现美分享美再造美的社区。",
+      "case_analysis": {
+        "case_analysis_text": [
+          {
+            "title": "他们是谁",
+            "content": [
+              "100天工作室（100Days），是一个专注于项目品牌设计的工作室。他们希望能有一个展示过往项目成就的APP,以及可以拥有与其他设计师互动交流的社区。"
+            ]
+          },
+          {
+            "title": "项目挑战",
+            "content": [
+              "100Days希望能拥有一个特定设计职业群体的交流平台，目前主流互动社区对于100Days来说展示力度不够专注与友好，同时希望能够与其他同行业工作者进行深入交流。"
+            ]
+          },
+          {
+            "title": "分析策略",
+            "content": [
+              "我们在仔细评估100Days期望的功能需求后，进一步帮助100Days能够更好地强化实质性需求。我们团队首先参与了一系列对于设计师的调查，我们发现，设计师这一群体对视觉方面非常敏感，大部分的设计师认为合理的颜色运用非常重要，其次是视觉留空白。然后我们还发现，这个群体对美的规范有着不一样的追求，举些栗子：他们用的照片希望是九宫格黄金分割比例，他们不喜欢五花缭乱的感觉，他们希望布局大道之至简的概念等等。"
+            ]
+          },
+          {
+            "title": "解决方案",
+            "content": [
+              "在完成调查结果分析后，我们将结果统计汇集给了我们的设计师Hooke，Hooke认为我们首先应该从颜色方面进行确认选择，Hooke让我们每个人对各种颜色组合进行测试，最后结果越少的颜色组合接受的程度越高，同系颜色搭配舒服。",
+              "然后，就针对项目的触发点，我们与Hooke一致认为在图片展示较多的情况，图片的比例以及布局会非常重要。最后，Hooke决定整个项目的主题以现代简约风格为主。至于Coding方面，我们优先采用图片懒加载、预加载等技术细节进行控制交互体验，同时增加一系列留言，点赞，关注等一系列互动交流功能。"
+            ]
+          }
+        ],
+        "case_analysis_img":"./img/case_003-firm.png"
+      },
+      "case_result": [
+        {
+          "start": "访问量",
+          "end": "玉米助手下载前10位"
+        },
+        {
+          "start": "评论数",
+          "end": "综合评分4.2，好评率86%"
+        }
+      ],
+      "case_to_sum_up": "100天工作室表示Senlins出色地完成了他们所期待的社区中心，期望着可以再一次与我们达成合作。",
+      "case_figure": "./img/case_003-title.png",
+      "case_show": [
+        {
+          "img": [
+            "./img/case_003-item1.png"
+          ],
+          "explain": [
+            "除了规范化字体使用准则外，我们还对图标的使用进行统一，主要以线性图标为主，增加了趣味性和整体协调性。个人中心和消息界面采用了轻微渐变的面型图标，强调侧重点及丰富结构层次。不同区域的功能图标尺寸做了不同。"
+          ]
+        },
+        {
+          "img": [
+            "./img/case_003-item2.png"
+          ],
+          "explain": [
+            "主体以黑色配色为主导，过长的文案也是影响视觉效果的元凶之一。所以，我们决定将数据文案的长短有意识地限制在某个范围内。借此消除掉繁琐累赘的感受，希望能带来焕然一新的感觉。"
+          ]
+        },
+        {
+          "img": [
+            "./img/case_003-item3.png"
+          ],
+          "explain": [
+            "考虑到设计师群体的特点，我们将交互进一步优化，简化作品上传等这些非重点功能，进一步降低视觉干扰，加强视觉体验。"
+          ]
+        },
+        {
+          "img": [
+            "./img/case_003-item4.png"
+          ],
+          "explain": [
+            "我们从开发者角度考虑问题，代码结构优化，将功能模块进一步优化，做到项目的功能高度复用性以及可扩展性。降低后期的维护时间与成本。"
           ]
         }
       ]

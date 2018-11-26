@@ -90,7 +90,7 @@ function Footer() {
                             <Link to='./dynamic'>动态</Link>
                         </div>
                         <div className={styles.footerRightMenuItem}>
-                            <Link to='./connect'>联系</Link>
+                            <Link to='./concect'>联系</Link>
                         </div>
                         <div className={styles.footerRightMenuItem}>
                             <Link to='./join'>招聘</Link>

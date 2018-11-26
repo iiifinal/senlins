@@ -4,8 +4,7 @@ import {connect} from 'react-redux'
 import {getTeamData,SelectedPersonal} from '../../redux/home.redux'
 
 import style from './meetus.css'
-import BGIMG from './img/meetus_bg.jpg'
-import TEAM from './img/sea_team.jpg'
+
 
 
 @connect(
@@ -77,7 +76,7 @@ class Meetus extends React.Component {
                     <div className={style.meetusHeaderSet}>
                         <div className={style.meetusHeaderLeft}>
                             <div className={style.meetusHeaderLeftImg}>
-                                <img src={BGIMG} alt=""/>
+
                             </div>
 
                         </div>
@@ -102,16 +101,16 @@ class Meetus extends React.Component {
                     </div>
                     <div className={style.summaryRight}>
                         <div className={style.summaryRightTitle}>
-                            <p>团队位置照片</p>
+                            <p>SENLINS</p>
                         </div>
                         <div className={style.summaryRightImg}>
-                            <img src={require('./img/summary.jpg')} alt=""/>
+                            {/*<img src={require('./img/summary.png')} alt=""/>*/}
                         </div>
                     </div>
                 </div>
                 <div className={style.teamEvery}>
                     <div className={style.teamEveryImg}>
-                        <img src={TEAM} alt=""/>
+                        <img src={require('./img/meetus_team2.png')} alt=""/>
                     </div>
 
                     <Route component={TeamList}></Route>

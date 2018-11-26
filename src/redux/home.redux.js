@@ -1,7 +1,5 @@
 import axios from 'axios'
-
-
-
+// 判断生产环境还是线上环境
 const debug = process.env.NODE_ENV !== 'production';
 const url = debug ? 'http://localhost:3000/dataCenter/senlins.json' : 'https://www.senlins.com/dataCenter/senlins.json';
 

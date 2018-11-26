@@ -28,12 +28,11 @@
 .meetusHeaderLeftImg {
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    background: url("./img/meetus_bg.png")no-repeat 0 0;
+    background-size: cover;
 }
 
-.meetusHeaderLeftImg > img {
-    max-height: 100%;
-}
+
 
 .meetusHeaderRight {
     flex: 60% 0;
@@ -107,7 +106,7 @@
 }
 
 .summaryRight {
-    flex: 50%;
+    flex: 50% 0;
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -116,28 +115,34 @@
 .summaryRightTitle {
     flex: 40px;
     width: 50%;
-    background: deepskyblue;
+    background: rgba(237,237,237,1);
 }
 
 .summaryRightTitle > p {
     font-size: 14px;
-    color: white;
+    /*color: white;*/
     text-align: center;
     text-transform: uppercase;
     line-height: 40px;
+
 }
 
 .summaryRightImg {
     width: 100%;
-    height: 100%;
+    flex: 90% 0;
     /*padding: 20px;*/
     box-sizing: border-box;
-    border: 15px solid rgba(4, 138, 255, 0.3);
-    overflow: hidden;
+    border: 15px solid rgba(234, 234, 234,1);
+    background-size: cover;
+    background: url("./img/summary.png")no-repeat 0 0;
+    box-shadow: 7px 6px 15px 0 rgba(0,0,0,0.1);
 }
-.summaryRightImg>img{
-    width: 100%;
+
+.summaryRightImg > img {
+    /*max-width: 100%;*/
+
 }
+
 /*-----------------------------------------------------------*/
 /*成员简介*/
 .teamEvery {
@@ -152,7 +157,8 @@
 }
 
 .teamEveryImg > img {
-   width: 100%;
+    /*width: 100%;*/
+    max-height: 100%;
 }
 
 .teamEveryMan {
@@ -201,30 +207,33 @@
 .teamEveryManConItemImg > img {
     max-width: 100%;
 }
-.teamItemText{
+
+.teamItemText {
     display: flex;
     flex-direction: column;
     align-items: center;
     /*background: rgba(255,255,255,0.9);*/
 }
-.teamItemText>span{
+
+.teamItemText > span {
     width: 100px;
     height: 100px;
     display: inline-block;
     background: royalblue;
 }
 
-.teamItemText>span>img{
+.teamItemText > span > img {
     width: 100%;
     height: 100%;
 }
 
 /*------------------------------------------------团队列表*/
-.teamList{
+.teamList {
     width: 100%;
     padding-bottom: 40px;
 }
-.teamListTitle{
+
+.teamListTitle {
     width: 100%;
     min-height: 200px;
     padding: 0 15%;
@@ -233,34 +242,40 @@
     justify-content: center;
     align-items: center;
 }
-.teamListTitle>h3{
+
+.teamListTitle > h3 {
     font-size: 30px;
     margin-bottom: 30px;
 }
-.teamListTitle>p{
+
+.teamListTitle > p {
     font-size: 16px;
     color: #666666;
     line-height: 24px;
 }
-.teamListCon{
+
+.teamListCon {
     width: 100%;
     min-height: 200px;
     display: flex;
     flex-wrap: wrap;
 }
-.teamListConItem{
+
+.teamListConItem {
     flex: 20% 0;
     box-sizing: border-box;
     position: relative;
     border: 1px solid white;
     overflow: hidden;
 }
-.teamListConItem>img{
-    vertical-align:top;
+
+.teamListConItem > img {
+    vertical-align: top;
     opacity: 0.7;
     max-width: 100%;
 }
-.teamListConItemText{
+
+.teamListConItemText {
     position: absolute;
     width: 100%;
     padding: 20px;
@@ -268,37 +283,41 @@
     bottom: 0;
     display: flex;
     align-items: center;
-    background: rgba(255,255,255,0.7);
+    background: rgba(255, 255, 255, 0.7);
     justify-content: space-between;
 }
-.teamListConItemTextLeft{
+
+.teamListConItemTextLeft {
     display: flex;
     flex-direction: column;
 }
-.teamListConItemTextName{
+
+.teamListConItemTextName {
     font-size: 28px;
     color: #666666;
     /*color: white;*/
     margin-bottom: 10px;
 }
 
-.teamListConItemTextCareer{
+.teamListConItemTextCareer {
     font-size: 14px;
     color: #888888;
     /*color: white;*/
 }
-.teamListConItemTextRight{
+
+.teamListConItemTextRight {
     font-size: 30px;
     /*color: white;*/
     color: #888888;
 }
 
-.teamListConItem:last-child{
+.teamListConItem:last-child {
     background: #c6e7e5;
     display: flex;
 
 }
-.joinTeam{
+
+.joinTeam {
     margin: 10%;
     flex: 1;
     box-sizing: border-box;
@@ -309,15 +328,18 @@
     justify-content: center;
     align-items: center;
 }
-.joinTeam>h5{
+
+.joinTeam > h5 {
     font-size: 26px;
     margin-bottom: 20px;
 }
-.joinTeam>span{
+
+.joinTeam > span {
     font-size: 12px;
     padding: 8px 14px;
     border: 1px solid #f7f7f7;
 }
+
 /*---------------------------------------------------------*/
 /*加入我们*/
 .joinUs {
@@ -327,9 +349,9 @@
     border-bottom: 1px solid white;
     justify-content: center;
 
-
 }
-.joinUsSetWidth{
+
+.joinUsSetWidth {
     padding-left: 10%;
     width: 85%;
     padding-right: 5%;
@@ -381,12 +403,14 @@
 .joinUsGraphicLeft > div > img {
     max-width: 100%;
 }
-.joinUsGraphicRight{
+
+.joinUsGraphicRight {
     flex: 50%;
     padding-left: 5%;
     padding-right: 10%;
 }
-.joinUsGraphicRight>p{
+
+.joinUsGraphicRight > p {
     font-size: 14px;
     line-height: 20px;
     margin-bottom: 30px;
