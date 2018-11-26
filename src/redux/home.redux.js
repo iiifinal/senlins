@@ -32,7 +32,7 @@ const initState = {
     recommendName: 'A',
     selectedSkillId: 'design',
     selectedCaseId: 'case_001',
-    articleId:'',
+    articleId:'A001',
     personalId: '0'
 
 }

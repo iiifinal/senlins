@@ -15,13 +15,14 @@
     display: flex;
 }
 
-.bannerLeft{
+.bannerLeft {
     flex: 70% 0;
     display: flex;
     flex-direction: column;
     padding-left: 10%;
     justify-content: center;
 }
+
 .bannerLeft > span {
     color: white;
     font-size: 40px;
@@ -33,7 +34,8 @@
     font-size: 18px;
     line-height: 26px;
 }
-.bannerRight{
+
+.bannerRight {
     flex: 30% 0;
     display: flex;
     align-items: center;
@@ -41,7 +43,7 @@
 }
 
 /*--------------------------------------------------文章*/
-.article{
+.article {
     width: 100%;
     padding: 60px 15%;
     min-height: 100px;
@@ -49,7 +51,8 @@
     flex-wrap: wrap;
     flex-direction: row;
 }
-.articleItem{
+
+.articleItem {
     flex: 47% 0;
     margin: 1.5%;
     display: flex;
@@ -57,49 +60,60 @@
     border: 1px solid #f7f7f7;
     padding: 20px;
 }
-.articleItemImg{
+
+.articleItemImg {
     flex: 350px 0;
     background: #cce5e4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
-.articleItemImg>img{
-    width: 100%;
+
+.articleItemImg > img {
+    max-width: 20%;
 }
-.articleItemText{
+
+.articleItemText {
     display: flex;
     margin-top: 30px;
     align-items: center;
     margin-bottom: 40px;
     justify-content: flex-end;
 }
-.articleItemText>p{
+
+.articleItemText > p {
     flex: 90% 0;
     font-size: 18px;
     line-height: 26px;
     padding-right: 20px;
     text-align: right;
 }
-.articleItemAvatar{
+
+.articleItemAvatar {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
 }
-.articleItemAvatarName{
+
+.articleItemAvatarName {
     padding-right: 20px;
 }
-.articleItemAvatarImg{
+
+.articleItemAvatarImg {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     overflow: hidden;
 }
-.articleItemAvatarImg>img{
+
+.articleItemAvatarImg > img {
     max-width: 100%;
 }
 
 /*-----------------------------------加载更多*/
-.loadMore{
+.loadMore {
     width: 100%;
     min-height: 10px;
     /*padding-top: 30px;*/
@@ -108,7 +122,8 @@
     flex-direction: column;
     align-items: center;
 }
-.loadMore>span{
+
+.loadMore > span {
     margin-top: 4px;
     font-size: 10px;
 }

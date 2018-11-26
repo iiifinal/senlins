@@ -2,7 +2,6 @@ import React from 'react'
 import {Route} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {getDynamicData, SelectedArticle} from '../../redux/home.redux'
-
 import {Icon} from 'antd';
 import style from './dynamic.css'
 
@@ -12,13 +11,12 @@ function banner() {
         <div className={style.banner}>
             <div className={style.bannerSet}>
                 <div className={style.bannerLeft}>
-                    <span>洞察</span>
-                    <p>我们学习东西。我们被激怒了。我们想分享。</p>
+                    <span>动态</span>
+                    <p>我们学习东西，我们吸取养分，我们与你共同分享成长的过程。</p>
                 </div>
                 <div className={style.bannerRight}>
                     <Icon type="down-circle"
-                          style={
-                              {fontSize: 54, color: 'white'}}
+                          style={{fontSize: 54, color: 'white'}}
                           theme="outlined"/>
                 </div>
             </div>

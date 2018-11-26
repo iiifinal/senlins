@@ -182,7 +182,6 @@ class ContentText extends React.Component {
                                       type="github" theme="outlined"/>
                             </a>
 
-
                         </div>
                     </div>
 
@@ -210,8 +209,10 @@ class Article extends React.Component {
         return (
             <div className={style.page}>
 
-                {data ? <Header data={data.title_img}></Header> : <HeaderSkeleton></HeaderSkeleton>}
-                {data ? <ContentText data={data}></ContentText> : <ContentSkeleton></ContentSkeleton>}
+                {/*{data ? <Header data={data.title_img}></Header> : <HeaderSkeleton></HeaderSkeleton>}*/}
+                {data ? <Header data={data.title_img}></Header> : null}
+                {/*{data ? <ContentText data={data}></ContentText> : <ContentSkeleton></ContentSkeleton>}*/}
+                {data ? <ContentText data={data}></ContentText> : null}
 
             </div>
         )

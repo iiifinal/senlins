@@ -141,10 +141,8 @@ class Case extends React.Component {
                         </div>
                     </div>
                     <div className={style.Cooperation}>
-                        <div>火狐</div>
-                        <div>合作品牌1</div>
-                        <div>合作品牌1</div>
-                        <div>合作品牌1</div>
+                        {/*<div>焱凤技术</div>*/}
+                        {/*<div>森林猫</div>*/}
                     </div>
                 </div>
                 <div className={style.caseList}>
