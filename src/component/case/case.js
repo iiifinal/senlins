@@ -140,10 +140,10 @@ class Case extends React.Component {
                             <img src={require('./img/case_banner.png')} alt=""/>
                         </div>
                     </div>
-                    <div className={style.Cooperation}>
-                        {/*<div>焱凤技术</div>*/}
-                        {/*<div>森林猫</div>*/}
-                    </div>
+                    {/*<div className={style.Cooperation}>*/}
+                        {/*/!*<div>焱凤技术</div>*!/*/}
+                        {/*/!*<div>森林猫</div>*!/*/}
+                    {/*</div>*/}
                 </div>
                 <div className={style.caseList}>
                     <Route component={caseTitle}></Route>

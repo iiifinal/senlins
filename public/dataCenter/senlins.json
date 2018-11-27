@@ -361,14 +361,14 @@
       "dynamicItem_img": "./img/technical.png",
       "dynamicItem_text": "SPA项目SEO的正确姿势",
       "dynamicItem_name": "Martin",
-      "dynamicItem_avatar": "./img/apple_avatar.png"
+      "dynamicItem_avatar": "./img/martin_avatar.png"
     },
     {
       "dynamicItem_id": "A004",
       "dynamicItem_img": "./img/technical.png",
       "dynamicItem_text": "用户研究与测试的成本分析",
       "dynamicItem_name": "Apple",
-      "dynamicItem_avatar": "./img/martin_avatar.png"
+      "dynamicItem_avatar": "./img/apple_avatar.png"
     }
   ],
   "article": [

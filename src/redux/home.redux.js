@@ -34,7 +34,6 @@ const initState = {
     selectedCaseId: 'case_001',
     articleId:'A001',
     personalId: '0'
-
 }
 
 export function homeState(state = initState, action) {

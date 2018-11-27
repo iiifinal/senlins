@@ -26,27 +26,19 @@ function JoinReason() {
 
                 <div className={style.joinReasonConItem}>
                     <div className={style.joinReasonConItemText}>
-                        <p>BKWLD真正体现了“两个人比一个人好”的谚语。每个团队成员都有发言权。项目由我见过的一些最有才华的人共同赢得和完成。</p>
+                        <p>Senlins体现了“两个人比一个人好”的谚语。每个团队成员都有发言权。项目由我见过的一些最有能力才华的人共同完成。</p>
                     </div>
+                    <img src={require('./img/join_reason_1.png')} alt=""/>
+
                 </div>
 
                 <div className={style.joinReasonConItem}>
                     <div className={style.joinReasonConItemText}>
-                        <p>BKWLD真正体现了“两个人比一个人好”的谚语。每个团队成员都有发言权。项目由我见过的一些最有才华的人共同赢得和完成。</p>
+                        <p>Senlins实现自由安排，自由工作，拒绝加班现象。按部就班的效率就是最好的效率。</p>
                     </div>
+                    <img src={require('./img/join_reason_2.png')} alt=""/>
                 </div>
 
-                <div className={style.joinReasonConItem}>
-                    <div className={style.joinReasonConItemText}>
-                        <p>BKWLD真正体现了“两个人比一个人好”的谚语。每个团队成员都有发言权。项目由我见过的一些最有才华的人共同赢得和完成。</p>
-                    </div>
-                </div>
-
-                <div className={style.joinReasonConItem}>
-                    <div className={style.joinReasonConItemText}>
-                        <p>BKWLD真正体现了“两个人比一个人好”的谚语。每个团队成员都有发言权。项目由我见过的一些最有才华的人共同赢得和完成。</p>
-                    </div>
-                </div>
             </div>
         </div>
     )

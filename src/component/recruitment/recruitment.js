@@ -9,12 +9,11 @@ class Header extends React.Component {
     render() {
         return (
             <div className={style.header}>
-                <img src={require('./img/recruitmentHead.jpg')} alt=""/>
+                {/*<img src={require('./img/recruitmentHead.png')} alt=""/>*/}
             </div>
         )
     }
 }
-
 
 class Content extends React.Component {
     render() {
