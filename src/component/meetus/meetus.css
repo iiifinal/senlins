@@ -263,6 +263,7 @@
 
 .teamListConItem {
     flex: 20% 0;
+    cursor: pointer;
     box-sizing: border-box;
     position: relative;
     border: 1px solid white;
