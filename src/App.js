@@ -73,7 +73,7 @@ function Footer() {
                         <p>项目定制化整体方案解决的企业</p>
                     </div>
                     <div className={styles.footerLiftPhone}>
-                        <h5>senlins@qq.com</h5>
+                        <h5>maldek@qq.com</h5>
                         <span>保持联系</span>
                     </div>
                 </div>

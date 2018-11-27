@@ -133,7 +133,7 @@ class Case extends React.Component {
                         <div className={style.FirstCaseLeft}>
                             <span>HELLO</span>
                             <h3>我是森林猫</h3>
-                            <h5>一个专注于品牌项目实现的推动者。</h5>
+                            <h5>一个专注于品牌项目实现的推动者</h5>
                             <p> HIRE ME</p>
                         </div>
                         <div className={style.FirstCaseRight}>

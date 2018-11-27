@@ -85,7 +85,7 @@ class Meetus extends React.Component {
                             <div className={style.meetusHeaderText}>
                                 <span>欢迎认识我们</span>
                                 <h3>我们是规划师和制造者团队</h3>
-                                <p>梦想家，实干家和甜甜圈爱好者。（有些人更喜欢当地种植的水果和蔬菜，但我们很清楚。）</p>
+                                <p>梦想家，实干家和吸喵星人（有些人更喜欢种植，拍照等）</p>
                             </div>
                         </div>
                     </div>

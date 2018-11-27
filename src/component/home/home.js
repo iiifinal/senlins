@@ -81,7 +81,7 @@ class Home extends React.Component {
                 <div className={style.bgImg}></div>
 
                 <div className={style.cascade}>
-                    <h3>森林猫（Senlins）,一个专注项目定制化整体方案解决的企业</h3>
+                    <h3>森林猫（SENLINS）,专注于项目定制化整体方案的企业团队</h3>
                     <p>
                         SENLINS遵循着"产品是商业价值的核心容器"的观念，通过定制化研究，快速定义产品策略和方向。
                     </p>

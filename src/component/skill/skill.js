@@ -184,7 +184,7 @@ function TeamLink() {
             <div className={style.teamLinkCon}>
                 <h3>规划师和制造者团队</h3>
                 <p>在追求艺术与目标的协调中，健康的紧张是我们文化的必要组成部分。</p>
-                <Link to='./concect'>了解更多</Link>
+                <Link to='./meetus'>了解更多</Link>
                 {/*<span>了解更多</span>*/}
             </div>
         </div>

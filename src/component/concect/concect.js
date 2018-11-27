@@ -41,7 +41,7 @@ class Information extends React.Component{
                               style={
                                   {fontSize: 24}}
                               theme="outlined" />
-                        <span>senlin.apple@senlins.com</span>
+                        <span>maldek@qq.com</span>
                     </div>
 
                     <div className={style.informationConItem}>
@@ -49,7 +49,7 @@ class Information extends React.Component{
                               style={
                                   {fontSize: 24}}
                               theme="outlined" />
-                        <span>123456789</span>
+                        <span>17603090160</span>
                     </div>
 
                     <div className={style.informationConItem}>
