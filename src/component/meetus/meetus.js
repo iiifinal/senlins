@@ -112,7 +112,6 @@ class Meetus extends React.Component {
                     <div className={style.teamEveryImg}>
                         <img src={require('./img/meetus_team2.png')} alt=""/>
                     </div>
-
                     <Route component={TeamList}></Route>
                 </div>
 

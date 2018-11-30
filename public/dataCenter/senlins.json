@@ -560,6 +560,24 @@
         "./img/personal-3.jpg",
         "./img/personal-4.jpg"
       ]
+    },
+    {
+      "member_id": "003",
+      "member_name": "Hooke",
+      "member_position": "UX/UI高级设计师",
+      "member_avatar": "./img/team_hooke.png",
+      "member_motto": "我的设计中，有一半是有节制地发挥想象，有10%是完全疯狂的创意，剩下的则是为了面包和黄油的设计。",
+      "member_contact": {
+        "weibo": "https://www.senlins.com",
+        "facebook": "https://www.senlins.com",
+        "github": "https://www.senlins.com"
+      },
+      "member_photo": [
+        "./img/personal-1.jpg",
+        "./img/personal-2.jpg",
+        "./img/personal-3.jpg",
+        "./img/personal-4.jpg"
+      ]
     }
   ],
   "detailed": [
